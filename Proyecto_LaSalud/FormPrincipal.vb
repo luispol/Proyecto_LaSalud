@@ -1,7 +1,5 @@
 ﻿Public Class FormPrincipal
-    Private Sub PanelTitulo_Paint(sender As Object, e As PaintEventArgs) Handles PanelTitulo.Paint
 
-    End Sub
     'PROCEDIMIENTOS PARA BOTONES:
     'Procesos para el boton Clientes
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click

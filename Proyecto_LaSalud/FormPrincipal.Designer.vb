@@ -24,6 +24,9 @@ Partial Class FormPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnVentas = New System.Windows.Forms.Button()
         Me.btnMedicamentos = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
@@ -32,6 +35,9 @@ Partial Class FormPrincipal
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTitulo.SuspendLayout()
         Me.PanelFormularios.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,6 +46,9 @@ Partial Class FormPrincipal
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.PictureBox4)
+        Me.PanelMenu.Controls.Add(Me.PictureBox3)
+        Me.PanelMenu.Controls.Add(Me.PictureBox2)
         Me.PanelMenu.Controls.Add(Me.btnVentas)
         Me.PanelMenu.Controls.Add(Me.btnMedicamentos)
         Me.PanelMenu.Controls.Add(Me.btnClientes)
@@ -50,6 +59,36 @@ Partial Class FormPrincipal
         Me.PanelMenu.Size = New System.Drawing.Size(214, 421)
         Me.PanelMenu.TabIndex = 0
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(12, 157)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(39, 39)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(12, 114)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(38, 37)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 69)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(38, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
         'btnVentas
         '
         Me.btnVentas.FlatAppearance.BorderSize = 0
@@ -57,12 +96,12 @@ Partial Class FormPrincipal
         Me.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnVentas.Location = New System.Drawing.Point(-5, 156)
+        Me.btnVentas.Location = New System.Drawing.Point(12, 157)
         Me.btnVentas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(219, 30)
+        Me.btnVentas.Size = New System.Drawing.Size(202, 39)
         Me.btnVentas.TabIndex = 1
-        Me.btnVentas.Text = "Ventas"
+        Me.btnVentas.Text = "VENTAS"
         Me.btnVentas.UseVisualStyleBackColor = True
         '
         'btnMedicamentos
@@ -72,12 +111,12 @@ Partial Class FormPrincipal
         Me.btnMedicamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMedicamentos.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnMedicamentos.Location = New System.Drawing.Point(-4, 112)
+        Me.btnMedicamentos.Location = New System.Drawing.Point(12, 114)
         Me.btnMedicamentos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnMedicamentos.Name = "btnMedicamentos"
-        Me.btnMedicamentos.Size = New System.Drawing.Size(219, 30)
+        Me.btnMedicamentos.Size = New System.Drawing.Size(202, 37)
         Me.btnMedicamentos.TabIndex = 1
-        Me.btnMedicamentos.Text = "Medicamentos"
+        Me.btnMedicamentos.Text = "MEDICAMENTOS"
         Me.btnMedicamentos.UseVisualStyleBackColor = True
         '
         'btnClientes
@@ -87,12 +126,12 @@ Partial Class FormPrincipal
         Me.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnClientes.Location = New System.Drawing.Point(-4, 70)
+        Me.btnClientes.Location = New System.Drawing.Point(12, 69)
         Me.btnClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Size = New System.Drawing.Size(219, 30)
+        Me.btnClientes.Size = New System.Drawing.Size(199, 39)
         Me.btnClientes.TabIndex = 0
-        Me.btnClientes.Text = "Clientes"
+        Me.btnClientes.Text = "CLIENTES"
         Me.btnClientes.UseVisualStyleBackColor = True
         '
         'PanelTitulo
@@ -131,9 +170,9 @@ Partial Class FormPrincipal
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(101, 26)
+        Me.PictureBox1.Location = New System.Drawing.Point(92, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(348, 340)
+        Me.PictureBox1.Size = New System.Drawing.Size(382, 381)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -151,6 +190,9 @@ Partial Class FormPrincipal
         Me.Name = "FormPrincipal"
         Me.Text = "LA SALUD SYSTEM"
         Me.PanelMenu.ResumeLayout(False)
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTitulo.ResumeLayout(False)
         Me.PanelTitulo.PerformLayout()
         Me.PanelFormularios.ResumeLayout(False)
@@ -167,4 +209,7 @@ Partial Class FormPrincipal
     Friend WithEvents btnVentas As Button
     Friend WithEvents btnMedicamentos As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

@@ -23,18 +23,18 @@ Partial Class FormClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtId = New System.Windows.Forms.TextBox()
-        Me.txtDUI = New System.Windows.Forms.TextBox()
+        Me.txtIdClientes = New System.Windows.Forms.TextBox()
+        Me.txtDUIClientes = New System.Windows.Forms.TextBox()
         Me.lblIdCliente = New System.Windows.Forms.Label()
         Me.lblDUI = New System.Windows.Forms.Label()
         Me.lblCorreo = New System.Windows.Forms.Label()
-        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.txtCorreoClientes = New System.Windows.Forms.TextBox()
         Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtTelefonoClientes = New System.Windows.Forms.TextBox()
         Me.lblNombreCliente = New System.Windows.Forms.Label()
         Me.txtNombreClientes = New System.Windows.Forms.TextBox()
         Me.lblApellidosClientes = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtApellidosClientes = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -47,19 +47,19 @@ Partial Class FormClientes
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Clientes"
         '
-        'txtId
+        'txtIdClientes
         '
-        Me.txtId.Location = New System.Drawing.Point(128, 75)
-        Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(346, 27)
-        Me.txtId.TabIndex = 1
+        Me.txtIdClientes.Location = New System.Drawing.Point(128, 75)
+        Me.txtIdClientes.Name = "txtIdClientes"
+        Me.txtIdClientes.Size = New System.Drawing.Size(346, 27)
+        Me.txtIdClientes.TabIndex = 1
         '
-        'txtDUI
+        'txtDUIClientes
         '
-        Me.txtDUI.Location = New System.Drawing.Point(128, 217)
-        Me.txtDUI.Name = "txtDUI"
-        Me.txtDUI.Size = New System.Drawing.Size(346, 27)
-        Me.txtDUI.TabIndex = 2
+        Me.txtDUIClientes.Location = New System.Drawing.Point(128, 217)
+        Me.txtDUIClientes.Name = "txtDUIClientes"
+        Me.txtDUIClientes.Size = New System.Drawing.Size(346, 27)
+        Me.txtDUIClientes.TabIndex = 2
         '
         'lblIdCliente
         '
@@ -88,12 +88,12 @@ Partial Class FormClientes
         Me.lblCorreo.TabIndex = 7
         Me.lblCorreo.Text = "Correo:"
         '
-        'txtCorreo
+        'txtCorreoClientes
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(128, 264)
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(346, 27)
-        Me.txtCorreo.TabIndex = 8
+        Me.txtCorreoClientes.Location = New System.Drawing.Point(128, 264)
+        Me.txtCorreoClientes.Name = "txtCorreoClientes"
+        Me.txtCorreoClientes.Size = New System.Drawing.Size(346, 27)
+        Me.txtCorreoClientes.TabIndex = 8
         '
         'lblTelefono
         '
@@ -104,12 +104,12 @@ Partial Class FormClientes
         Me.lblTelefono.TabIndex = 9
         Me.lblTelefono.Text = "Telefono:"
         '
-        'TextBox1
+        'txtTelefonoClientes
         '
-        Me.TextBox1.Location = New System.Drawing.Point(128, 313)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(346, 27)
-        Me.TextBox1.TabIndex = 10
+        Me.txtTelefonoClientes.Location = New System.Drawing.Point(128, 313)
+        Me.txtTelefonoClientes.Name = "txtTelefonoClientes"
+        Me.txtTelefonoClientes.Size = New System.Drawing.Size(346, 27)
+        Me.txtTelefonoClientes.TabIndex = 10
         '
         'lblNombreCliente
         '
@@ -136,30 +136,30 @@ Partial Class FormClientes
         Me.lblApellidosClientes.TabIndex = 13
         Me.lblApellidosClientes.Text = "Apellidos:"
         '
-        'TextBox2
+        'txtApellidosClientes
         '
-        Me.TextBox2.Location = New System.Drawing.Point(128, 172)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(346, 27)
-        Me.TextBox2.TabIndex = 14
+        Me.txtApellidosClientes.Location = New System.Drawing.Point(128, 172)
+        Me.txtApellidosClientes.Name = "txtApellidosClientes"
+        Me.txtApellidosClientes.Size = New System.Drawing.Size(346, 27)
+        Me.txtApellidosClientes.TabIndex = 14
         '
         'FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtApellidosClientes)
         Me.Controls.Add(Me.lblApellidosClientes)
         Me.Controls.Add(Me.txtNombreClientes)
         Me.Controls.Add(Me.lblNombreCliente)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtTelefonoClientes)
         Me.Controls.Add(Me.lblTelefono)
-        Me.Controls.Add(Me.txtCorreo)
+        Me.Controls.Add(Me.txtCorreoClientes)
         Me.Controls.Add(Me.lblCorreo)
         Me.Controls.Add(Me.lblDUI)
         Me.Controls.Add(Me.lblIdCliente)
-        Me.Controls.Add(Me.txtDUI)
-        Me.Controls.Add(Me.txtId)
+        Me.Controls.Add(Me.txtDUIClientes)
+        Me.Controls.Add(Me.txtIdClientes)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormClientes"
         Me.Text = "Cliente"
@@ -169,16 +169,16 @@ Partial Class FormClientes
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtId As TextBox
-    Friend WithEvents txtDUI As TextBox
+    Friend WithEvents txtIdClientes As TextBox
+    Friend WithEvents txtDUIClientes As TextBox
     Friend WithEvents lblIdCliente As Label
     Friend WithEvents lblDUI As Label
     Friend WithEvents lblCorreo As Label
-    Friend WithEvents txtCorreo As TextBox
+    Friend WithEvents txtCorreoClientes As TextBox
     Friend WithEvents lblTelefono As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtTelefonoClientes As TextBox
     Friend WithEvents lblNombreCliente As Label
     Friend WithEvents txtNombreClientes As TextBox
     Friend WithEvents lblApellidosClientes As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtApellidosClientes As TextBox
 End Class

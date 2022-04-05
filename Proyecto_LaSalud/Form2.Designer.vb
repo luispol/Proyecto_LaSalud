@@ -24,7 +24,7 @@ Partial Class FormMedicamentos
     Private Sub InitializeComponent()
         Me.txtTipoMedicamento = New System.Windows.Forms.TextBox()
         Me.txtNombreMedicamentos = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtIdMedicamentos = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblIdMedicamentos = New System.Windows.Forms.Label()
         Me.lblNombreMedicamentos = New System.Windows.Forms.Label()
@@ -45,12 +45,12 @@ Partial Class FormMedicamentos
         Me.txtNombreMedicamentos.Size = New System.Drawing.Size(346, 27)
         Me.txtNombreMedicamentos.TabIndex = 6
         '
-        'TextBox1
+        'txtIdMedicamentos
         '
-        Me.TextBox1.Location = New System.Drawing.Point(191, 103)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(346, 27)
-        Me.TextBox1.TabIndex = 5
+        Me.txtIdMedicamentos.Location = New System.Drawing.Point(191, 103)
+        Me.txtIdMedicamentos.Name = "txtIdMedicamentos"
+        Me.txtIdMedicamentos.Size = New System.Drawing.Size(346, 27)
+        Me.txtIdMedicamentos.TabIndex = 5
         '
         'Label1
         '
@@ -99,7 +99,7 @@ Partial Class FormMedicamentos
         Me.Controls.Add(Me.lblIdMedicamentos)
         Me.Controls.Add(Me.txtTipoMedicamento)
         Me.Controls.Add(Me.txtNombreMedicamentos)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtIdMedicamentos)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormMedicamentos"
         Me.Text = "Medicamentos"
@@ -110,7 +110,7 @@ Partial Class FormMedicamentos
 
     Friend WithEvents txtTipoMedicamento As TextBox
     Friend WithEvents txtNombreMedicamentos As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtIdMedicamentos As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lblIdMedicamentos As Label
     Friend WithEvents lblNombreMedicamentos As Label

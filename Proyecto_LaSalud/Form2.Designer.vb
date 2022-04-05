@@ -93,7 +93,7 @@ Partial Class FormMedicamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(942, 627)
         Me.Controls.Add(Me.lblTipoMedicamento)
         Me.Controls.Add(Me.lblNombreMedicamentos)
         Me.Controls.Add(Me.lblIdMedicamentos)

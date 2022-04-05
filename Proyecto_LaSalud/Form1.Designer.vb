@@ -41,7 +41,7 @@ Partial Class FormClientes
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(252, 9)
+        Me.Label1.Location = New System.Drawing.Point(399, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(101, 35)
         Me.Label1.TabIndex = 0
@@ -49,14 +49,14 @@ Partial Class FormClientes
         '
         'txtIdClientes
         '
-        Me.txtIdClientes.Location = New System.Drawing.Point(128, 75)
+        Me.txtIdClientes.Location = New System.Drawing.Point(270, 72)
         Me.txtIdClientes.Name = "txtIdClientes"
         Me.txtIdClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtIdClientes.TabIndex = 1
         '
         'txtDUIClientes
         '
-        Me.txtDUIClientes.Location = New System.Drawing.Point(128, 217)
+        Me.txtDUIClientes.Location = New System.Drawing.Point(270, 210)
         Me.txtDUIClientes.Name = "txtDUIClientes"
         Me.txtDUIClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtDUIClientes.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class FormClientes
         'lblIdCliente
         '
         Me.lblIdCliente.AutoSize = True
-        Me.lblIdCliente.Location = New System.Drawing.Point(88, 75)
+        Me.lblIdCliente.Location = New System.Drawing.Point(225, 72)
         Me.lblIdCliente.Name = "lblIdCliente"
         Me.lblIdCliente.Size = New System.Drawing.Size(25, 20)
         Me.lblIdCliente.TabIndex = 4
@@ -73,7 +73,7 @@ Partial Class FormClientes
         'lblDUI
         '
         Me.lblDUI.AutoSize = True
-        Me.lblDUI.Location = New System.Drawing.Point(76, 217)
+        Me.lblDUI.Location = New System.Drawing.Point(213, 210)
         Me.lblDUI.Name = "lblDUI"
         Me.lblDUI.Size = New System.Drawing.Size(37, 20)
         Me.lblDUI.TabIndex = 5
@@ -82,7 +82,7 @@ Partial Class FormClientes
         'lblCorreo
         '
         Me.lblCorreo.AutoSize = True
-        Me.lblCorreo.Location = New System.Drawing.Point(56, 267)
+        Me.lblCorreo.Location = New System.Drawing.Point(193, 263)
         Me.lblCorreo.Name = "lblCorreo"
         Me.lblCorreo.Size = New System.Drawing.Size(57, 20)
         Me.lblCorreo.TabIndex = 7
@@ -90,7 +90,7 @@ Partial Class FormClientes
         '
         'txtCorreoClientes
         '
-        Me.txtCorreoClientes.Location = New System.Drawing.Point(128, 264)
+        Me.txtCorreoClientes.Location = New System.Drawing.Point(270, 260)
         Me.txtCorreoClientes.Name = "txtCorreoClientes"
         Me.txtCorreoClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtCorreoClientes.TabIndex = 8
@@ -98,7 +98,7 @@ Partial Class FormClientes
         'lblTelefono
         '
         Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Location = New System.Drawing.Point(43, 313)
+        Me.lblTelefono.Location = New System.Drawing.Point(180, 313)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(70, 20)
         Me.lblTelefono.TabIndex = 9
@@ -106,7 +106,7 @@ Partial Class FormClientes
         '
         'txtTelefonoClientes
         '
-        Me.txtTelefonoClientes.Location = New System.Drawing.Point(128, 313)
+        Me.txtTelefonoClientes.Location = New System.Drawing.Point(270, 313)
         Me.txtTelefonoClientes.Name = "txtTelefonoClientes"
         Me.txtTelefonoClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtTelefonoClientes.TabIndex = 10
@@ -114,7 +114,7 @@ Partial Class FormClientes
         'lblNombreCliente
         '
         Me.lblNombreCliente.AutoSize = True
-        Me.lblNombreCliente.Location = New System.Drawing.Point(40, 122)
+        Me.lblNombreCliente.Location = New System.Drawing.Point(177, 119)
         Me.lblNombreCliente.Name = "lblNombreCliente"
         Me.lblNombreCliente.Size = New System.Drawing.Size(73, 20)
         Me.lblNombreCliente.TabIndex = 11
@@ -122,7 +122,7 @@ Partial Class FormClientes
         '
         'txtNombreClientes
         '
-        Me.txtNombreClientes.Location = New System.Drawing.Point(128, 122)
+        Me.txtNombreClientes.Location = New System.Drawing.Point(270, 119)
         Me.txtNombreClientes.Name = "txtNombreClientes"
         Me.txtNombreClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtNombreClientes.TabIndex = 12
@@ -130,7 +130,7 @@ Partial Class FormClientes
         'lblApellidosClientes
         '
         Me.lblApellidosClientes.AutoSize = True
-        Me.lblApellidosClientes.Location = New System.Drawing.Point(38, 172)
+        Me.lblApellidosClientes.Location = New System.Drawing.Point(175, 165)
         Me.lblApellidosClientes.Name = "lblApellidosClientes"
         Me.lblApellidosClientes.Size = New System.Drawing.Size(75, 20)
         Me.lblApellidosClientes.TabIndex = 13
@@ -138,7 +138,7 @@ Partial Class FormClientes
         '
         'txtApellidosClientes
         '
-        Me.txtApellidosClientes.Location = New System.Drawing.Point(128, 172)
+        Me.txtApellidosClientes.Location = New System.Drawing.Point(270, 165)
         Me.txtApellidosClientes.Name = "txtApellidosClientes"
         Me.txtApellidosClientes.Size = New System.Drawing.Size(346, 27)
         Me.txtApellidosClientes.TabIndex = 14
@@ -147,7 +147,7 @@ Partial Class FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(942, 627)
         Me.Controls.Add(Me.txtApellidosClientes)
         Me.Controls.Add(Me.lblApellidosClientes)
         Me.Controls.Add(Me.txtNombreClientes)

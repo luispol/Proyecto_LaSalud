@@ -5,29 +5,25 @@
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         AbrirFormulario(Of FormClientes)()
         btnClientes.BackColor = Color.FromArgb(12, 61, 92)
-    End Sub
-    Private Sub btnClientes_Leave(sender As Object, e As EventArgs) Handles btnClientes.Leave
-        btnClientes.BackColor = Color.FromArgb(4, 41, 68)
+        btnVentas.BackColor = Color.FromArgb(4, 41, 68)
+        btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     'Proceso para el boton Medicamentos
     Private Sub btnMedicamentos_Click(sender As Object, e As EventArgs) Handles btnMedicamentos.Click
         AbrirFormulario(Of FormMedicamentos)()
         btnMedicamentos.BackColor = Color.FromArgb(12, 61, 92)
-    End Sub
-    Private Sub btnMedicamentos_Leave(sender As Object, e As EventArgs) Handles btnMedicamentos.Leave
-        btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
+        btnClientes.BackColor = Color.FromArgb(4, 41, 68)
+        btnVentas.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     'Proceso para el boton ventas
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
         AbrirFormulario(Of FormVentas)()
         btnVentas.BackColor = Color.FromArgb(12, 61, 92)
+        btnClientes.BackColor = Color.FromArgb(4, 41, 68)
+        btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
-    Private Sub btnVentas_Leave(sender As Object, e As EventArgs) Handles btnVentas.Leave
-        btnVentas.BackColor = Color.FromArgb(4, 41, 68)
-    End Sub
-
 
     'Proceso para abrir formularios
     Private Sub AbrirFormulario(Of Miform As {Form, New})()

@@ -59,7 +59,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(208, 528)
+        Me.PanelMenu.Size = New System.Drawing.Size(208, 512)
         Me.PanelMenu.TabIndex = 0
         '
         'PicBxbottnVents
@@ -145,10 +145,11 @@ Partial Class FormPrincipal
         Me.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PanelFormularios.Controls.Add(Me.Eslogan1)
         Me.PanelFormularios.Controls.Add(Me.PicBxFondoPrincipal)
-        Me.PanelFormularios.Location = New System.Drawing.Point(208, 81)
+        Me.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelFormularios.Location = New System.Drawing.Point(0, 0)
         Me.PanelFormularios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelFormularios.Name = "PanelFormularios"
-        Me.PanelFormularios.Size = New System.Drawing.Size(583, 447)
+        Me.PanelFormularios.Size = New System.Drawing.Size(792, 512)
         Me.PanelFormularios.TabIndex = 2
         '
         'Eslogan1
@@ -158,7 +159,7 @@ Partial Class FormPrincipal
         Me.Eslogan1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Eslogan1.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Eslogan1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Eslogan1.Location = New System.Drawing.Point(6, 30)
+        Me.Eslogan1.Location = New System.Drawing.Point(214, 98)
         Me.Eslogan1.Name = "Eslogan1"
         Me.Eslogan1.Size = New System.Drawing.Size(271, 23)
         Me.Eslogan1.TabIndex = 1
@@ -167,9 +168,9 @@ Partial Class FormPrincipal
         'PicBxFondoPrincipal
         '
         Me.PicBxFondoPrincipal.Image = CType(resources.GetObject("PicBxFondoPrincipal.Image"), System.Drawing.Image)
-        Me.PicBxFondoPrincipal.Location = New System.Drawing.Point(0, -81)
+        Me.PicBxFondoPrincipal.Location = New System.Drawing.Point(208, 12)
         Me.PicBxFondoPrincipal.Name = "PicBxFondoPrincipal"
-        Me.PicBxFondoPrincipal.Size = New System.Drawing.Size(583, 528)
+        Me.PicBxFondoPrincipal.Size = New System.Drawing.Size(594, 525)
         Me.PicBxFondoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxFondoPrincipal.TabIndex = 0
         Me.PicBxFondoPrincipal.TabStop = False
@@ -182,13 +183,13 @@ Partial Class FormPrincipal
         Me.PanelTitulo.Location = New System.Drawing.Point(208, 0)
         Me.PanelTitulo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelTitulo.Name = "PanelTitulo"
-        Me.PanelTitulo.Size = New System.Drawing.Size(583, 85)
+        Me.PanelTitulo.Size = New System.Drawing.Size(584, 85)
         Me.PanelTitulo.TabIndex = 1
         '
         'PicBxTtLasalud
         '
         Me.PicBxTtLasalud.Image = CType(resources.GetObject("PicBxTtLasalud.Image"), System.Drawing.Image)
-        Me.PicBxTtLasalud.Location = New System.Drawing.Point(0, 0)
+        Me.PicBxTtLasalud.Location = New System.Drawing.Point(3, 0)
         Me.PicBxTtLasalud.Name = "PicBxTtLasalud"
         Me.PicBxTtLasalud.Size = New System.Drawing.Size(583, 95)
         Me.PicBxTtLasalud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -200,10 +201,11 @@ Partial Class FormPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(791, 528)
+        Me.ClientSize = New System.Drawing.Size(792, 512)
         Me.Controls.Add(Me.PanelTitulo)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.PanelFormularios)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False

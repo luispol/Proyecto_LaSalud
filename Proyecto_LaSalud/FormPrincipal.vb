@@ -44,7 +44,4 @@
         End If
     End Sub
 
-    Private Sub Clientes(sender As Object, e As DragEventArgs) Handles PicBxbttClientes.DragDrop
-        ShowDialog("Clientes")
-    End Sub
 End Class

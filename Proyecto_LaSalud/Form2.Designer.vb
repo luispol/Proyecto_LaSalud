@@ -29,71 +29,94 @@ Partial Class FormMedicamentos
         Me.lblIdMedicamentos = New System.Windows.Forms.Label()
         Me.lblNombreMedicamentos = New System.Windows.Forms.Label()
         Me.lblTipoMedicamento = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'txtTipoMedicamento
         '
-        Me.txtTipoMedicamento.Location = New System.Drawing.Point(191, 195)
+        Me.txtTipoMedicamento.Location = New System.Drawing.Point(381, 273)
+        Me.txtTipoMedicamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTipoMedicamento.Name = "txtTipoMedicamento"
-        Me.txtTipoMedicamento.Size = New System.Drawing.Size(346, 27)
+        Me.txtTipoMedicamento.Size = New System.Drawing.Size(303, 23)
         Me.txtTipoMedicamento.TabIndex = 7
         '
         'txtNombreMedicamentos
         '
-        Me.txtNombreMedicamentos.Location = New System.Drawing.Point(191, 147)
+        Me.txtNombreMedicamentos.Location = New System.Drawing.Point(381, 237)
+        Me.txtNombreMedicamentos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombreMedicamentos.Name = "txtNombreMedicamentos"
-        Me.txtNombreMedicamentos.Size = New System.Drawing.Size(346, 27)
+        Me.txtNombreMedicamentos.Size = New System.Drawing.Size(303, 23)
         Me.txtNombreMedicamentos.TabIndex = 6
         '
         'txtIdMedicamentos
         '
-        Me.txtIdMedicamentos.Location = New System.Drawing.Point(191, 103)
+        Me.txtIdMedicamentos.Location = New System.Drawing.Point(381, 204)
+        Me.txtIdMedicamentos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtIdMedicamentos.Name = "txtIdMedicamentos"
-        Me.txtIdMedicamentos.Size = New System.Drawing.Size(346, 27)
+        Me.txtIdMedicamentos.Size = New System.Drawing.Size(303, 23)
         Me.txtIdMedicamentos.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(217, 32)
+        Me.Label1.Location = New System.Drawing.Point(404, 151)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(179, 35)
+        Me.Label1.Size = New System.Drawing.Size(141, 28)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Medicamentos"
         '
         'lblIdMedicamentos
         '
         Me.lblIdMedicamentos.AutoSize = True
-        Me.lblIdMedicamentos.Location = New System.Drawing.Point(147, 103)
+        Me.lblIdMedicamentos.Location = New System.Drawing.Point(343, 204)
         Me.lblIdMedicamentos.Name = "lblIdMedicamentos"
-        Me.lblIdMedicamentos.Size = New System.Drawing.Size(25, 20)
+        Me.lblIdMedicamentos.Size = New System.Drawing.Size(20, 15)
         Me.lblIdMedicamentos.TabIndex = 8
         Me.lblIdMedicamentos.Text = "Id:"
         '
         'lblNombreMedicamentos
         '
         Me.lblNombreMedicamentos.AutoSize = True
-        Me.lblNombreMedicamentos.Location = New System.Drawing.Point(105, 147)
+        Me.lblNombreMedicamentos.Location = New System.Drawing.Point(306, 237)
         Me.lblNombreMedicamentos.Name = "lblNombreMedicamentos"
-        Me.lblNombreMedicamentos.Size = New System.Drawing.Size(67, 20)
+        Me.lblNombreMedicamentos.Size = New System.Drawing.Size(54, 15)
         Me.lblNombreMedicamentos.TabIndex = 9
         Me.lblNombreMedicamentos.Text = "Nombre:"
         '
         'lblTipoMedicamento
         '
         Me.lblTipoMedicamento.AutoSize = True
-        Me.lblTipoMedicamento.Location = New System.Drawing.Point(34, 195)
+        Me.lblTipoMedicamento.Location = New System.Drawing.Point(244, 273)
         Me.lblTipoMedicamento.Name = "lblTipoMedicamento"
-        Me.lblTipoMedicamento.Size = New System.Drawing.Size(138, 20)
+        Me.lblTipoMedicamento.Size = New System.Drawing.Size(110, 15)
         Me.lblTipoMedicamento.TabIndex = 10
         Me.lblTipoMedicamento.Text = "Tipo Medicamento:"
         '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(792, 100)
+        Me.Panel1.TabIndex = 11
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 100)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 412)
+        Me.Panel2.TabIndex = 12
+        '
         'FormMedicamentos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(942, 627)
+        Me.ClientSize = New System.Drawing.Size(792, 512)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblTipoMedicamento)
         Me.Controls.Add(Me.lblNombreMedicamentos)
         Me.Controls.Add(Me.lblIdMedicamentos)
@@ -101,6 +124,7 @@ Partial Class FormMedicamentos
         Me.Controls.Add(Me.txtNombreMedicamentos)
         Me.Controls.Add(Me.txtIdMedicamentos)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormMedicamentos"
         Me.Text = "Medicamentos"
         Me.ResumeLayout(False)
@@ -115,4 +139,6 @@ Partial Class FormMedicamentos
     Friend WithEvents lblIdMedicamentos As Label
     Friend WithEvents lblNombreMedicamentos As Label
     Friend WithEvents lblTipoMedicamento As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class

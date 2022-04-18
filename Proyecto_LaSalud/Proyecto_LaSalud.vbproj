@@ -46,7 +46,6 @@
     <Folder Include="Datos\" />
     <Folder Include="Logica\" />
     <Folder Include="Reportes\" />
-    <Folder Include="Presentacion\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormClientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class FormClientes
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormClientes))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtIdClientes = New System.Windows.Forms.TextBox()
         Me.txtDUIClientes = New System.Windows.Forms.TextBox()
         Me.lblIdCliente = New System.Windows.Forms.Label()
@@ -38,7 +37,6 @@ Partial Class FormClientes
         Me.lblApellidosClientes = New System.Windows.Forms.Label()
         Me.txtApellido1Cliente = New System.Windows.Forms.TextBox()
         Me.Panel1Clientes = New System.Windows.Forms.Panel()
-        Me.Panel2Clientes = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PicBxEditarClientes = New System.Windows.Forms.PictureBox()
@@ -47,56 +45,53 @@ Partial Class FormClientes
         Me.PicBxGuardarCliente = New System.Windows.Forms.PictureBox()
         Me.ToolTipCliente = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BttEliminarCliente = New System.Windows.Forms.Button()
+        Me.BttAgregarCliente = New System.Windows.Forms.Button()
+        Me.BttGuardarCliente = New System.Windows.Forms.Button()
+        Me.BttEditarCliente = New System.Windows.Forms.Button()
+        Me.PicBx2RegistrosdeCliente = New System.Windows.Forms.PictureBox()
         Me.GroupBxDatosCliente = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtApellido3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtdireccionCliente = New System.Windows.Forms.TextBox()
         Me.LabelDirec = New System.Windows.Forms.Label()
         Me.txtApellido2Cliente = New System.Windows.Forms.TextBox()
         Me.labelApellido2Cliente = New System.Windows.Forms.Label()
-        Me.PicBx2RegistrosdeCliente = New System.Windows.Forms.PictureBox()
+        Me.DataGridViewClientes = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEditarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEliminarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBxDatosCliente.SuspendLayout()
         CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBxDatosCliente.SuspendLayout()
+        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(522, 74)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 28)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Clientes"
         '
         'txtIdClientes
         '
         Me.txtIdClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtIdClientes.Location = New System.Drawing.Point(79, 27)
+        Me.txtIdClientes.Location = New System.Drawing.Point(79, 41)
         Me.txtIdClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtIdClientes.Name = "txtIdClientes"
-        Me.txtIdClientes.Size = New System.Drawing.Size(56, 23)
+        Me.txtIdClientes.Size = New System.Drawing.Size(115, 23)
         Me.txtIdClientes.TabIndex = 1
         '
         'txtDUIClientes
         '
         Me.txtDUIClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtDUIClientes.Location = New System.Drawing.Point(199, 27)
+        Me.txtDUIClientes.Location = New System.Drawing.Point(238, 41)
         Me.txtDUIClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDUIClientes.Name = "txtDUIClientes"
-        Me.txtDUIClientes.Size = New System.Drawing.Size(137, 23)
+        Me.txtDUIClientes.Size = New System.Drawing.Size(170, 23)
         Me.txtDUIClientes.TabIndex = 2
         '
         'lblIdCliente
         '
         Me.lblIdCliente.AutoSize = True
-        Me.lblIdCliente.Location = New System.Drawing.Point(49, 27)
+        Me.lblIdCliente.Location = New System.Drawing.Point(49, 41)
         Me.lblIdCliente.Name = "lblIdCliente"
         Me.lblIdCliente.Size = New System.Drawing.Size(23, 15)
         Me.lblIdCliente.TabIndex = 4
@@ -105,7 +100,7 @@ Partial Class FormClientes
         'lblDUI
         '
         Me.lblDUI.AutoSize = True
-        Me.lblDUI.Location = New System.Drawing.Point(161, 30)
+        Me.lblDUI.Location = New System.Drawing.Point(200, 44)
         Me.lblDUI.Name = "lblDUI"
         Me.lblDUI.Size = New System.Drawing.Size(32, 15)
         Me.lblDUI.TabIndex = 5
@@ -114,7 +109,7 @@ Partial Class FormClientes
         'lblCorreo
         '
         Me.lblCorreo.AutoSize = True
-        Me.lblCorreo.Location = New System.Drawing.Point(23, 199)
+        Me.lblCorreo.Location = New System.Drawing.Point(23, 259)
         Me.lblCorreo.Name = "lblCorreo"
         Me.lblCorreo.Size = New System.Drawing.Size(49, 15)
         Me.lblCorreo.TabIndex = 7
@@ -123,16 +118,16 @@ Partial Class FormClientes
         'txtCorreoClientes
         '
         Me.txtCorreoClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtCorreoClientes.Location = New System.Drawing.Point(78, 196)
+        Me.txtCorreoClientes.Location = New System.Drawing.Point(78, 256)
         Me.txtCorreoClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCorreoClientes.Name = "txtCorreoClientes"
-        Me.txtCorreoClientes.Size = New System.Drawing.Size(258, 23)
+        Me.txtCorreoClientes.Size = New System.Drawing.Size(330, 23)
         Me.txtCorreoClientes.TabIndex = 8
         '
         'lblTelefono
         '
         Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Location = New System.Drawing.Point(14, 345)
+        Me.lblTelefono.Location = New System.Drawing.Point(14, 392)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(58, 15)
         Me.lblTelefono.TabIndex = 9
@@ -141,16 +136,16 @@ Partial Class FormClientes
         'txtTelefonoClientes
         '
         Me.txtTelefonoClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTelefonoClientes.Location = New System.Drawing.Point(79, 342)
+        Me.txtTelefonoClientes.Location = New System.Drawing.Point(79, 389)
         Me.txtTelefonoClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTelefonoClientes.Name = "txtTelefonoClientes"
-        Me.txtTelefonoClientes.Size = New System.Drawing.Size(257, 23)
+        Me.txtTelefonoClientes.Size = New System.Drawing.Size(329, 23)
         Me.txtTelefonoClientes.TabIndex = 10
         '
         'lblNombreCliente
         '
         Me.lblNombreCliente.AutoSize = True
-        Me.lblNombreCliente.Location = New System.Drawing.Point(11, 68)
+        Me.lblNombreCliente.Location = New System.Drawing.Point(11, 82)
         Me.lblNombreCliente.Name = "lblNombreCliente"
         Me.lblNombreCliente.Size = New System.Drawing.Size(62, 15)
         Me.lblNombreCliente.TabIndex = 11
@@ -159,16 +154,16 @@ Partial Class FormClientes
         'txtNombreClientes
         '
         Me.txtNombreClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNombreClientes.Location = New System.Drawing.Point(79, 68)
+        Me.txtNombreClientes.Location = New System.Drawing.Point(79, 82)
         Me.txtNombreClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombreClientes.Name = "txtNombreClientes"
-        Me.txtNombreClientes.Size = New System.Drawing.Size(257, 23)
+        Me.txtNombreClientes.Size = New System.Drawing.Size(329, 23)
         Me.txtNombreClientes.TabIndex = 12
         '
         'lblApellidosClientes
         '
         Me.lblApellidosClientes.AutoSize = True
-        Me.lblApellidosClientes.Location = New System.Drawing.Point(10, 112)
+        Me.lblApellidosClientes.Location = New System.Drawing.Point(10, 126)
         Me.lblApellidosClientes.Name = "lblApellidosClientes"
         Me.lblApellidosClientes.Size = New System.Drawing.Size(66, 15)
         Me.lblApellidosClientes.TabIndex = 13
@@ -177,10 +172,10 @@ Partial Class FormClientes
         'txtApellido1Cliente
         '
         Me.txtApellido1Cliente.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtApellido1Cliente.Location = New System.Drawing.Point(78, 109)
+        Me.txtApellido1Cliente.Location = New System.Drawing.Point(78, 123)
         Me.txtApellido1Cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtApellido1Cliente.Name = "txtApellido1Cliente"
-        Me.txtApellido1Cliente.Size = New System.Drawing.Size(258, 23)
+        Me.txtApellido1Cliente.Size = New System.Drawing.Size(330, 23)
         Me.txtApellido1Cliente.TabIndex = 14
         '
         'Panel1Clientes
@@ -188,23 +183,15 @@ Partial Class FormClientes
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(200, 512)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 637)
         Me.Panel1Clientes.TabIndex = 15
-        '
-        'Panel2Clientes
-        '
-        Me.Panel2Clientes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2Clientes.Location = New System.Drawing.Point(200, 0)
-        Me.Panel2Clientes.Name = "Panel2Clientes"
-        Me.Panel2Clientes.Size = New System.Drawing.Size(592, 100)
-        Me.Panel2Clientes.TabIndex = 16
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(587, 115)
+        Me.PictureBox1.Location = New System.Drawing.Point(564, 36)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(197, 160)
+        Me.PictureBox1.Size = New System.Drawing.Size(113, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
@@ -212,10 +199,10 @@ Partial Class FormClientes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(271, 98)
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(250, 67)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(246, 23)
+        Me.Label2.Size = New System.Drawing.Size(308, 29)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "REGISTRO DE CLIENTES"
         '
@@ -223,9 +210,9 @@ Partial Class FormClientes
         '
         Me.PicBxEditarClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxEditarClientes.Image = CType(resources.GetObject("PicBxEditarClientes.Image"), System.Drawing.Image)
-        Me.PicBxEditarClientes.Location = New System.Drawing.Point(10, 30)
+        Me.PicBxEditarClientes.Location = New System.Drawing.Point(13, 24)
         Me.PicBxEditarClientes.Name = "PicBxEditarClientes"
-        Me.PicBxEditarClientes.Size = New System.Drawing.Size(38, 39)
+        Me.PicBxEditarClientes.Size = New System.Drawing.Size(38, 38)
         Me.PicBxEditarClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEditarClientes.TabIndex = 0
         Me.PicBxEditarClientes.TabStop = False
@@ -235,9 +222,9 @@ Partial Class FormClientes
         '
         Me.PicBxAgregarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxAgregarCliente.Image = CType(resources.GetObject("PicBxAgregarCliente.Image"), System.Drawing.Image)
-        Me.PicBxAgregarCliente.Location = New System.Drawing.Point(98, 30)
+        Me.PicBxAgregarCliente.Location = New System.Drawing.Point(13, 68)
         Me.PicBxAgregarCliente.Name = "PicBxAgregarCliente"
-        Me.PicBxAgregarCliente.Size = New System.Drawing.Size(38, 39)
+        Me.PicBxAgregarCliente.Size = New System.Drawing.Size(38, 38)
         Me.PicBxAgregarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxAgregarCliente.TabIndex = 2
         Me.PicBxAgregarCliente.TabStop = False
@@ -247,7 +234,7 @@ Partial Class FormClientes
         '
         Me.PicBxEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxEliminarCliente.Image = CType(resources.GetObject("PicBxEliminarCliente.Image"), System.Drawing.Image)
-        Me.PicBxEliminarCliente.Location = New System.Drawing.Point(142, 30)
+        Me.PicBxEliminarCliente.Location = New System.Drawing.Point(184, 68)
         Me.PicBxEliminarCliente.Name = "PicBxEliminarCliente"
         Me.PicBxEliminarCliente.Size = New System.Drawing.Size(38, 38)
         Me.PicBxEliminarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -259,9 +246,9 @@ Partial Class FormClientes
         '
         Me.PicBxGuardarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxGuardarCliente.Image = CType(resources.GetObject("PicBxGuardarCliente.Image"), System.Drawing.Image)
-        Me.PicBxGuardarCliente.Location = New System.Drawing.Point(54, 30)
+        Me.PicBxGuardarCliente.Location = New System.Drawing.Point(184, 24)
         Me.PicBxGuardarCliente.Name = "PicBxGuardarCliente"
-        Me.PicBxGuardarCliente.Size = New System.Drawing.Size(38, 39)
+        Me.PicBxGuardarCliente.Size = New System.Drawing.Size(38, 38)
         Me.PicBxGuardarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxGuardarCliente.TabIndex = 1
         Me.PicBxGuardarCliente.TabStop = False
@@ -269,22 +256,72 @@ Partial Class FormClientes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BttEliminarCliente)
+        Me.GroupBox1.Controls.Add(Me.BttAgregarCliente)
+        Me.GroupBox1.Controls.Add(Me.BttGuardarCliente)
+        Me.GroupBox1.Controls.Add(Me.BttEditarCliente)
         Me.GroupBox1.Controls.Add(Me.PicBxEditarClientes)
         Me.GroupBox1.Controls.Add(Me.PicBxEliminarCliente)
         Me.GroupBox1.Controls.Add(Me.PicBxGuardarCliente)
         Me.GroupBox1.Controls.Add(Me.PicBxAgregarCliente)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(587, 291)
+        Me.GroupBox1.Location = New System.Drawing.Point(706, 468)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(197, 79)
+        Me.GroupBox1.Size = New System.Drawing.Size(602, 117)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Acciones de Registro"
         '
+        'BttEliminarCliente
+        '
+        Me.BttEliminarCliente.Location = New System.Drawing.Point(228, 68)
+        Me.BttEliminarCliente.Name = "BttEliminarCliente"
+        Me.BttEliminarCliente.Size = New System.Drawing.Size(111, 38)
+        Me.BttEliminarCliente.TabIndex = 26
+        Me.BttEliminarCliente.Text = "Eliminar"
+        Me.BttEliminarCliente.UseVisualStyleBackColor = True
+        '
+        'BttAgregarCliente
+        '
+        Me.BttAgregarCliente.Location = New System.Drawing.Point(57, 68)
+        Me.BttAgregarCliente.Name = "BttAgregarCliente"
+        Me.BttAgregarCliente.Size = New System.Drawing.Size(111, 38)
+        Me.BttAgregarCliente.TabIndex = 25
+        Me.BttAgregarCliente.Text = "Agregar"
+        Me.BttAgregarCliente.UseVisualStyleBackColor = True
+        '
+        'BttGuardarCliente
+        '
+        Me.BttGuardarCliente.Location = New System.Drawing.Point(228, 24)
+        Me.BttGuardarCliente.Name = "BttGuardarCliente"
+        Me.BttGuardarCliente.Size = New System.Drawing.Size(111, 38)
+        Me.BttGuardarCliente.TabIndex = 24
+        Me.BttGuardarCliente.Text = "Guardar"
+        Me.BttGuardarCliente.UseVisualStyleBackColor = True
+        '
+        'BttEditarCliente
+        '
+        Me.BttEditarCliente.Location = New System.Drawing.Point(57, 24)
+        Me.BttEditarCliente.Name = "BttEditarCliente"
+        Me.BttEditarCliente.Size = New System.Drawing.Size(111, 38)
+        Me.BttEditarCliente.TabIndex = 23
+        Me.BttEditarCliente.Text = "Editar"
+        Me.BttEditarCliente.UseVisualStyleBackColor = True
+        '
+        'PicBx2RegistrosdeCliente
+        '
+        Me.PicBx2RegistrosdeCliente.Image = CType(resources.GetObject("PicBx2RegistrosdeCliente.Image"), System.Drawing.Image)
+        Me.PicBx2RegistrosdeCliente.Location = New System.Drawing.Point(1270, 591)
+        Me.PicBx2RegistrosdeCliente.Name = "PicBx2RegistrosdeCliente"
+        Me.PicBx2RegistrosdeCliente.Size = New System.Drawing.Size(38, 38)
+        Me.PicBx2RegistrosdeCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicBx2RegistrosdeCliente.TabIndex = 22
+        Me.PicBx2RegistrosdeCliente.TabStop = False
+        '
         'GroupBxDatosCliente
         '
-        Me.GroupBxDatosCliente.Controls.Add(Me.TextBox1)
-        Me.GroupBxDatosCliente.Controls.Add(Me.Label3)
+        Me.GroupBxDatosCliente.Controls.Add(Me.TxtApellido3)
+        Me.GroupBxDatosCliente.Controls.Add(Me.Label1)
         Me.GroupBxDatosCliente.Controls.Add(Me.txtdireccionCliente)
         Me.GroupBxDatosCliente.Controls.Add(Me.LabelDirec)
         Me.GroupBxDatosCliente.Controls.Add(Me.txtApellido2Cliente)
@@ -301,41 +338,41 @@ Partial Class FormClientes
         Me.GroupBxDatosCliente.Controls.Add(Me.txtCorreoClientes)
         Me.GroupBxDatosCliente.Controls.Add(Me.lblApellidosClientes)
         Me.GroupBxDatosCliente.Controls.Add(Me.lblCorreo)
-        Me.GroupBxDatosCliente.Location = New System.Drawing.Point(227, 131)
+        Me.GroupBxDatosCliente.Location = New System.Drawing.Point(250, 137)
         Me.GroupBxDatosCliente.Name = "GroupBxDatosCliente"
-        Me.GroupBxDatosCliente.Size = New System.Drawing.Size(354, 375)
+        Me.GroupBxDatosCliente.Size = New System.Drawing.Size(427, 448)
         Me.GroupBxDatosCliente.TabIndex = 21
         Me.GroupBxDatosCliente.TabStop = False
         Me.GroupBxDatosCliente.Text = "Datos del Cliente"
         '
-        'TextBox1
+        'TxtApellido3
         '
-        Me.TextBox1.Location = New System.Drawing.Point(78, 304)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(258, 23)
-        Me.TextBox1.TabIndex = 21
+        Me.TxtApellido3.Location = New System.Drawing.Point(78, 213)
+        Me.TxtApellido3.Name = "TxtApellido3"
+        Me.TxtApellido3.Size = New System.Drawing.Size(330, 23)
+        Me.TxtApellido3.TabIndex = 21
         '
-        'Label3
+        'Label1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 307)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 15)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Dpto :"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 216)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 15)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Apellido 3 :"
         '
         'txtdireccionCliente
         '
-        Me.txtdireccionCliente.Location = New System.Drawing.Point(78, 236)
+        Me.txtdireccionCliente.Location = New System.Drawing.Point(78, 296)
         Me.txtdireccionCliente.Multiline = True
         Me.txtdireccionCliente.Name = "txtdireccionCliente"
-        Me.txtdireccionCliente.Size = New System.Drawing.Size(258, 55)
+        Me.txtdireccionCliente.Size = New System.Drawing.Size(330, 76)
         Me.txtdireccionCliente.TabIndex = 19
         '
         'LabelDirec
         '
         Me.LabelDirec.AutoSize = True
-        Me.LabelDirec.Location = New System.Drawing.Point(9, 239)
+        Me.LabelDirec.Location = New System.Drawing.Point(9, 299)
         Me.LabelDirec.Name = "LabelDirec"
         Me.LabelDirec.Size = New System.Drawing.Size(63, 15)
         Me.LabelDirec.TabIndex = 17
@@ -343,43 +380,51 @@ Partial Class FormClientes
         '
         'txtApellido2Cliente
         '
-        Me.txtApellido2Cliente.Location = New System.Drawing.Point(78, 151)
+        Me.txtApellido2Cliente.Location = New System.Drawing.Point(78, 165)
         Me.txtApellido2Cliente.Name = "txtApellido2Cliente"
-        Me.txtApellido2Cliente.Size = New System.Drawing.Size(258, 23)
+        Me.txtApellido2Cliente.Size = New System.Drawing.Size(330, 23)
         Me.txtApellido2Cliente.TabIndex = 16
         '
         'labelApellido2Cliente
         '
         Me.labelApellido2Cliente.AutoSize = True
-        Me.labelApellido2Cliente.Location = New System.Drawing.Point(11, 154)
+        Me.labelApellido2Cliente.Location = New System.Drawing.Point(11, 168)
         Me.labelApellido2Cliente.Name = "labelApellido2Cliente"
         Me.labelApellido2Cliente.Size = New System.Drawing.Size(66, 15)
         Me.labelApellido2Cliente.TabIndex = 15
         Me.labelApellido2Cliente.Text = "Apellido 2 :"
         '
-        'PicBx2RegistrosdeCliente
+        'DataGridViewClientes
         '
-        Me.PicBx2RegistrosdeCliente.Image = CType(resources.GetObject("PicBx2RegistrosdeCliente.Image"), System.Drawing.Image)
-        Me.PicBx2RegistrosdeCliente.Location = New System.Drawing.Point(748, 468)
-        Me.PicBx2RegistrosdeCliente.Name = "PicBx2RegistrosdeCliente"
-        Me.PicBx2RegistrosdeCliente.Size = New System.Drawing.Size(38, 38)
-        Me.PicBx2RegistrosdeCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicBx2RegistrosdeCliente.TabIndex = 22
-        Me.PicBx2RegistrosdeCliente.TabStop = False
+        Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewClientes.Location = New System.Drawing.Point(706, 36)
+        Me.DataGridViewClientes.Name = "DataGridViewClientes"
+        Me.DataGridViewClientes.RowTemplate.Height = 25
+        Me.DataGridViewClientes.Size = New System.Drawing.Size(602, 426)
+        Me.DataGridViewClientes.TabIndex = 23
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(232, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1088, 22)
+        Me.Panel1.TabIndex = 24
         '
         'FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 512)
-        Me.Controls.Add(Me.PicBx2RegistrosdeCliente)
+        Me.ClientSize = New System.Drawing.Size(1320, 637)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DataGridViewClientes)
         Me.Controls.Add(Me.GroupBxDatosCliente)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Panel2Clientes)
+        Me.Controls.Add(Me.PicBx2RegistrosdeCliente)
         Me.Controls.Add(Me.Panel1Clientes)
-        Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormClientes"
         Me.Text = "Cliente"
@@ -389,15 +434,14 @@ Partial Class FormClientes
         CType(Me.PicBxEliminarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBxDatosCliente.ResumeLayout(False)
         Me.GroupBxDatosCliente.PerformLayout()
-        CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents txtIdClientes As TextBox
     Friend WithEvents txtDUIClientes As TextBox
     Friend WithEvents lblIdCliente As Label
@@ -411,7 +455,6 @@ Partial Class FormClientes
     Friend WithEvents lblApellidosClientes As Label
     Friend WithEvents txtApellido1Cliente As TextBox
     Friend WithEvents Panel1Clientes As Panel
-    Friend WithEvents Panel2Clientes As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PicBxEditarClientes As PictureBox
@@ -426,6 +469,12 @@ Partial Class FormClientes
     Friend WithEvents LabelDirec As Label
     Friend WithEvents txtApellido2Cliente As TextBox
     Friend WithEvents labelApellido2Cliente As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents TxtApellido3 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridViewClientes As DataGridView
+    Friend WithEvents BttEditarCliente As Button
+    Friend WithEvents BttEliminarCliente As Button
+    Friend WithEvents BttAgregarCliente As Button
+    Friend WithEvents BttGuardarCliente As Button
+    Friend WithEvents Panel1 As Panel
 End Class

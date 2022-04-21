@@ -1,5 +1,5 @@
 ﻿Public Class FormClientes
-    '(CODIGO) MUESTRA DE MENSAJE DE AYUDA PARA EL USUARIO
+    '(CODIGO) MOSTRAR UN MENSAJE DE AYUDA PARA EL USUARIO
 
     'BOTON EDITAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxEditarClientes_MouseHover(sender As Object, e As EventArgs) Handles PicBxEditarClientes.MouseHover

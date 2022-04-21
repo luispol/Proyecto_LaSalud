@@ -22,6 +22,7 @@ Partial Class FormMedicamentos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMedicamentos))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBxDatosMedicamentos = New System.Windows.Forms.GroupBox()
@@ -52,6 +53,7 @@ Partial Class FormMedicamentos
         Me.PicBxGuardarMedicamento = New System.Windows.Forms.PictureBox()
         Me.PicBxAgregarMedicamento = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ToolTipMedicamentos = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBxDatosMedicamentos.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -306,6 +308,7 @@ Partial Class FormMedicamentos
         Me.PicBxEditarMedicamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEditarMedicamento.TabIndex = 0
         Me.PicBxEditarMedicamento.TabStop = False
+        Me.ToolTipMedicamentos.SetToolTip(Me.PicBxEditarMedicamento, "Editar el registro del Medicamento")
         '
         'PicBxEliminarMedicamento
         '
@@ -317,6 +320,7 @@ Partial Class FormMedicamentos
         Me.PicBxEliminarMedicamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEliminarMedicamento.TabIndex = 3
         Me.PicBxEliminarMedicamento.TabStop = False
+        Me.ToolTipMedicamentos.SetToolTip(Me.PicBxEliminarMedicamento, "Eliminar el registro del Medicamento")
         '
         'PicBxGuardarMedicamento
         '
@@ -328,6 +332,7 @@ Partial Class FormMedicamentos
         Me.PicBxGuardarMedicamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxGuardarMedicamento.TabIndex = 1
         Me.PicBxGuardarMedicamento.TabStop = False
+        Me.ToolTipMedicamentos.SetToolTip(Me.PicBxGuardarMedicamento, "Guardar el registro del Medicamento")
         '
         'PicBxAgregarMedicamento
         '
@@ -339,6 +344,7 @@ Partial Class FormMedicamentos
         Me.PicBxAgregarMedicamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxAgregarMedicamento.TabIndex = 2
         Me.PicBxAgregarMedicamento.TabStop = False
+        Me.ToolTipMedicamentos.SetToolTip(Me.PicBxAgregarMedicamento, "Guardar el registro del Medicamento")
         '
         'Panel2
         '
@@ -406,4 +412,5 @@ Partial Class FormMedicamentos
     Friend WithEvents PicBxGuardarMedicamento As PictureBox
     Friend WithEvents PicBxAgregarMedicamento As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents ToolTipMedicamentos As ToolTip
 End Class

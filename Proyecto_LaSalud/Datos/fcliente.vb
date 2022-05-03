@@ -7,10 +7,10 @@ Public Class fcliente
     Public Function mostrar() As DataTable
         Try
             conectado()
-            cmd = New SqlCommand("mostrar_clientes")
-            cmd.CommandType = CommandType.StoredProcedure
-
-            cmd.Connection = cnn
+            cmd = New SqlCommand("mostrar_clientes") With {
+            .CommandType = CommandType.StoredProcedure,
+            .Connection = cnn
+            }
             If cmd.ExecuteNonQuery Then
                 Dim dt As New DataTable
                 Dim da As New SqlDataAdapter(cmd)

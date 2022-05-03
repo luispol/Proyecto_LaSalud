@@ -44,7 +44,7 @@
         Try
             Dim func As New fcliente
             dt = func.mostrar()
-            DataGridViewClientes.Columns.Item("Elminar").Visible = False
+            DataGridViewClientes.Columns.Item("Eliminar").Visible = False
             If dt.Rows.Count <> 0 Then
                 DataGridViewClientes.DataSource = dt
                 txtBusquedaClientes.Enabled = True

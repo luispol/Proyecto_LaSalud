@@ -16,8 +16,9 @@ Public Class fcliente
                 Dim da As New SqlDataAdapter(cmd)
                 da.Fill(dt)
                 Return dt
+            Else
+                Return Nothing
             End If
-            Return Nothing
         Catch ex As Exception
             MsgBox(ex.Message)
             Return Nothing

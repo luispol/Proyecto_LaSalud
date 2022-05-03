@@ -58,11 +58,11 @@ Partial Class FormClientes
         Me.txtApellido2Cliente = New System.Windows.Forms.TextBox()
         Me.labelApellido2Cliente = New System.Windows.Forms.Label()
         Me.DataGridViewClientes = New System.Windows.Forms.DataGridView()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbCampoCliente = New System.Windows.Forms.ComboBox()
         Me.txtBusquedaClientes = New System.Windows.Forms.TextBox()
         Me.linklblInexistente = New System.Windows.Forms.LinkLabel()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEditarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +86,7 @@ Partial Class FormClientes
         '
         Me.txtDUIClientes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDUIClientes.Location = New System.Drawing.Point(272, 55)
+        Me.txtDUIClientes.MaxLength = 9
         Me.txtDUIClientes.Name = "txtDUIClientes"
         Me.txtDUIClientes.Size = New System.Drawing.Size(194, 27)
         Me.txtDUIClientes.TabIndex = 2
@@ -426,6 +427,14 @@ Partial Class FormClientes
         Me.DataGridViewClientes.Size = New System.Drawing.Size(688, 483)
         Me.DataGridViewClientes.TabIndex = 23
         '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.MinimumWidth = 6
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Width = 125
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
@@ -462,14 +471,6 @@ Partial Class FormClientes
         Me.linklblInexistente.TabIndex = 27
         Me.linklblInexistente.TabStop = True
         Me.linklblInexistente.Text = "Datos inexistentes"
-        '
-        'Eliminar
-        '
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.MinimumWidth = 6
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Width = 125
         '
         'FormClientes
         '

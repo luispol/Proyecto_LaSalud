@@ -36,9 +36,19 @@ Public Class FormClientes
 
 
     Private dt As New DataTable
-
+    'Preso al momento de cargar el formulario de clientes
     Private Sub FormClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
+        txtIdClientes.Enabled = False
+        txtDUIClientes.Enabled = False
+        txtNombreClientes.Enabled = False
+        txtApellido1Cliente.Enabled = False
+        txtApellido2Cliente.Enabled = False
+        TxtApellido3.Enabled = False
+        txtCorreoClientes.Enabled = False
+        txtdireccionCliente.Enabled = False
+        txtTelefonoClientes.Enabled = False
+
     End Sub
 
     'Proceso para mostar los datos en la tabla
@@ -65,8 +75,8 @@ Public Class FormClientes
             MsgBox(ex.Message)
         End Try
         BttAgregarCliente.Visible = True
-        BttGuardarCliente.Visible = True
-        BttEditarCliente.Visible = True
+        BttGuardarCliente.Visible = False
+        BttEditarCliente.Visible = False
 
         buscar()
 
@@ -146,7 +156,7 @@ Public Class FormClientes
 
     'Proceso para limpiar los textbox cuando se registre un nuevo cliente
     Public Sub limpiar()
-        BttGuardarCliente.Visible = True
+        'BttGuardarCliente.Visible = False
         BttEditarCliente.Visible = False
         txtDUIClientes.Text = ""
         txtNombreClientes.Text = ""
@@ -157,10 +167,22 @@ Public Class FormClientes
         txtdireccionCliente.Text = ""
         txtTelefonoClientes.Text = ""
     End Sub
-
+    'Acciones al dar click al boton agregar
     Private Sub BttAgregarCliente_Click(sender As Object, e As EventArgs) Handles BttAgregarCliente.Click
         limpiar()
         mostrar()
+        BttGuardarCliente.Visible = True
+        'activiacion de los textboxs
+        txtIdClientes.Enabled = False
+        txtDUIClientes.Enabled = True
+        txtNombreClientes.Enabled = True
+        txtApellido1Cliente.Enabled = True
+        txtApellido2Cliente.Enabled = True
+        TxtApellido3.Enabled = True
+        txtCorreoClientes.Enabled = True
+        txtdireccionCliente.Enabled = True
+        txtTelefonoClientes.Enabled = True
+
     End Sub
 
     Private Sub BttGuardarCliente_Click(sender As Object, e As EventArgs) Handles BttGuardarCliente.Click
@@ -182,6 +204,18 @@ Public Class FormClientes
                     MessageBox.Show("Datos registrados", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     mostrar()
                     limpiar()
+                    txtIdClientes.Enabled = False
+                    txtDUIClientes.Enabled = False
+                    txtNombreClientes.Enabled = False
+                    txtApellido1Cliente.Enabled = False
+                    txtApellido2Cliente.Enabled = False
+                    TxtApellido3.Enabled = False
+                    txtCorreoClientes.Enabled = False
+                    txtdireccionCliente.Enabled = False
+                    txtTelefonoClientes.Enabled = False
+                    BttGuardarCliente.Visible = False
+
+
                 Else
                     MessageBox.Show("Datos no registrados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
@@ -193,6 +227,7 @@ Public Class FormClientes
             End Try
         Else
             MessageBox.Show("Falto ingresar datos obligatorios", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         End If
     End Sub
 End Class

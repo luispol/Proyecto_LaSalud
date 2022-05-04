@@ -63,6 +63,7 @@ Partial Class FormClientes
         Me.cbCampoCliente = New System.Windows.Forms.ComboBox()
         Me.txtBusquedaClientes = New System.Windows.Forms.TextBox()
         Me.linklblInexistente = New System.Windows.Forms.LinkLabel()
+        Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEditarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +73,7 @@ Partial Class FormClientes
         CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosCliente.SuspendLayout()
         CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdClientes
@@ -472,6 +474,10 @@ Partial Class FormClientes
         Me.linklblInexistente.TabStop = True
         Me.linklblInexistente.Text = "Datos inexistentes"
         '
+        'erroricono
+        '
+        Me.erroricono.ContainerControl = Me
+        '
         'FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -500,6 +506,7 @@ Partial Class FormClientes
         Me.GroupBxDatosCliente.ResumeLayout(False)
         Me.GroupBxDatosCliente.PerformLayout()
         CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -543,4 +550,5 @@ Partial Class FormClientes
     Friend WithEvents txtBusquedaClientes As TextBox
     Friend WithEvents linklblInexistente As LinkLabel
     Friend WithEvents Eliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents erroricono As ErrorProvider
 End Class

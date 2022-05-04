@@ -1,4 +1,6 @@
-﻿Public Class FormClientes
+﻿Imports System.ComponentModel
+
+Public Class FormClientes
     '(CODIGO) MOSTRAR UN MENSAJE DE AYUDA PARA EL USUARIO
 
     'BOTON EDITAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
@@ -63,8 +65,8 @@
             MsgBox(ex.Message)
         End Try
         BttAgregarCliente.Visible = True
-        BttGuardarCliente.Visible = False
-        BttEditarCliente.Visible = False
+        BttGuardarCliente.Visible = True
+        BttEditarCliente.Visible = True
 
         buscar()
 
@@ -96,5 +98,101 @@
         DataGridViewClientes.Columns(1).Visible = False
     End Sub
 
+    'Procesos de los textbox para capturar la informacion del cliente
 
+    Private Sub txtNombreClientes_Validating(sender As Object, e As CancelEventArgs) Handles txtNombreClientes.Validating
+        'Revisamos si la caja de texto tiene caracteres de informacion o no
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Ingrese los nombres del cliente")
+        End If
+    End Sub
+
+    Private Sub txtApellido1Cliente_Validating(sender As Object, e As CancelEventArgs) Handles txtApellido1Cliente.Validating
+        'Revisamos si la caja de texto tiene caracteres de informacion o no
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Ingrese el primer apellido del cliente")
+        End If
+    End Sub
+
+    Private Sub txtApellido2Cliente_Validating(sender As Object, e As CancelEventArgs) Handles txtApellido2Cliente.Validating
+        'Revisamos si la caja de texto tiene caracteres de informacion o no
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Ingrese el segundo apellido del cliente")
+        End If
+    End Sub
+
+    Private Sub txtdireccionCliente_Validating(sender As Object, e As CancelEventArgs) Handles txtdireccionCliente.Validating
+        'Revisamos si la caja de texto tiene caracteres de informacion o no
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Ingrese la direccion del cliente")
+        End If
+    End Sub
+    Private Sub txtTelefonoClientes_Validating(sender As Object, e As CancelEventArgs) Handles txtTelefonoClientes.Validating
+        'Revisamos si la caja de texto tiene caracteres de informacion o no
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Ingrese el telefono del cliente")
+        End If
+    End Sub
+
+    'Proceso para limpiar los textbox cuando se registre un nuevo cliente
+    Public Sub limpiar()
+        BttGuardarCliente.Visible = True
+        BttEditarCliente.Visible = False
+        txtDUIClientes.Text = ""
+        txtNombreClientes.Text = ""
+        txtApellido1Cliente.Text = ""
+        txtApellido2Cliente.Text = ""
+        TxtApellido3.Text = ""
+        txtCorreoClientes.Text = ""
+        txtdireccionCliente.Text = ""
+        txtTelefonoClientes.Text = ""
+    End Sub
+
+    Private Sub BttAgregarCliente_Click(sender As Object, e As EventArgs) Handles BttAgregarCliente.Click
+        limpiar()
+        mostrar()
+    End Sub
+
+    Private Sub BttGuardarCliente_Click(sender As Object, e As EventArgs) Handles BttGuardarCliente.Click
+        'Condicion para validar que se hayan registrado datos en texboxs especificos
+        If Me.ValidateChildren = True And txtNombreClientes.Text <> "" And txtApellido1Cliente.Text <> "" And txtApellido2Cliente.Text <> "" And txtdireccionCliente.Text <> "" And txtTelefonoClientes.Text <> "" Then
+            Try
+                Dim dts As New vcliente
+                Dim func As New fcliente
+                dts.gDUI = txtDUIClientes.Text
+                dts.gnombres = txtNombreClientes.Text
+                dts.gprimerapellido = txtApellido1Cliente.Text
+                dts.gsegundoapellido = txtApellido2Cliente.Text
+                dts.gtercerapellido = TxtApellido3.Text
+                dts.gcorreo = txtCorreoClientes.Text
+                dts.gdireccion = txtdireccionCliente.Text
+                dts.gtelefono = txtTelefonoClientes.Text
+
+                If func.insertar(dts) Then
+                    MessageBox.Show("Datos registrados", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    mostrar()
+                    limpiar()
+                Else
+                    MessageBox.Show("Datos no registrados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    mostrar()
+                    limpiar()
+                End If
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Falto ingresar datos obligatorios", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
 End Class

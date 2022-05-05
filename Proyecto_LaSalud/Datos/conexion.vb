@@ -9,7 +9,7 @@ Public Class conexion
     'Funcion para conectarse a la base de datos
     Protected Function conectado()
         Try
-            cnn = New SqlConnection("Data Source=DESKTOP-F08PK5A\SQLEXPRESS01;Initial Catalog=dblasalud;Integrated Security=True")
+            cnn = New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=dblasalud;Integrated Security=True")
             cnn.Open()
             Return True
         Catch ex As Exception
@@ -32,8 +32,6 @@ Public Class conexion
             Return False
         End Try
     End Function
-
-
 
 
 End Class

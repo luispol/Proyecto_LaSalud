@@ -34,6 +34,12 @@ Public Class FormClientes
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
+    Private Sub DataGridViewClientes_MouseHover(sender As Object, e As EventArgs) Handles DataGridViewClientes.MouseHover
+        ToolTipCliente.SetToolTip(DataGridViewClientes, "Para editar o eliminar, seleccione un registro")
+        ToolTipCliente.ToolTipTitle = "Editar o Eliminar"
+        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
 
     Private dt As New DataTable
     'Preso al momento de cargar el formulario de clientes
@@ -74,9 +80,11 @@ Public Class FormClientes
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        BttAgregarCliente.Visible = True
-        BttGuardarCliente.Visible = False
-        BttEditarCliente.Visible = False
+        BttAgregarCliente.Enabled = True
+        BttGuardarCliente.Enabled = False
+        BttEditarCliente.Enabled = False
+        BttEditarCliente.Visible = True
+
 
         buscar()
 
@@ -172,6 +180,7 @@ Public Class FormClientes
         limpiar()
         mostrar()
         BttGuardarCliente.Visible = True
+        BttGuardarCliente.Enabled = True
         'activiacion de los textboxs
         txtIdClientes.Enabled = False
         txtDUIClientes.Enabled = True
@@ -229,5 +238,147 @@ Public Class FormClientes
             MessageBox.Show("Falto ingresar datos obligatorios", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         End If
+    End Sub
+
+    'Al hacer click en un registro de cliente en el DataGridView,
+    'los datos del cliente seleccionado se transladan a los text box correspondientes
+    Private Sub DataGridViewClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewClientes.CellClick
+
+        'MessageBox.Show("Edite los datos y para confirmar, pulse el botón EDITAR", "Editar registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'Cajas de texto
+        txtIdClientes.Text = DataGridViewClientes.SelectedCells.Item(1).Value
+        txtDUIClientes.Text = DataGridViewClientes.SelectedCells.Item(2).Value
+        txtNombreClientes.Text = DataGridViewClientes.SelectedCells.Item(3).Value
+        txtApellido1Cliente.Text = DataGridViewClientes.SelectedCells.Item(4).Value
+        txtApellido2Cliente.Text = DataGridViewClientes.SelectedCells.Item(5).Value
+        TxtApellido3.Text = DataGridViewClientes.SelectedCells.Item(6).Value
+        txtdireccionCliente.Text = DataGridViewClientes.SelectedCells.Item(7).Value
+        txtCorreoClientes.Text = DataGridViewClientes.SelectedCells.Item(8).Value
+        txtTelefonoClientes.Text = DataGridViewClientes.SelectedCells.Item(9).Value
+
+        'Habilitar el boton Editar
+        BttEditarCliente.Visible = True
+        BttEditarCliente.Enabled = True
+
+        'Desabilitar el boton Agregar
+        BttAgregarCliente.Enabled = False
+
+
+        'Habilitar los Text Box
+        txtIdClientes.Enabled = False
+        txtNombreClientes.Enabled = True
+        txtDUIClientes.Enabled = True
+        txtApellido1Cliente.Enabled = True
+        txtApellido2Cliente.Enabled = True
+        TxtApellido3.Enabled = True
+        txtdireccionCliente.Enabled = True
+        txtCorreoClientes.Enabled = True
+        txtTelefonoClientes.Enabled = True
+
+
+    End Sub
+
+    'BOTON EDITAR
+    Private Sub BttEditarCliente_Click(sender As Object, e As EventArgs) Handles BttEditarCliente.Click
+        Dim result As DialogResult
+        result = MessageBox.Show("¿Está seguro que quiere editar los datos del cliente?", "Modicando registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+
+            'Condicion para validar que se hayan registrado datos en texboxs especificos
+            If Me.ValidateChildren = True And txtNombreClientes.Text <> "" And txtApellido1Cliente.Text <> "" And txtApellido2Cliente.Text <> "" And txtdireccionCliente.Text <> "" And txtTelefonoClientes.Text <> "" And txtIdClientes.Text <> "" Then
+                Try
+                    Dim dts As New vcliente
+                    Dim func As New fcliente
+
+                    dts.gidcliente = txtIdClientes.Text
+                    dts.gDUI = txtDUIClientes.Text
+                    dts.gnombres = txtNombreClientes.Text
+                    dts.gprimerapellido = txtApellido1Cliente.Text
+                    dts.gsegundoapellido = txtApellido2Cliente.Text
+                    dts.gtercerapellido = TxtApellido3.Text
+                    dts.gcorreo = txtCorreoClientes.Text
+                    dts.gdireccion = txtdireccionCliente.Text
+                    dts.gtelefono = txtTelefonoClientes.Text
+
+                    If func.editar(dts) Then
+                        MessageBox.Show("Datos de Cliente modificado correctamente", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        mostrar()
+                        limpiar()
+                        txtIdClientes.Enabled = False
+                        txtDUIClientes.Enabled = False
+                        txtNombreClientes.Enabled = False
+                        txtApellido1Cliente.Enabled = False
+                        txtApellido2Cliente.Enabled = False
+                        TxtApellido3.Enabled = False
+                        txtCorreoClientes.Enabled = False
+                        txtdireccionCliente.Enabled = False
+                        txtTelefonoClientes.Enabled = False
+                        BttGuardarCliente.Visible = False
+
+
+                    Else
+                        MessageBox.Show("Datos no modificados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        mostrar()
+                        limpiar()
+                    End If
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            Else
+                MessageBox.Show("Falto ingresar datos obligatorios", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub cbeliminar_CheckedChanged(sender As Object, e As EventArgs) Handles cbeliminar.CheckedChanged
+        If cbeliminar.CheckState = CheckState.Checked Then
+            DataGridViewClientes.Columns.Item("Eliminar").Visible = True
+        Else
+            DataGridViewClientes.Columns.Item("Eliminar").Visible = False
+
+        End If
+    End Sub
+
+    Private Sub DataGridViewClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewClientes.CellContentClick
+        If e.ColumnIndex = Me.DataGridViewClientes.Columns.Item("Eliminar").Index Then
+            Dim chkcell As DataGridViewCheckBoxCell = Me.DataGridViewClientes.Rows(e.RowIndex).Cells("Eliminar")
+            chkcell.Value = Not chkcell.Value
+        End If
+    End Sub
+    'BOTON ELIMINAR
+    Private Sub BttEliminarCliente_Click(sender As Object, e As EventArgs) Handles BttEliminarCliente.Click
+        Dim result As DialogResult
+        result = MessageBox.Show("¿Está seguro que quiere eliminar a los clientes seleccionados?", "Eliminado registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+            Try
+                For Each row As DataGridViewRow In DataGridViewClientes.Rows
+                    Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Eliminar").Value)
+
+                    If marcado Then
+                        Dim onekey As Integer = Convert.ToInt32(row.Cells("idcliente").Value)
+                        Dim vdb As New vcliente
+                        Dim func As New fcliente
+                        vdb.gidcliente = onekey
+
+                        If func.eliminar(vdb) Then
+                        Else
+                            MessageBox.Show("El cliente no fue eliminado", "Eliminado registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End If
+                    End If
+                Next
+                Call mostrar()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Cancelando la eliminación de registros", "Eliminado registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call mostrar()
+        End If
+        Call limpiar()
+        BttAgregarCliente.Enabled = True
     End Sub
 End Class

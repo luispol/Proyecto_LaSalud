@@ -44,6 +44,8 @@ Partial Class FormClientes
         Me.PicBxEliminarCliente = New System.Windows.Forms.PictureBox()
         Me.PicBxGuardarCliente = New System.Windows.Forms.PictureBox()
         Me.ToolTipCliente = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DataGridViewClientes = New System.Windows.Forms.DataGridView()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BttEliminarCliente = New System.Windows.Forms.Button()
         Me.BttAgregarCliente = New System.Windows.Forms.Button()
@@ -57,22 +59,21 @@ Partial Class FormClientes
         Me.LabelDirec = New System.Windows.Forms.Label()
         Me.txtApellido2Cliente = New System.Windows.Forms.TextBox()
         Me.labelApellido2Cliente = New System.Windows.Forms.Label()
-        Me.DataGridViewClientes = New System.Windows.Forms.DataGridView()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbCampoCliente = New System.Windows.Forms.ComboBox()
         Me.txtBusquedaClientes = New System.Windows.Forms.TextBox()
         Me.linklblInexistente = New System.Windows.Forms.LinkLabel()
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.cbeliminar = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEditarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxEliminarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosCliente.SuspendLayout()
-        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -190,7 +191,7 @@ Partial Class FormClientes
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 562)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 637)
         Me.Panel1Clientes.TabIndex = 15
         '
         'PictureBox1
@@ -260,6 +261,30 @@ Partial Class FormClientes
         Me.PicBxGuardarCliente.TabIndex = 1
         Me.PicBxGuardarCliente.TabStop = False
         Me.ToolTipCliente.SetToolTip(Me.PicBxGuardarCliente, "Guardar el registro del cliente")
+        '
+        'DataGridViewClientes
+        '
+        Me.DataGridViewClientes.AllowUserToAddRows = False
+        Me.DataGridViewClientes.AllowUserToDeleteRows = False
+        Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
+        Me.DataGridViewClientes.Location = New System.Drawing.Point(706, 100)
+        Me.DataGridViewClientes.Name = "DataGridViewClientes"
+        Me.DataGridViewClientes.ReadOnly = True
+        Me.DataGridViewClientes.RowHeadersWidth = 51
+        Me.DataGridViewClientes.RowTemplate.Height = 25
+        Me.DataGridViewClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewClientes.Size = New System.Drawing.Size(602, 362)
+        Me.DataGridViewClientes.TabIndex = 23
+        Me.ToolTipCliente.SetToolTip(Me.DataGridViewClientes, "Para editar o eliminar, primero seleccione un registro")
+        '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.MinimumWidth = 6
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Width = 125
         '
         'GroupBox1
         '
@@ -401,43 +426,20 @@ Partial Class FormClientes
         Me.labelApellido2Cliente.TabIndex = 15
         Me.labelApellido2Cliente.Text = "Apellido 2 :"
         '
-        'DataGridViewClientes
-        '
-        Me.DataGridViewClientes.AllowUserToAddRows = False
-        Me.DataGridViewClientes.AllowUserToDeleteRows = False
-        Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
-        Me.DataGridViewClientes.Location = New System.Drawing.Point(706, 100)
-        Me.DataGridViewClientes.Name = "DataGridViewClientes"
-        Me.DataGridViewClientes.ReadOnly = True
-        Me.DataGridViewClientes.RowHeadersWidth = 51
-        Me.DataGridViewClientes.RowTemplate.Height = 25
-        Me.DataGridViewClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewClientes.Size = New System.Drawing.Size(602, 362)
-        Me.DataGridViewClientes.TabIndex = 23
-        '
-        'Eliminar
-        '
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.MinimumWidth = 6
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Width = 125
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(232, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(967, 22)
+        Me.Panel1.Size = New System.Drawing.Size(1088, 22)
         Me.Panel1.TabIndex = 24
         '
         'cbCampoCliente
         '
         Me.cbCampoCliente.FormattingEnabled = True
         Me.cbCampoCliente.Items.AddRange(New Object() {"DUI", "nombres", "primerapellido", "segundoapellido", "tercerapellido"})
-        Me.cbCampoCliente.Location = New System.Drawing.Point(706, 67)
+        Me.cbCampoCliente.Location = New System.Drawing.Point(706, 49)
         Me.cbCampoCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbCampoCliente.Name = "cbCampoCliente"
         Me.cbCampoCliente.Size = New System.Drawing.Size(222, 23)
@@ -446,10 +448,10 @@ Partial Class FormClientes
         '
         'txtBusquedaClientes
         '
-        Me.txtBusquedaClientes.Location = New System.Drawing.Point(961, 68)
+        Me.txtBusquedaClientes.Location = New System.Drawing.Point(934, 50)
         Me.txtBusquedaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBusquedaClientes.Name = "txtBusquedaClientes"
-        Me.txtBusquedaClientes.Size = New System.Drawing.Size(347, 23)
+        Me.txtBusquedaClientes.Size = New System.Drawing.Size(374, 23)
         Me.txtBusquedaClientes.TabIndex = 26
         '
         'linklblInexistente
@@ -466,11 +468,22 @@ Partial Class FormClientes
         '
         Me.erroricono.ContainerControl = Me
         '
+        'cbeliminar
+        '
+        Me.cbeliminar.AutoSize = True
+        Me.cbeliminar.Location = New System.Drawing.Point(706, 77)
+        Me.cbeliminar.Name = "cbeliminar"
+        Me.cbeliminar.Size = New System.Drawing.Size(69, 19)
+        Me.cbeliminar.TabIndex = 28
+        Me.cbeliminar.Text = "Eliminar"
+        Me.cbeliminar.UseVisualStyleBackColor = True
+        '
         'FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 562)
+        Me.ClientSize = New System.Drawing.Size(1320, 637)
+        Me.Controls.Add(Me.cbeliminar)
         Me.Controls.Add(Me.linklblInexistente)
         Me.Controls.Add(Me.txtBusquedaClientes)
         Me.Controls.Add(Me.cbCampoCliente)
@@ -490,11 +503,11 @@ Partial Class FormClientes
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxEliminarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBxDatosCliente.ResumeLayout(False)
         Me.GroupBxDatosCliente.PerformLayout()
-        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -540,4 +553,5 @@ Partial Class FormClientes
     Friend WithEvents linklblInexistente As LinkLabel
     Friend WithEvents Eliminar As DataGridViewCheckBoxColumn
     Friend WithEvents erroricono As ErrorProvider
+    Friend WithEvents cbeliminar As CheckBox
 End Class

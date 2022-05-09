@@ -25,6 +25,17 @@
         btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
+    'Proceso para el boton categorias
+    Private Sub btnCategorias_Click(sender As Object, e As EventArgs) Handles btnCategorias.Click
+        AbrirFormulario(Of FormCategorias)()
+        btnCategorias.BackColor = Color.FromArgb(12, 61, 92)
+        btnClientes.BackColor = Color.FromArgb(4, 41, 68)
+        btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
+        btnVentas.BackColor = Color.FromArgb(4, 41, 68)
+    End Sub
+
+
+
     'Proceso para abrir formularios
     Private Sub AbrirFormulario(Of Miform As {Form, New})()
         Dim formulario As Form
@@ -44,7 +55,5 @@
         End If
     End Sub
 
-    Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class

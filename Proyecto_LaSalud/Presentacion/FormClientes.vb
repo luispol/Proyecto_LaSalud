@@ -84,8 +84,7 @@ Public Class FormClientes
         BttGuardarCliente.Enabled = False
         BttEditarCliente.Enabled = False
         BttEditarCliente.Visible = True
-
-
+        BttEliminarCliente.Enabled = False
         buscar()
 
     End Sub
@@ -222,7 +221,10 @@ Public Class FormClientes
                     txtCorreoClientes.Enabled = False
                     txtdireccionCliente.Enabled = False
                     txtTelefonoClientes.Enabled = False
-                    BttGuardarCliente.Visible = False
+                    'Acciones de botones
+                    BttGuardarCliente.Enabled = False
+                    BttEditarCliente.Visible = True
+                    BttEditarCliente.Enabled = False
 
 
                 Else
@@ -260,8 +262,10 @@ Public Class FormClientes
         BttEditarCliente.Visible = True
         BttEditarCliente.Enabled = True
 
-        'Desabilitar el boton Agregar
+        'Desabilitar el boton Agregar, Guardar, Eliminar
         BttAgregarCliente.Enabled = False
+        BttGuardarCliente.Enabled = False
+        BttEliminarCliente.Enabled = False
 
 
         'Habilitar los Text Box
@@ -314,9 +318,14 @@ Public Class FormClientes
                         txtCorreoClientes.Enabled = False
                         txtdireccionCliente.Enabled = False
                         txtTelefonoClientes.Enabled = False
-                        BttGuardarCliente.Visible = False
-
-
+                        'Acciones de los botones
+                        BttAgregarCliente.Enabled = True
+                        BttEditarCliente.Visible = True
+                        BttGuardarCliente.Enabled = False
+                        'BttEditarCliente.Visible = True
+                        'BttEditarCliente.Enabled = False
+                        'BttEliminarCliente.Enabled = False
+                        limpiar()
                     Else
                         MessageBox.Show("Datos no modificados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         mostrar()
@@ -332,20 +341,30 @@ Public Class FormClientes
             End If
         End If
     End Sub
-
+    'Proceso para que muestre la columna que contiene los checkbox para seleccionar el registro a eliminar
     Private Sub cbeliminar_CheckedChanged(sender As Object, e As EventArgs) Handles cbeliminar.CheckedChanged
         If cbeliminar.CheckState = CheckState.Checked Then
             DataGridViewClientes.Columns.Item("Eliminar").Visible = True
+            BttEliminarCliente.Enabled = True
+            BttAgregarCliente.Enabled = False
+            BttEditarCliente.Enabled = False
+            BttGuardarCliente.Enabled = False
         Else
             DataGridViewClientes.Columns.Item("Eliminar").Visible = False
+            BttEliminarCliente.Enabled = False
+            BttAgregarCliente.Enabled = True
+            BttEditarCliente.Enabled = False
+            BttGuardarCliente.Enabled = False
 
         End If
-    End Sub
 
+    End Sub
+    'Proceso que muestra los checkbox de todas las filas de los registros
     Private Sub DataGridViewClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewClientes.CellContentClick
         If e.ColumnIndex = Me.DataGridViewClientes.Columns.Item("Eliminar").Index Then
             Dim chkcell As DataGridViewCheckBoxCell = Me.DataGridViewClientes.Rows(e.RowIndex).Cells("Eliminar")
             chkcell.Value = Not chkcell.Value
+            BttEliminarCliente.Enabled = True
         End If
     End Sub
     'BOTON ELIMINAR
@@ -365,8 +384,29 @@ Public Class FormClientes
                         vdb.gidcliente = onekey
 
                         If func.eliminar(vdb) Then
+                            cbeliminar.Checked = False
+                            txtIdClientes.Enabled = False
+                            txtDUIClientes.Enabled = False
+                            txtNombreClientes.Enabled = False
+                            txtApellido1Cliente.Enabled = False
+                            txtApellido2Cliente.Enabled = False
+                            TxtApellido3.Enabled = False
+                            txtCorreoClientes.Enabled = False
+                            txtdireccionCliente.Enabled = False
+                            txtTelefonoClientes.Enabled = False
+
                         Else
                             MessageBox.Show("El cliente no fue eliminado", "Eliminado registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            cbeliminar.Checked = False
+                            txtIdClientes.Enabled = False
+                            txtDUIClientes.Enabled = False
+                            txtNombreClientes.Enabled = False
+                            txtApellido1Cliente.Enabled = False
+                            txtApellido2Cliente.Enabled = False
+                            TxtApellido3.Enabled = False
+                            txtCorreoClientes.Enabled = False
+                            txtdireccionCliente.Enabled = False
+                            txtTelefonoClientes.Enabled = False
                         End If
                     End If
                 Next
@@ -376,9 +416,23 @@ Public Class FormClientes
             End Try
         Else
             MessageBox.Show("Cancelando la eliminación de registros", "Eliminado registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            cbeliminar.Checked = False
+            txtIdClientes.Enabled = False
+            txtDUIClientes.Enabled = False
+            txtNombreClientes.Enabled = False
+            txtApellido1Cliente.Enabled = False
+            txtApellido2Cliente.Enabled = False
+            TxtApellido3.Enabled = False
+            txtCorreoClientes.Enabled = False
+            txtdireccionCliente.Enabled = False
+            txtTelefonoClientes.Enabled = False
             Call mostrar()
         End If
         Call limpiar()
         BttAgregarCliente.Enabled = True
+        BttGuardarCliente.Enabled = False
+        BttEditarCliente.Enabled = False
+        BttEditarCliente.Visible = True
+        BttEliminarCliente.Enabled = False
     End Sub
 End Class

@@ -164,7 +164,7 @@ Public Class FormClientes
     'Proceso para limpiar los textbox cuando se registre un nuevo cliente
     Public Sub limpiar()
         'BttGuardarCliente.Visible = False
-        BttEditarCliente.Visible = False
+        txtIdClientes.Text = ""
         txtDUIClientes.Text = ""
         txtNombreClientes.Text = ""
         txtApellido1Cliente.Text = ""
@@ -178,7 +178,7 @@ Public Class FormClientes
     Private Sub BttAgregarCliente_Click(sender As Object, e As EventArgs) Handles BttAgregarCliente.Click
         limpiar()
         mostrar()
-        BttGuardarCliente.Visible = True
+        'Habilitar el boton guardar
         BttGuardarCliente.Enabled = True
         'activiacion de los textboxs
         txtIdClientes.Enabled = False
@@ -223,16 +223,11 @@ Public Class FormClientes
                     txtTelefonoClientes.Enabled = False
                     'Acciones de botones
                     BttGuardarCliente.Enabled = False
-                    BttEditarCliente.Visible = True
-                    BttEditarCliente.Enabled = False
-
-
                 Else
                     MessageBox.Show("Datos no registrados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
                     limpiar()
                 End If
-
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -259,7 +254,6 @@ Public Class FormClientes
         txtTelefonoClientes.Text = DataGridViewClientes.SelectedCells.Item(9).Value
 
         'Habilitar el boton Editar
-        BttEditarCliente.Visible = True
         BttEditarCliente.Enabled = True
 
         'Desabilitar el boton Agregar, Guardar, Eliminar
@@ -278,8 +272,6 @@ Public Class FormClientes
         txtdireccionCliente.Enabled = True
         txtCorreoClientes.Enabled = True
         txtTelefonoClientes.Enabled = True
-
-
     End Sub
 
     'BOTON EDITAR
@@ -308,7 +300,6 @@ Public Class FormClientes
                     If func.editar(dts) Then
                         MessageBox.Show("Datos de Cliente modificado correctamente", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         mostrar()
-                        limpiar()
                         txtIdClientes.Enabled = False
                         txtDUIClientes.Enabled = False
                         txtNombreClientes.Enabled = False
@@ -318,13 +309,7 @@ Public Class FormClientes
                         txtCorreoClientes.Enabled = False
                         txtdireccionCliente.Enabled = False
                         txtTelefonoClientes.Enabled = False
-                        'Acciones de los botones
-                        BttAgregarCliente.Enabled = True
-                        BttEditarCliente.Visible = True
-                        BttGuardarCliente.Enabled = False
-                        'BttEditarCliente.Visible = True
-                        'BttEditarCliente.Enabled = False
-                        'BttEliminarCliente.Enabled = False
+                        cbeliminar.Checked = False
                         limpiar()
                     Else
                         MessageBox.Show("Datos no modificados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -337,10 +322,38 @@ Public Class FormClientes
                 End Try
             Else
                 MessageBox.Show("Falto ingresar datos obligatorios", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                txtIdClientes.Enabled = False
+                txtDUIClientes.Enabled = False
+                txtNombreClientes.Enabled = False
+                txtApellido1Cliente.Enabled = False
+                txtApellido2Cliente.Enabled = False
+                TxtApellido3.Enabled = False
+                txtCorreoClientes.Enabled = False
+                txtdireccionCliente.Enabled = False
+                txtTelefonoClientes.Enabled = False
+                limpiar()
             End If
+        Else
+            MessageBox.Show("Cancelando los cambios del registro", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtIdClientes.Enabled = False
+            txtDUIClientes.Enabled = False
+            txtNombreClientes.Enabled = False
+            txtApellido1Cliente.Enabled = False
+            txtApellido2Cliente.Enabled = False
+            TxtApellido3.Enabled = False
+            txtCorreoClientes.Enabled = False
+            txtdireccionCliente.Enabled = False
+            txtTelefonoClientes.Enabled = False
+            cbeliminar.Checked = False
+            Call mostrar()
         End If
+        limpiar()
+        BttAgregarCliente.Enabled = True
+        BttGuardarCliente.Enabled = False
+        BttEditarCliente.Enabled = False
+        BttEliminarCliente.Enabled = False
     End Sub
+
     'Proceso para que muestre la columna que contiene los checkbox para seleccionar el registro a eliminar
     Private Sub cbeliminar_CheckedChanged(sender As Object, e As EventArgs) Handles cbeliminar.CheckedChanged
         If cbeliminar.CheckState = CheckState.Checked Then
@@ -430,9 +443,5 @@ Public Class FormClientes
         End If
         Call limpiar()
         BttAgregarCliente.Enabled = True
-        BttGuardarCliente.Enabled = False
-        BttEditarCliente.Enabled = False
-        BttEditarCliente.Visible = True
-        BttEliminarCliente.Enabled = False
     End Sub
 End Class

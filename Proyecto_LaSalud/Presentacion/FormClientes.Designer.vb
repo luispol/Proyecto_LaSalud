@@ -51,7 +51,6 @@ Partial Class FormClientes
         Me.BttAgregarCliente = New System.Windows.Forms.Button()
         Me.BttGuardarCliente = New System.Windows.Forms.Button()
         Me.BttEditarCliente = New System.Windows.Forms.Button()
-        Me.PicBx2RegistrosdeCliente = New System.Windows.Forms.PictureBox()
         Me.GroupBxDatosCliente = New System.Windows.Forms.GroupBox()
         Me.TxtApellido3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -72,7 +71,6 @@ Partial Class FormClientes
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosCliente.SuspendLayout()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -192,7 +190,7 @@ Partial Class FormClientes
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 581)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 620)
         Me.Panel1Clientes.TabIndex = 15
         '
         'PictureBox1
@@ -341,16 +339,6 @@ Partial Class FormClientes
         Me.BttEditarCliente.Text = "Editar"
         Me.BttEditarCliente.UseVisualStyleBackColor = True
         '
-        'PicBx2RegistrosdeCliente
-        '
-        Me.PicBx2RegistrosdeCliente.Image = CType(resources.GetObject("PicBx2RegistrosdeCliente.Image"), System.Drawing.Image)
-        Me.PicBx2RegistrosdeCliente.Location = New System.Drawing.Point(1270, 591)
-        Me.PicBx2RegistrosdeCliente.Name = "PicBx2RegistrosdeCliente"
-        Me.PicBx2RegistrosdeCliente.Size = New System.Drawing.Size(38, 38)
-        Me.PicBx2RegistrosdeCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicBx2RegistrosdeCliente.TabIndex = 22
-        Me.PicBx2RegistrosdeCliente.TabStop = False
-        '
         'GroupBxDatosCliente
         '
         Me.GroupBxDatosCliente.Controls.Add(Me.TxtApellido3)
@@ -483,7 +471,7 @@ Partial Class FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1327, 581)
+        Me.ClientSize = New System.Drawing.Size(1327, 620)
         Me.Controls.Add(Me.cbeliminar)
         Me.Controls.Add(Me.linklblInexistente)
         Me.Controls.Add(Me.txtBusquedaClientes)
@@ -494,7 +482,6 @@ Partial Class FormClientes
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.PicBx2RegistrosdeCliente)
         Me.Controls.Add(Me.Panel1Clientes)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormClientes"
@@ -506,7 +493,6 @@ Partial Class FormClientes
         CType(Me.PicBxGuardarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.PicBx2RegistrosdeCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBxDatosCliente.ResumeLayout(False)
         Me.GroupBxDatosCliente.PerformLayout()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
@@ -536,7 +522,6 @@ Partial Class FormClientes
     Friend WithEvents ToolTipCliente As ToolTip
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBxDatosCliente As GroupBox
-    Friend WithEvents PicBx2RegistrosdeCliente As PictureBox
     Friend WithEvents txtdireccionCliente As TextBox
     Friend WithEvents LabelDirec As Label
     Friend WithEvents txtApellido2Cliente As TextBox

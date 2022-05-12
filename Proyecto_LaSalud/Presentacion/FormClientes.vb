@@ -28,11 +28,11 @@ Public Class FormClientes
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON DE VER REGISTROS DE CLIENTE 
-    Private Sub PicBx2RegistrosdeCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBx2RegistrosdeCliente.MouseHover
-        ToolTipCliente.SetToolTip(PicBx2RegistrosdeCliente, "Ver los registros del cliente")
-        ToolTipCliente.ToolTipTitle = "Registros de Cliente"
-        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
-    End Sub
+    'Private Sub PicBx2RegistrosdeCliente_MouseHover(sender As Object, e As EventArgs)
+    '    ToolTipCliente.SetToolTip(PicBx2RegistrosdeCliente, "Ver los registros del cliente")
+    '    ToolTipCliente.ToolTipTitle = "Registros de Cliente"
+    '    ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+    'End Sub
 
     Private Sub DataGridViewClientes_MouseHover(sender As Object, e As EventArgs) Handles DataGridViewClientes.MouseHover
         ToolTipCliente.SetToolTip(DataGridViewClientes, "Para editar o eliminar, seleccione un registro")

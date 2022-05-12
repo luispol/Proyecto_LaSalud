@@ -34,18 +34,21 @@ Partial Class FormPrincipal
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxbottnVents, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFormularios.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.PanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelMenu.Controls.Add(Me.PictureBox2)
         Me.PanelMenu.Controls.Add(Me.btnCategorias)
         Me.PanelMenu.Controls.Add(Me.PictureBox1)
         Me.PanelMenu.Controls.Add(Me.PicBxbottnVents)
@@ -58,7 +61,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(232, 581)
+        Me.PanelMenu.Size = New System.Drawing.Size(232, 620)
         Me.PanelMenu.TabIndex = 0
         '
         'btnCategorias
@@ -69,7 +72,7 @@ Partial Class FormPrincipal
         Me.btnCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCategorias.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCategorias.Location = New System.Drawing.Point(-1, 311)
+        Me.btnCategorias.Location = New System.Drawing.Point(-1, 266)
         Me.btnCategorias.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCategorias.Name = "btnCategorias"
         Me.btnCategorias.Size = New System.Drawing.Size(232, 37)
@@ -90,7 +93,7 @@ Partial Class FormPrincipal
         'PicBxbottnVents
         '
         Me.PicBxbottnVents.Image = CType(resources.GetObject("PicBxbottnVents.Image"), System.Drawing.Image)
-        Me.PicBxbottnVents.Location = New System.Drawing.Point(3, 267)
+        Me.PicBxbottnVents.Location = New System.Drawing.Point(2, 311)
         Me.PicBxbottnVents.Name = "PicBxbottnVents"
         Me.PicBxbottnVents.Size = New System.Drawing.Size(39, 39)
         Me.PicBxbottnVents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -125,7 +128,7 @@ Partial Class FormPrincipal
         Me.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnVentas.Location = New System.Drawing.Point(-1, 267)
+        Me.btnVentas.Location = New System.Drawing.Point(-1, 311)
         Me.btnVentas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(232, 39)
@@ -173,7 +176,7 @@ Partial Class FormPrincipal
         Me.PanelFormularios.Location = New System.Drawing.Point(0, 0)
         Me.PanelFormularios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelFormularios.Name = "PanelFormularios"
-        Me.PanelFormularios.Size = New System.Drawing.Size(1327, 581)
+        Me.PanelFormularios.Size = New System.Drawing.Size(1327, 620)
         Me.PanelFormularios.TabIndex = 2
         '
         'Panel1
@@ -185,12 +188,22 @@ Partial Class FormPrincipal
         Me.Panel1.Size = New System.Drawing.Size(1327, 22)
         Me.Panel1.TabIndex = 0
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(2, 266)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(39, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1327, 581)
+        Me.ClientSize = New System.Drawing.Size(1327, 620)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.PanelFormularios)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -205,6 +218,7 @@ Partial Class FormPrincipal
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFormularios.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -220,4 +234,5 @@ Partial Class FormPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnCategorias As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

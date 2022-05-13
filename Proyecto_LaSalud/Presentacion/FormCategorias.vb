@@ -287,26 +287,34 @@
 
     'BOTON EDITAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxEditarClientes_MouseHover(sender As Object, e As EventArgs) Handles PicBxEditarCategoria.MouseHover
-        ToolTipCliente.SetToolTip(PicBxAgregarCategoria, "Editar el registro de la categoría")
-        ToolTipCliente.ToolTipTitle = "Editar"
-        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+        ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Editar el registro de la categoría")
+        ToolTipCategoria.ToolTipTitle = "Editar"
+        ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON GUARDAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxGuardarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxGuardarCategoria.MouseHover
-        ToolTipCliente.SetToolTip(PicBxAgregarCategoria, "Guardar el registro de la categoría")
-        ToolTipCliente.ToolTipTitle = "Guardar"
-        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+        ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Guardar el registro de la categoría")
+        ToolTipCategoria.ToolTipTitle = "Guardar"
+        ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON AGREGAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxAgregarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxAgregarCategoria.MouseHover
-        ToolTipCliente.SetToolTip(PicBxAgregarCategoria, "Agregar el registro de la categoría")
-        ToolTipCliente.ToolTipTitle = "Agregar"
-        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+        ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Agregar el registro de la categoría")
+        ToolTipCategoria.ToolTipTitle = "Agregar"
+        ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON ELIMINAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxEliminarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxEliminarCategoria.MouseHover
-        ToolTipCliente.SetToolTip(PicBxEliminarCategoria, "Eliminar el registro de la categoría")
-        ToolTipCliente.ToolTipTitle = "Eliminar"
-        ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
+        ToolTipCategoria.SetToolTip(PicBxEliminarCategoria, "Eliminar el registro de la categoría")
+        ToolTipCategoria.ToolTipTitle = "Eliminar"
+        ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Public Sub DataGridViewCategoria_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentDoubleClick
+        If txtflag.Text = "1" Then
+            FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
+            FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value
+            Me.Close()
+        End If
     End Sub
 End Class

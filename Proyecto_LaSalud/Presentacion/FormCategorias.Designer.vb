@@ -36,6 +36,7 @@ Partial Class FormCategorias
         Me.PicBxGuardarCategoria = New System.Windows.Forms.PictureBox()
         Me.PicBxAgregarCategoria = New System.Windows.Forms.PictureBox()
         Me.GroupBxDatosCategoria = New System.Windows.Forms.GroupBox()
+        Me.txtflag = New System.Windows.Forms.TextBox()
         Me.txtIdCategoria = New System.Windows.Forms.TextBox()
         Me.lblIdCategoria = New System.Windows.Forms.Label()
         Me.txtNombreCategoria = New System.Windows.Forms.TextBox()
@@ -45,7 +46,7 @@ Partial Class FormCategorias
         Me.cbCampoCategoria = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbeliminar = New System.Windows.Forms.CheckBox()
-        Me.ToolTipCliente = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTipCategoria = New System.Windows.Forms.ToolTip(Me.components)
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1Clientes = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -75,7 +76,7 @@ Partial Class FormCategorias
         Me.DataGridViewCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewCategoria.Size = New System.Drawing.Size(602, 362)
         Me.DataGridViewCategoria.TabIndex = 34
-        Me.ToolTipCliente.SetToolTip(Me.DataGridViewCategoria, "Para editar o eliminar, primero seleccione un registro")
+        Me.ToolTipCategoria.SetToolTip(Me.DataGridViewCategoria, "Para editar o eliminar, primero seleccione un registro")
         '
         'Eliminar
         '
@@ -149,7 +150,7 @@ Partial Class FormCategorias
         Me.PicBxEditarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEditarCategoria.TabIndex = 0
         Me.PicBxEditarCategoria.TabStop = False
-        Me.ToolTipCliente.SetToolTip(Me.PicBxEditarCategoria, "Editar el registro de la categoría")
+        Me.ToolTipCategoria.SetToolTip(Me.PicBxEditarCategoria, "Editar el registro de la categoría")
         '
         'PicBxEliminarCategoria
         '
@@ -161,7 +162,7 @@ Partial Class FormCategorias
         Me.PicBxEliminarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEliminarCategoria.TabIndex = 3
         Me.PicBxEliminarCategoria.TabStop = False
-        Me.ToolTipCliente.SetToolTip(Me.PicBxEliminarCategoria, "Eliminar el registro de la categoría")
+        Me.ToolTipCategoria.SetToolTip(Me.PicBxEliminarCategoria, "Eliminar el registro de la categoría")
         '
         'PicBxGuardarCategoria
         '
@@ -173,7 +174,7 @@ Partial Class FormCategorias
         Me.PicBxGuardarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxGuardarCategoria.TabIndex = 1
         Me.PicBxGuardarCategoria.TabStop = False
-        Me.ToolTipCliente.SetToolTip(Me.PicBxGuardarCategoria, "Guardar el registro de la categoría")
+        Me.ToolTipCategoria.SetToolTip(Me.PicBxGuardarCategoria, "Guardar el registro de la categoría")
         '
         'PicBxAgregarCategoria
         '
@@ -185,7 +186,7 @@ Partial Class FormCategorias
         Me.PicBxAgregarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxAgregarCategoria.TabIndex = 2
         Me.PicBxAgregarCategoria.TabStop = False
-        Me.ToolTipCliente.SetToolTip(Me.PicBxAgregarCategoria, "Agregar el registro de la categoría")
+        Me.ToolTipCategoria.SetToolTip(Me.PicBxAgregarCategoria, "Agregar el registro de la categoría")
         '
         'GroupBxDatosCategoria
         '
@@ -199,6 +200,15 @@ Partial Class FormCategorias
         Me.GroupBxDatosCategoria.TabIndex = 33
         Me.GroupBxDatosCategoria.TabStop = False
         Me.GroupBxDatosCategoria.Text = "Categorias"
+        '
+        'txtflag
+        '
+        Me.txtflag.Enabled = False
+        Me.txtflag.Location = New System.Drawing.Point(1284, 50)
+        Me.txtflag.Name = "txtflag"
+        Me.txtflag.Size = New System.Drawing.Size(24, 23)
+        Me.txtflag.TabIndex = 13
+        Me.txtflag.Text = "0"
         '
         'txtIdCategoria
         '
@@ -251,7 +261,7 @@ Partial Class FormCategorias
         Me.txtBusquedaCategoria.Location = New System.Drawing.Point(934, 50)
         Me.txtBusquedaCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBusquedaCategoria.Name = "txtBusquedaCategoria"
-        Me.txtBusquedaCategoria.Size = New System.Drawing.Size(374, 23)
+        Me.txtBusquedaCategoria.Size = New System.Drawing.Size(344, 23)
         Me.txtBusquedaCategoria.TabIndex = 37
         '
         'cbCampoCategoria
@@ -323,6 +333,7 @@ Partial Class FormCategorias
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1327, 620)
+        Me.Controls.Add(Me.txtflag)
         Me.Controls.Add(Me.DataGridViewCategoria)
         Me.Controls.Add(Me.GroupBoxAccionesDeRegsitroCategoria)
         Me.Controls.Add(Me.GroupBxDatosCategoria)
@@ -353,7 +364,7 @@ Partial Class FormCategorias
 
     Friend WithEvents DataGridViewCategoria As DataGridView
     Friend WithEvents Eliminar As DataGridViewCheckBoxColumn
-    Friend WithEvents ToolTipCliente As ToolTip
+    Friend WithEvents ToolTipCategoria As ToolTip
     Friend WithEvents GroupBoxAccionesDeRegsitroCategoria As GroupBox
     Friend WithEvents BttEliminarCategoria As Button
     Friend WithEvents BttAgregarCategoria As Button
@@ -377,4 +388,5 @@ Partial Class FormCategorias
     Friend WithEvents Panel1Clientes As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents txtflag As TextBox
 End Class

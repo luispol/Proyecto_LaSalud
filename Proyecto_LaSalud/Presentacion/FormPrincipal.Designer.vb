@@ -24,6 +24,7 @@ Partial Class FormPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnCategorias = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PicBxbottnVents = New System.Windows.Forms.PictureBox()
@@ -34,14 +35,13 @@ Partial Class FormPrincipal
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxbottnVents, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFormularios.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -63,6 +63,16 @@ Partial Class FormPrincipal
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(232, 620)
         Me.PanelMenu.TabIndex = 0
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(2, 266)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(39, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
         '
         'btnCategorias
         '
@@ -188,16 +198,6 @@ Partial Class FormPrincipal
         Me.Panel1.Size = New System.Drawing.Size(1327, 22)
         Me.Panel1.TabIndex = 0
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(2, 266)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(39, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
-        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -213,12 +213,12 @@ Partial Class FormPrincipal
         Me.Name = "FormPrincipal"
         Me.Text = "LA SALUD SYSTEM"
         Me.PanelMenu.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxbottnVents, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFormularios.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -42,7 +42,7 @@ Public Class FormClientes
 
 
     Private dt As New DataTable
-    'Preso al momento de cargar el formulario de clientes
+    'Proceso al momento de cargar el formulario de clientes
     Private Sub FormClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
         txtIdClientes.Enabled = False
@@ -368,6 +368,17 @@ Public Class FormClientes
             BttAgregarCliente.Enabled = True
             BttEditarCliente.Enabled = False
             BttGuardarCliente.Enabled = False
+            limpiar()
+            txtIdClientes.Enabled = False
+            txtDUIClientes.Enabled = False
+            txtNombreClientes.Enabled = False
+            txtApellido1Cliente.Enabled = False
+            txtApellido2Cliente.Enabled = False
+            TxtApellido3.Enabled = False
+            txtCorreoClientes.Enabled = False
+            txtdireccionCliente.Enabled = False
+            txtTelefonoClientes.Enabled = False
+
 
         End If
 

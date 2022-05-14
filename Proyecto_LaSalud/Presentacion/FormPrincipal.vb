@@ -7,6 +7,7 @@
         btnClientes.BackColor = Color.FromArgb(12, 61, 92)
         btnVentas.BackColor = Color.FromArgb(4, 41, 68)
         btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
+        btnCategorias.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     'Proceso para el boton Medicamentos
@@ -15,6 +16,7 @@
         btnMedicamentos.BackColor = Color.FromArgb(12, 61, 92)
         btnClientes.BackColor = Color.FromArgb(4, 41, 68)
         btnVentas.BackColor = Color.FromArgb(4, 41, 68)
+        btnCategorias.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     'Proceso para el boton ventas
@@ -23,6 +25,7 @@
         btnVentas.BackColor = Color.FromArgb(12, 61, 92)
         btnClientes.BackColor = Color.FromArgb(4, 41, 68)
         btnMedicamentos.BackColor = Color.FromArgb(4, 41, 68)
+        btnCategorias.BackColor = Color.FromArgb(4, 41, 68)
     End Sub
 
     'Proceso para el boton categorias
@@ -54,5 +57,6 @@
             formulario.BringToFront()
         End If
     End Sub
+
 
 End Class

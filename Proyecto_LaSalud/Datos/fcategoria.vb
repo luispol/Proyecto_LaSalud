@@ -26,7 +26,7 @@ Public Class fcategoria
         End Try
     End Function
 
-    'Funcion que recibe todos los datos de los objetos establecidos en vcliente 
+    'FUNCION INSERTAR
     Public Function insertar(ByVal dts As vcategoria) As Boolean
         Try
             conectado()

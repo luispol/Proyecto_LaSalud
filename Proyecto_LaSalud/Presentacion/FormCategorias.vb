@@ -2,17 +2,11 @@
 
 
     Private dt As New DataTable
-
+    'Proceso al momento de carga del formulario categorias
     Private Sub FormCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-    End Sub
-
-    'Preso al momento de cargar el formulario de clientes
-    Private Sub FormClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
         txtIdCategoria.Enabled = False
         txtNombreCategoria.Enabled = False
-
     End Sub
 
     'Proceso para mostar los datos en la tabla
@@ -72,9 +66,8 @@
         DataGridViewCategoria.Columns(1).Visible = False
     End Sub
 
-    'Procesos de los textbox para capturar la informacion del cliente
-
-    Private Sub txtNombreClientes_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtNombreCategoria.Validating
+    'Procesos de los textbox para capturar la informacion de la categoria
+    Private Sub txtNombreCategoria_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtNombreCategoria.Validating
         'Revisamos si la caja de texto tiene caracteres de informacion o no
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
@@ -85,12 +78,11 @@
 
     'Proceso para limpiar los textbox cuando se registre un nuevo cliente
     Public Sub limpiar()
-        'BttGuardarCliente.Visible = False
         txtIdCategoria.Text = ""
         txtNombreCategoria.Text = ""
     End Sub
     'Acciones al dar click al boton agregar
-    Private Sub BttAgregarCliente_Click(sender As Object, e As EventArgs) Handles BttAgregarCategoria.Click
+    Private Sub BttAgregarCategoria_Click(sender As Object, e As EventArgs) Handles BttAgregarCategoria.Click
         limpiar()
         mostrar()
         'Habilitar el boton guardar
@@ -101,7 +93,7 @@
 
     End Sub
 
-    Private Sub BttGuardarCliente_Click(sender As Object, e As EventArgs) Handles BttGuardarCategoria.Click
+    Private Sub BttGuardarCategoria_Click(sender As Object, e As EventArgs) Handles BttGuardarCategoria.Click
         'Condicion para validar que se hayan registrado datos en texboxs especificos
         If Me.ValidateChildren = True And txtNombreCategoria.Text <> "" Then
             Try
@@ -135,7 +127,7 @@
 
     'Al hacer click en un registro de cliente en el DataGridView,
     'los datos del cliente seleccionado se transladan a los text box correspondientes
-    Private Sub DataGridViewClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellClick
+    Private Sub DataGridViewCategoria_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellClick
 
         'MessageBox.Show("Edite los datos y para confirmar, pulse el botón EDITAR", "Editar registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'Cajas de texto
@@ -158,7 +150,7 @@
     End Sub
 
     'BOTON EDITAR
-    Private Sub BttEditarCliente_Click(sender As Object, e As EventArgs) Handles BttEditarCategoria.Click
+    Private Sub BBttEditarCategoria_Click(sender As Object, e As EventArgs) Handles BttEditarCategoria.Click
         Dim result As DialogResult
         result = MessageBox.Show("¿Está seguro que quiere editar el dato de la categoría?", "Modicando registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
@@ -224,12 +216,15 @@
             BttAgregarCategoria.Enabled = True
             BttEditarCategoria.Enabled = False
             BttGuardarCategoria.Enabled = False
+            limpiar()
+            txtIdCategoria.Enabled = False
+            txtNombreCategoria.Enabled = False
 
         End If
 
     End Sub
     'Proceso que muestra los checkbox de todas las filas de los registros
-    Private Sub DataGridViewClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentClick
+    Private Sub DataGridViewCategoria_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentClick
         If e.ColumnIndex = Me.DataGridViewCategoria.Columns.Item("Eliminar").Index Then
             Dim chkcell As DataGridViewCheckBoxCell = Me.DataGridViewCategoria.Rows(e.RowIndex).Cells("Eliminar")
             chkcell.Value = Not chkcell.Value
@@ -237,7 +232,7 @@
         End If
     End Sub
     'BOTON ELIMINAR
-    Private Sub BttEliminarCliente_Click(sender As Object, e As EventArgs) Handles BttEliminarCategoria.Click
+    Private Sub BttEliminarCategoria_Click(sender As Object, e As EventArgs) Handles BttEliminarCategoria.Click
         Dim result As DialogResult
         result = MessageBox.Show("¿Está seguro que quiere eliminar a las categorias seleccionadas?", "Eliminado registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
@@ -285,32 +280,40 @@
 
     '(CODIGO) MOSTRAR UN MENSAJE DE AYUDA PARA EL USUARIO
 
-    'BOTON EDITAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
-    Private Sub PicBxEditarClientes_MouseHover(sender As Object, e As EventArgs) Handles PicBxEditarCategoria.MouseHover
+    'BOTON EDITAR REGISTRO CATEGORIA (ACCIONES DE REGSITRO)
+    Private Sub PicBxEditarCategoria_MouseHover(sender As Object, e As EventArgs) Handles PicBxEditarCategoria.MouseHover
         ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Editar el registro de la categoría")
         ToolTipCategoria.ToolTipTitle = "Editar"
         ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
-    'BOTON GUARDAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
-    Private Sub PicBxGuardarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxGuardarCategoria.MouseHover
+    'BOTON GUARDAR REGISTRO CATEGORIA (ACCIONES DE REGSITRO)
+    Private Sub PicBxGuardarCategoria_MouseHover(sender As Object, e As EventArgs) Handles PicBxGuardarCategoria.MouseHover
         ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Guardar el registro de la categoría")
         ToolTipCategoria.ToolTipTitle = "Guardar"
         ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
-    'BOTON AGREGAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
-    Private Sub PicBxAgregarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxAgregarCategoria.MouseHover
+    'BOTON AGREGAR REGISTRO CATEGORIA (ACCIONES DE REGSITRO)
+    Private Sub PicBxAgregarCategoria_MouseHover(sender As Object, e As EventArgs) Handles PicBxAgregarCategoria.MouseHover
         ToolTipCategoria.SetToolTip(PicBxAgregarCategoria, "Agregar el registro de la categoría")
         ToolTipCategoria.ToolTipTitle = "Agregar"
         ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
-    'BOTON ELIMINAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
-    Private Sub PicBxEliminarCliente_MouseHover(sender As Object, e As EventArgs) Handles PicBxEliminarCategoria.MouseHover
+    'BOTON ELIMINAR REGISTRO CATEGORIA (ACCIONES DE REGSITRO)
+    Private Sub PicBxEliminarCategoria_MouseHover(sender As Object, e As EventArgs) Handles PicBxEliminarCategoria.MouseHover
         ToolTipCategoria.SetToolTip(PicBxEliminarCategoria, "Eliminar el registro de la categoría")
         ToolTipCategoria.ToolTipTitle = "Eliminar"
         ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
-    Public Sub DataGridViewCategoria_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentDoubleClick
+    'Public Sub DataGridViewCategoria_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentDoubleClick
+    '    If txtflag.Text = "1" Then
+    '        FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
+    '        FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value
+    '        Me.Close()
+    '    End If
+    'End Sub
+
+    Private Sub DataGridViewCategoria_CellDoubleClick(ByVal sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellDoubleClick
         If txtflag.Text = "1" Then
             FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
             FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value

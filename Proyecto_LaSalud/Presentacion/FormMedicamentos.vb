@@ -107,7 +107,7 @@ Public Class FormMedicamentos
     End Sub
 
     'Procesos de los textbox para capturar la informacion
-    Private Sub txtNombreMedicamento_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtNombreMedicamento.Validating
+    Private Sub txtNombreMedicamento_Validating(ByVal sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtNombreMedicamento.Validating
         'Revisamos si las cajas de texto tiene caracteres de informacion o no
 
         If DirectCast(sender, TextBox).Text.Length > 0 Then
@@ -116,42 +116,42 @@ Public Class FormMedicamentos
             Me.erroricono.SetError(sender, "Ingrese el nombre del medicamento")
         End If
     End Sub
-    Private Sub txtDescripcionMed_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtDescripcionMed.Validating
+    Private Sub txtDescripcionMed_Validating(ByVal sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtDescripcionMed.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
             Me.erroricono.SetError(sender, "Ingrese una descripción al medicamento")
         End If
     End Sub
-    Private Sub txtStock_Validating(sender As Object, e As CancelEventArgs) Handles txtStock.Validating
+    Private Sub txtStock_Validating(ByVal sender As Object, e As CancelEventArgs) Handles txtStock.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
             Me.erroricono.SetError(sender, "Debe ingresar el stock del medicamento")
         End If
     End Sub
-    Private Sub txtPrecioCompraMed_Validating(sender As Object, e As CancelEventArgs) Handles txtPrecioCompraMed.Validating
+    Private Sub txtPrecioCompraMed_Validating(ByVal sender As Object, e As CancelEventArgs) Handles txtPrecioCompraMed.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
             Me.erroricono.SetError(sender, "Ingrese el precio de compra al medicamento")
         End If
     End Sub
-    Private Sub txtPrecioVentaMed_Validating(sender As Object, e As CancelEventArgs) Handles txtPrecioVentaMed.Validating
+    Private Sub txtPrecioVentaMed_Validating(ByVal sender As Object, e As CancelEventArgs) Handles txtPrecioVentaMed.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
             Me.erroricono.SetError(sender, "Ingrese el precio de venta al medicamento")
         End If
     End Sub
-    Private Sub datefecha_vencimiento_Validating(sender As Object, e As CancelEventArgs) Handles datefecha_vencimiento.Validating
+    Private Sub datefecha_vencimiento_Validating(ByVal sender As Object, e As CancelEventArgs) Handles datefecha_vencimiento.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
             Me.erroricono.SetError(sender, "Ingrese la fecha de vencimiento del medicamento")
         End If
     End Sub
-    Private Sub Btn_CargarPic_Validating(sender As Object, e As CancelEventArgs) Handles Btn_CargarPic.Validating
+    Private Sub Btn_CargarPic_Validating(ByVal sender As Object, e As CancelEventArgs) Handles Btn_CargarPic.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
@@ -199,23 +199,22 @@ Public Class FormMedicamentos
         BttnSeleecionarCategoria.Enabled = True
         Btn_CargarPic.Enabled = True
         Btn_limpiarPic.Enabled = True
-
-
-
     End Sub
 
     Private Sub BttGuardarMedicamento_Click(sender As Object, e As EventArgs) Handles BttGuardarMedicamento.Click
         'Condicion para validar que se hayan registrado datos en texboxs especificos
-        If Me.ValidateChildren = True And txtidCategoria_med.Text <> "" And txtDescripcionMed.Text <> "" And txtStock.Text <> "" And txtPrecioCompraMed.Text <> "" And txtPrecioVentaMed.Text <> "" Then
+        If Me.ValidateChildren = True And txtNombreMedicamento.Text <> "" And txtDescripcionMed.Text <> "" And txtStock.Text <> "" And txtPrecioCompraMed.Text <> "" And txtPrecioVentaMed.Text <> "" Then
             Try
                 Dim dts As New vmedicamento
                 Dim func As New fmedicamentos
                 dts.gnombre = txtNombreMedicamento.Text
+                dts.gidcategoria = txtidCategoria_med.Text
                 dts.gdescripcion = txtDescripcionMed.Text
                 dts.gstock = txtStock.Text
                 dts.gprecio_compra = txtPrecioCompraMed.Text
                 dts.gprecio_venta = txtPrecioVentaMed.Text
                 dts.gfecha_vencimiento = datefecha_vencimiento.Text
+
 
 
                 Dim ms As New IO.MemoryStream()
@@ -262,7 +261,7 @@ Public Class FormMedicamentos
         End If
     End Sub
 
-    'Al hacer click en un registro de cliente en el DataGridView,
+    'Al hacer click en un registro de medicamentos en el DataGridView,
     'los datos del cliente seleccionado se transladan a los text box correspondientes
     Private Sub DataGridViewMedicamentos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMedicamentos.CellClick
 
@@ -320,6 +319,7 @@ Public Class FormMedicamentos
 
                     dts.gidmedicamento = txtIdMedicamento.Text
                     dts.gnombre = txtNombreMedicamento.Text
+                    dts.gidcategoria = txtidCategoria_med.Text
                     dts.gdescripcion = txtDescripcionMed.Text
                     dts.gstock = txtStock.Text
                     dts.gprecio_compra = txtPrecioCompraMed.Text
@@ -428,7 +428,7 @@ Public Class FormMedicamentos
                     Dim marcado As Boolean = Convert.ToBoolean(row.Cells("Eliminar").Value)
 
                     If marcado Then
-                        Dim onekey As Integer = Convert.ToInt32(row.Cells("idcliente").Value)
+                        Dim onekey As Integer = Convert.ToInt32(row.Cells("idmedicamento").Value)
                         Dim vdb As New vmedicamento
                         Dim func As New fmedicamentos
                         vdb.gidmedicamento = onekey
@@ -497,7 +497,7 @@ Public Class FormMedicamentos
 
     End Sub
 
-    Private Sub BttnSeleecionarCategoria_Click(sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
+    Private Sub BttnSeleecionarCategoria_Click(ByVal sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
         FormCategorias.txtflag.Text = "1"
         FormCategorias.ShowDialog()
     End Sub

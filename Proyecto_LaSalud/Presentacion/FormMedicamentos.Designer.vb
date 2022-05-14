@@ -288,8 +288,8 @@ Partial Class FormMedicamentos
         '
         'Imagen
         '
+        Me.Imagen.BackgroundImage = CType(resources.GetObject("Imagen.BackgroundImage"), System.Drawing.Image)
         Me.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Imagen.Image = Global.Proyecto_LaSalud.My.Resources.Resources.sin_imagen
         Me.Imagen.Location = New System.Drawing.Point(245, 287)
         Me.Imagen.Name = "Imagen"
         Me.Imagen.Size = New System.Drawing.Size(160, 134)

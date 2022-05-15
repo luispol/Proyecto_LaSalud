@@ -305,19 +305,11 @@
         ToolTipCategoria.ToolTipIcon = ToolTipIcon.Info
     End Sub
 
-    'Public Sub DataGridViewCategoria_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellContentDoubleClick
-    '    If txtflag.Text = "1" Then
-    '        FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
-    '        FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value
-    '        Me.Close()
-    '    End If
-    'End Sub
-
-    Public Sub DataGridViewCategoria_CellDoubleClick(ByVal sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellDoubleClick
-        If txtflag.Text = "1" Then
-            FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
-            FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value
-            Me.Close()
-        End If
+    Private Sub DataGridViewCategoria_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellDoubleClick
+        Dim frm As FormMedicamentos = CType(Owner, FormMedicamentos)
+        frm.txtidCategoria_med.Text = DataGridViewCategoria.CurrentRow.Cells(1).Value
+        frm.txtNom_Categoria.Text = DataGridViewCategoria.CurrentRow.Cells(2).Value
+        Me.Close()
     End Sub
+
 End Class

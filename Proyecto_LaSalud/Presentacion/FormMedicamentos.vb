@@ -191,7 +191,7 @@ Public Class FormMedicamentos
         txtIdMedicamento.Enabled = False
         txtNombreMedicamento.Enabled = True
         txtNom_Categoria.Enabled = False
-        txtidCategoria_med.Enabled = True
+        txtidCategoria_med.Enabled = False
         txtDescripcionMed.Enabled = True
         txtStock.Enabled = True
         txtPrecioCompraMed.Enabled = True
@@ -498,12 +498,11 @@ Public Class FormMedicamentos
 
     End Sub
 
-    Public Sub BttnSeleecionarCategoria_Click(ByVal sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
-        FormCategorias.txtflag.Text = "1"
-        FormCategorias.ShowDialog()
+    Private Sub BttnSeleecionarCategoria_Click(ByVal sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
+        Dim frm As New FormCategorias
+        AddOwnedForm(frm)
+        frm.ShowDialog()
     End Sub
 
-    'Public Sub cargarMedicamento(idCat As Integer, nomCat As String) Implements Interface1.cargarMedicamento
-    '    Throw New NotImplementedException()
-    'End Sub
+
 End Class

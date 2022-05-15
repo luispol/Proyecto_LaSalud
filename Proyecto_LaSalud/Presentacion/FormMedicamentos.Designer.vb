@@ -329,7 +329,7 @@ Partial Class FormMedicamentos
         Me.BttnSeleecionarCategoria.Location = New System.Drawing.Point(424, 163)
         Me.BttnSeleecionarCategoria.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BttnSeleecionarCategoria.Name = "BttnSeleecionarCategoria"
-        Me.BttnSeleecionarCategoria.Size = New System.Drawing.Size(39, 31)
+        Me.BttnSeleecionarCategoria.Size = New System.Drawing.Size(39, 27)
         Me.BttnSeleecionarCategoria.TabIndex = 23
         Me.BttnSeleecionarCategoria.Text = "..."
         Me.BttnSeleecionarCategoria.UseVisualStyleBackColor = True
@@ -565,10 +565,8 @@ Partial Class FormMedicamentos
         Me.lnkInexistente.AutoSize = True
         Me.lnkInexistente.Location = New System.Drawing.Point(1113, 409)
         Me.lnkInexistente.Name = "lnkInexistente"
-        Me.lnkInexistente.Size = New System.Drawing.Size(129, 20)
+        Me.lnkInexistente.Size = New System.Drawing.Size(0, 20)
         Me.lnkInexistente.TabIndex = 40
-        Me.lnkInexistente.TabStop = True
-        Me.lnkInexistente.Text = "Datos inexistentes"
         '
         'FormMedicamentos
         '
@@ -631,7 +629,6 @@ Partial Class FormMedicamentos
     Friend WithEvents txtIdMedicamento As TextBox
     Friend WithEvents lblIdMedicamento As Label
     Friend WithEvents lblnombreMed As Label
-    Friend WithEvents txtidCategoria_med As TextBox
     Friend WithEvents labelCategoria As Label
     Friend WithEvents lblimagen As Label
     Friend WithEvents txtDescripcionMed As TextBox
@@ -648,7 +645,6 @@ Partial Class FormMedicamentos
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BttnSeleecionarCategoria As Button
-    Friend WithEvents txtNom_Categoria As TextBox
     Friend WithEvents datefecha_vencimiento As DateTimePicker
     Friend WithEvents Imagen As PictureBox
     Friend WithEvents Panel2 As Panel
@@ -656,4 +652,6 @@ Partial Class FormMedicamentos
     Friend WithEvents Btn_limpiarPic As PictureBox
     Friend WithEvents OpenFileDialogMed As OpenFileDialog
     Friend WithEvents lnkInexistente As LinkLabel
+    Public WithEvents txtidCategoria_med As TextBox
+    Public WithEvents txtNom_Categoria As TextBox
 End Class

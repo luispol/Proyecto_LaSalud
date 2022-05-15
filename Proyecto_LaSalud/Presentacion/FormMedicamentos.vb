@@ -191,7 +191,7 @@ Public Class FormMedicamentos
         txtIdMedicamento.Enabled = False
         txtNombreMedicamento.Enabled = True
         txtNom_Categoria.Enabled = False
-        txtidCategoria_med.Enabled = False
+        txtidCategoria_med.Enabled = True
         txtDescripcionMed.Enabled = True
         txtStock.Enabled = True
         txtPrecioCompraMed.Enabled = True
@@ -320,7 +320,7 @@ Public Class FormMedicamentos
 
                     dts.gidmedicamento = txtIdMedicamento.Text
                     dts.gnombre = txtNombreMedicamento.Text
-                    'dts.gidcategoria = txtidCategoria_med.Text
+                    dts.gidcategoria = txtidCategoria_med.Text
                     dts.gdescripcion = txtDescripcionMed.Text
                     dts.gstock = txtStock.Text
                     dts.gprecio_compra = txtPrecioCompraMed.Text
@@ -498,7 +498,7 @@ Public Class FormMedicamentos
 
     End Sub
 
-    Private Sub BttnSeleecionarCategoria_Click(ByVal sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
+    Public Sub BttnSeleecionarCategoria_Click(ByVal sender As Object, e As EventArgs) Handles BttnSeleecionarCategoria.Click
         FormCategorias.txtflag.Text = "1"
         FormCategorias.ShowDialog()
     End Sub

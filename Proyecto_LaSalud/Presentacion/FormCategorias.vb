@@ -313,7 +313,7 @@
     '    End If
     'End Sub
 
-    Private Sub DataGridViewCategoria_CellDoubleClick(ByVal sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellDoubleClick
+    Public Sub DataGridViewCategoria_CellDoubleClick(ByVal sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCategoria.CellDoubleClick
         If txtflag.Text = "1" Then
             FormMedicamentos.txtidCategoria_med.Text = DataGridViewCategoria.SelectedCells.Item(1).Value
             FormMedicamentos.txtNom_Categoria.Text = DataGridViewCategoria.SelectedCells.Item(2).Value

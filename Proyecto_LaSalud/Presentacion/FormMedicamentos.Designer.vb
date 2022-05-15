@@ -70,6 +70,7 @@ Partial Class FormMedicamentos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialogMed = New System.Windows.Forms.OpenFileDialog()
+        Me.lnkInexistente = New System.Windows.Forms.LinkLabel()
         CType(Me.DataGridViewMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxAccionesdeRegistroMedicamentos.SuspendLayout()
         CType(Me.PicBxEditarMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -559,11 +560,22 @@ Partial Class FormMedicamentos
         '
         Me.OpenFileDialogMed.FileName = "OpenFileDialog1"
         '
+        'lnkInexistente
+        '
+        Me.lnkInexistente.AutoSize = True
+        Me.lnkInexistente.Location = New System.Drawing.Point(1113, 409)
+        Me.lnkInexistente.Name = "lnkInexistente"
+        Me.lnkInexistente.Size = New System.Drawing.Size(129, 20)
+        Me.lnkInexistente.TabIndex = 40
+        Me.lnkInexistente.TabStop = True
+        Me.lnkInexistente.Text = "Datos inexistentes"
+        '
         'FormMedicamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1509, 825)
+        Me.Controls.Add(Me.lnkInexistente)
         Me.Controls.Add(Me.DataGridViewMedicamentos)
         Me.Controls.Add(Me.GroupBoxAccionesdeRegistroMedicamentos)
         Me.Controls.Add(Me.GroupBxDatosMedicametos)
@@ -643,4 +655,5 @@ Partial Class FormMedicamentos
     Friend WithEvents Btn_CargarPic As PictureBox
     Friend WithEvents Btn_limpiarPic As PictureBox
     Friend WithEvents OpenFileDialogMed As OpenFileDialog
+    Friend WithEvents lnkInexistente As LinkLabel
 End Class

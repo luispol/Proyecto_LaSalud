@@ -27,11 +27,11 @@ Public Class fmedicamentos
         End Try
     End Function
 
-    'Funcion que recibe todos los datos de los objetos establecidos en vcliente 
+    'Funcion que recibe todos los datos de los objetos establecidos en vmedicamento
     Public Function insertar(ByVal dts As vmedicamento) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("insertar_medicamento")
+            cmd = New SqlCommand("insertar_medicamentos")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
 
@@ -39,8 +39,8 @@ Public Class fmedicamentos
             cmd.Parameters.AddWithValue("@nombre", dts.gnombre)
             cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
             cmd.Parameters.AddWithValue("@stock", dts.gstock)
-            cmd.Parameters.AddWithValue("@precio_venta", dts.gprecio_venta)
             cmd.Parameters.AddWithValue("@precio_compra", dts.gprecio_compra)
+            cmd.Parameters.AddWithValue("@precio_venta", dts.gprecio_venta)
             cmd.Parameters.AddWithValue("@fecha_vencimiento", dts.gfecha_vencimiento)
             cmd.Parameters.AddWithValue("@imagen", dts.gimagen)
             'condicional si verifica si se ejectura la instruccion SQL
@@ -70,8 +70,8 @@ Public Class fmedicamentos
             cmd.Parameters.AddWithValue("@nombre", dts.gnombre)
             cmd.Parameters.AddWithValue("@descripcion", dts.gdescripcion)
             cmd.Parameters.AddWithValue("@stock", dts.gstock)
-            cmd.Parameters.AddWithValue("@precio_venta", dts.gprecio_venta)
             cmd.Parameters.AddWithValue("@precio_compra", dts.gprecio_compra)
+            cmd.Parameters.AddWithValue("@precio_venta", dts.gprecio_venta)
             cmd.Parameters.AddWithValue("@fecha_vencimiento", dts.gfecha_vencimiento)
             cmd.Parameters.AddWithValue("@imagen", dts.gimagen)
             'condicional si verifica si se ejectura la instruccion SQL

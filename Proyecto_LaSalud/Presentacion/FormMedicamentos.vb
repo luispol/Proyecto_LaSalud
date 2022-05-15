@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class FormMedicamentos
+
     '(CODIGO) MOSTRAR UN MENSAJE DE AYUDA PARA EL USUARIO
 
     'BOTON EDITAR REGISTRO DE MEDICAMENTO (ACCIONES DE REGSITRO)
@@ -58,12 +59,12 @@ Public Class FormMedicamentos
                 DataGridViewMedicamentos.DataSource = dt
                 txtBusquedaMedicamentos.Enabled = True
                 DataGridViewMedicamentos.ColumnHeadersVisible = True
-                linklblInexistente.Enabled = False
+                lnkInexistente.Enabled = False
             Else
                 DataGridViewMedicamentos.DataSource = Nothing
                 txtBusquedaMedicamentos.Enabled = False
                 DataGridViewMedicamentos.ColumnHeadersVisible = False
-                linklblInexistente.Enabled = True
+                lnkInexistente.Enabled = True
 
             End If
 
@@ -144,20 +145,20 @@ Public Class FormMedicamentos
             Me.erroricono.SetError(sender, "Ingrese el precio de venta al medicamento")
         End If
     End Sub
-    Private Sub datefecha_vencimiento_Validating(ByVal sender As Object, e As CancelEventArgs) Handles datefecha_vencimiento.Validating
-        If DirectCast(sender, TextBox).Text.Length > 0 Then
-            Me.erroricono.SetError(sender, "")
-        Else
-            Me.erroricono.SetError(sender, "Ingrese la fecha de vencimiento del medicamento")
-        End If
-    End Sub
-    Private Sub Btn_CargarPic_Validating(ByVal sender As Object, e As CancelEventArgs) Handles Btn_CargarPic.Validating
-        If DirectCast(sender, TextBox).Text.Length > 0 Then
-            Me.erroricono.SetError(sender, "")
-        Else
-            Me.erroricono.SetError(sender, "Ingrese la categoría a la que pertecene el medicamento")
-        End If
-    End Sub
+    'Private Sub datefecha_vencimiento_Validating(ByVal sender As Object, e As CancelEventArgs) Handles datefecha_vencimiento.Validating
+    '    If DirectCast(sender, TextBox).Text.Length > 0 Then
+    '        Me.erroricono.SetError(sender, "")
+    '    Else
+    '        Me.erroricono.SetError(sender, "Ingrese la fecha de vencimiento del medicamento")
+    '    End If
+    'End Sub
+    'Private Sub Btn_CargarPic_Validating(ByVal sender As Object, e As CancelEventArgs) Handles Btn_CargarPic.Validating
+    '    If DirectCast(sender, TextBox).Text.Length > 0 Then
+    '        Me.erroricono.SetError(sender, "")
+    '    Else
+    '        Me.erroricono.SetError(sender, "Ingrese la categoría a la que pertecene el medicamento")
+    '    End If
+    'End Sub
 
 
 
@@ -262,7 +263,7 @@ Public Class FormMedicamentos
     End Sub
 
     'Al hacer click en un registro de medicamentos en el DataGridView,
-    'los datos del cliente seleccionado se transladan a los text box correspondientes
+    'los datos del medicamento seleccionado se transladan a los text box correspondientes
     Private Sub DataGridViewMedicamentos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMedicamentos.CellClick
 
         'MessageBox.Show("Edite los datos y para confirmar, pulse el botón EDITAR", "Editar registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -273,8 +274,8 @@ Public Class FormMedicamentos
         txtNombreMedicamento.Text = DataGridViewMedicamentos.SelectedCells.Item(4).Value
         txtDescripcionMed.Text = DataGridViewMedicamentos.SelectedCells.Item(5).Value
         txtStock.Text = DataGridViewMedicamentos.SelectedCells.Item(6).Value
-        txtPrecioVentaMed.Text = DataGridViewMedicamentos.SelectedCells.Item(7).Value
-        txtPrecioCompraMed.Text = DataGridViewMedicamentos.SelectedCells.Item(8).Value
+        txtPrecioCompraMed.Text = DataGridViewMedicamentos.SelectedCells.Item(7).Value
+        txtPrecioVentaMed.Text = DataGridViewMedicamentos.SelectedCells.Item(8).Value
         datefecha_vencimiento.Text = DataGridViewMedicamentos.SelectedCells.Item(9).Value
 
         Imagen.BackgroundImage = Nothing
@@ -312,14 +313,14 @@ Public Class FormMedicamentos
         If result = DialogResult.OK Then
 
             'Condicion para validar que se hayan registrado datos en texboxs especificos
-            If Me.ValidateChildren = True And txtidCategoria_med.Text <> "" And txtDescripcionMed.Text <> "" And txtStock.Text <> "" And txtPrecioCompraMed.Text <> "" And txtPrecioVentaMed.Text <> "" And txtIdMedicamento.Text <> "" Then
+            If Me.ValidateChildren = True And txtNombreMedicamento.Text <> "" And txtDescripcionMed.Text <> "" And txtStock.Text <> "" And txtPrecioCompraMed.Text <> "" And txtPrecioVentaMed.Text <> "" And txtIdMedicamento.Text <> "" Then
                 Try
                     Dim dts As New vmedicamento
                     Dim func As New fmedicamentos
 
                     dts.gidmedicamento = txtIdMedicamento.Text
                     dts.gnombre = txtNombreMedicamento.Text
-                    dts.gidcategoria = txtidCategoria_med.Text
+                    'dts.gidcategoria = txtidCategoria_med.Text
                     dts.gdescripcion = txtDescripcionMed.Text
                     dts.gstock = txtStock.Text
                     dts.gprecio_compra = txtPrecioCompraMed.Text
@@ -501,4 +502,8 @@ Public Class FormMedicamentos
         FormCategorias.txtflag.Text = "1"
         FormCategorias.ShowDialog()
     End Sub
+
+    'Public Sub cargarMedicamento(idCat As Integer, nomCat As String) Implements Interface1.cargarMedicamento
+    '    Throw New NotImplementedException()
+    'End Sub
 End Class

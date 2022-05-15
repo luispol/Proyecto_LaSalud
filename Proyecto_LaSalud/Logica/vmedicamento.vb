@@ -96,18 +96,18 @@
                     ByVal nombre As String,
                     ByVal descripcion As String,
                     ByVal stock As Double,
-                    ByVal precio_venta As Double,
                     ByVal precio_compra As Double,
+                    ByVal precio_venta As Double,
                     ByVal fecha_vencimiento As Date,
-                    ByVal imagen As Byte)
+                    ByVal imagen() As Byte)
 
         gidmedicamento = idmedicamento
         gidcategoria = idcategoria
         gnombre = nombre
         gdescripcion = descripcion
         gstock = stock
-        gprecio_venta = precio_venta
         gprecio_compra = precio_compra
+        gprecio_venta = precio_venta
         gfecha_vencimiento = fecha_vencimiento
         gimagen = imagen
 

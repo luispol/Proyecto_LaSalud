@@ -463,4 +463,8 @@ Public Class FormClientes
         frmven.txtApellido2_cliente.Text = DataGridViewClientes.CurrentRow.Cells(5).Value
         Me.Close()
     End Sub
+
+    Private Sub txtBusquedaClientes_TextChanged(sender As Object, e As EventArgs) Handles txtBusquedaClientes.TextChanged
+        buscar()
+    End Sub
 End Class

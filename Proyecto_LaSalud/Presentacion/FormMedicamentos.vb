@@ -504,5 +504,7 @@ Public Class FormMedicamentos
         frm.ShowDialog()
     End Sub
 
-
+    Private Sub txtBusquedaMedicamentos_TextChanged(sender As Object, e As EventArgs) Handles txtBusquedaMedicamentos.TextChanged
+        buscar()
+    End Sub
 End Class

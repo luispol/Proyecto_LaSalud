@@ -6,25 +6,25 @@
 
     'BOTON EDITAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxEditarClientes_MouseHover(sender As Object, e As EventArgs)
-        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Editar el registro del cliente")
+        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Editar el registro de la venta")
         ToolTipCliente.ToolTipTitle = "Editar"
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON GUARDAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxGuardarCliente_MouseHover(sender As Object, e As EventArgs)
-        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Guardar el registro del cliente")
+        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Guardar el registro de la venta")
         ToolTipCliente.ToolTipTitle = "Guardar"
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON AGREGAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxAgregarCliente_MouseHover(sender As Object, e As EventArgs)
-        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Agregar el registro del cliente")
+        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Agregar el registro de la venta")
         ToolTipCliente.ToolTipTitle = "Agregar"
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
     'BOTON ELIMINAR REGISTRO CLIENTE (ACCIONES DE REGSITRO)
     Private Sub PicBxEliminarCliente_MouseHover(sender As Object, e As EventArgs)
-        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Eliminar el registro del cliente")
+        ToolTipCliente.SetToolTip(PicBxAgregarCliente, "Eliminar el registro de la venta")
         ToolTipCliente.ToolTipTitle = "Eliminar"
         ToolTipCliente.ToolTipIcon = ToolTipIcon.Info
     End Sub
@@ -49,6 +49,7 @@
         txtApellido2_cliente.Enabled = False
         txtFecha_venta.Enabled = False
         cbFormaPago.Enabled = False
+        btnBuscar_cliente.Enabled = False
     End Sub
 
     Private Sub mostrar()
@@ -127,9 +128,10 @@
         txtApellido2_cliente.Enabled = False
         txtFecha_venta.Enabled = True
         cbFormaPago.Enabled = True
+        btnBuscar_cliente.Enabled = True
     End Sub
 
-    Private Sub BttGuardarVenta_Click(sender As Object, e As EventArgs)
+    Private Sub BttGuardarVenta_Click_1(sender As Object, e As EventArgs) Handles BttGuardarVenta.Click
         'Condicion para validar que se hayan registrado datos en texboxs especificos
         If Me.ValidateChildren = True And txtIdCliente.Text <> "" And txtApellido1_cliente.Text <> "" And cbFormaPago.Text <> "" Then
             Try
@@ -198,7 +200,7 @@
     End Sub
 
     'BOTON EDITAR
-    Private Sub BttEditarVenta_Click(sender As Object, e As EventArgs)
+    Private Sub BttEditarVenta_Click_1(sender As Object, e As EventArgs) Handles BttEditarVenta.Click
         Dim result As DialogResult
         result = MessageBox.Show("¿Está seguro que quiere editar los datos de la venta?", "Modicando registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 

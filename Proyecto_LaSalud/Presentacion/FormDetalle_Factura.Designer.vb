@@ -39,12 +39,11 @@ Partial Class FormDetalle_Factura
         Me.DataGridViewVentas = New System.Windows.Forms.DataGridView()
         Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.linklblInexistente = New System.Windows.Forms.LinkLabel()
-        Me.txtBusquedaventas = New System.Windows.Forms.TextBox()
-        Me.cbCampoVenta = New System.Windows.Forms.ComboBox()
+        Me.txtBusquedaDetalle_factura = New System.Windows.Forms.TextBox()
+        Me.cbCampoDetalle_factura = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbeliminar = New System.Windows.Forms.CheckBox()
         Me.txtFecha_venta = New System.Windows.Forms.DateTimePicker()
-        Me.btnBuscar_cliente = New System.Windows.Forms.Button()
         Me.labelApellido2Cliente = New System.Windows.Forms.Label()
         Me.txtno_factura = New System.Windows.Forms.TextBox()
         Me.lblno_factura = New System.Windows.Forms.Label()
@@ -52,9 +51,21 @@ Partial Class FormDetalle_Factura
         Me.lblidcliente_venta = New System.Windows.Forms.Label()
         Me.lblFecha_venta = New System.Windows.Forms.Label()
         Me.GroupBxDatosVentas = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtApellido1_cliente = New System.Windows.Forms.TextBox()
+        Me.txtStock = New System.Windows.Forms.NumericUpDown()
+        Me.txtCantidad = New System.Windows.Forms.NumericUpDown()
+        Me.txtPrecioUnitario = New System.Windows.Forms.TextBox()
+        Me.lblPrecio_Unitario = New System.Windows.Forms.Label()
+        Me.lblStock = New System.Windows.Forms.Label()
+        Me.lblCantidad = New System.Windows.Forms.Label()
+        Me.txtNombre_Medicamento = New System.Windows.Forms.TextBox()
+        Me.btnBuscar_Medicamento = New System.Windows.Forms.Button()
+        Me.txtIdMedicamento = New System.Windows.Forms.TextBox()
+        Me.lblMedicamento = New System.Windows.Forms.Label()
         Me.txtApellido2_cliente = New System.Windows.Forms.TextBox()
+        Me.txtApellido1_cliente = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BttEliminarDetalle_factura = New System.Windows.Forms.Button()
+        Me.PicBxEliminarCategoria = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -63,6 +74,9 @@ Partial Class FormDetalle_Factura
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosVentas.SuspendLayout()
+        CType(Me.txtStock, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicBxEliminarCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1Clientes
@@ -92,9 +106,10 @@ Partial Class FormDetalle_Factura
         '
         'cbFormaPago
         '
+        Me.cbFormaPago.Enabled = False
         Me.cbFormaPago.FormattingEnabled = True
         Me.cbFormaPago.Items.AddRange(New Object() {"Efectivo", "BITCOIN", "Tarjeta de credito"})
-        Me.cbFormaPago.Location = New System.Drawing.Point(126, 225)
+        Me.cbFormaPago.Location = New System.Drawing.Point(126, 176)
         Me.cbFormaPago.Name = "cbFormaPago"
         Me.cbFormaPago.Size = New System.Drawing.Size(255, 28)
         Me.cbFormaPago.TabIndex = 34
@@ -102,6 +117,8 @@ Partial Class FormDetalle_Factura
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BttEliminarDetalle_factura)
+        Me.GroupBox1.Controls.Add(Me.PicBxEliminarCategoria)
         Me.GroupBox1.Controls.Add(Me.BttAgregarVenta)
         Me.GroupBox1.Controls.Add(Me.BttGuardarVenta)
         Me.GroupBox1.Controls.Add(Me.BttEditarVenta)
@@ -109,7 +126,7 @@ Partial Class FormDetalle_Factura
         Me.GroupBox1.Controls.Add(Me.PicBxGuardarCliente)
         Me.GroupBox1.Controls.Add(Me.PicBxAgregarCliente)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 371)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 433)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -222,22 +239,22 @@ Partial Class FormDetalle_Factura
         Me.linklblInexistente.TabStop = True
         Me.linklblInexistente.Text = "Datos inexistentes"
         '
-        'txtBusquedaventas
+        'txtBusquedaDetalle_factura
         '
-        Me.txtBusquedaventas.Location = New System.Drawing.Point(1067, 67)
-        Me.txtBusquedaventas.Name = "txtBusquedaventas"
-        Me.txtBusquedaventas.Size = New System.Drawing.Size(427, 27)
-        Me.txtBusquedaventas.TabIndex = 47
+        Me.txtBusquedaDetalle_factura.Location = New System.Drawing.Point(1067, 67)
+        Me.txtBusquedaDetalle_factura.Name = "txtBusquedaDetalle_factura"
+        Me.txtBusquedaDetalle_factura.Size = New System.Drawing.Size(427, 27)
+        Me.txtBusquedaDetalle_factura.TabIndex = 47
         '
-        'cbCampoVenta
+        'cbCampoDetalle_factura
         '
-        Me.cbCampoVenta.FormattingEnabled = True
-        Me.cbCampoVenta.Items.AddRange(New Object() {"DUI", "primerapellido"})
-        Me.cbCampoVenta.Location = New System.Drawing.Point(807, 65)
-        Me.cbCampoVenta.Name = "cbCampoVenta"
-        Me.cbCampoVenta.Size = New System.Drawing.Size(253, 28)
-        Me.cbCampoVenta.TabIndex = 46
-        Me.cbCampoVenta.Text = "DUI"
+        Me.cbCampoDetalle_factura.FormattingEnabled = True
+        Me.cbCampoDetalle_factura.Items.AddRange(New Object() {"no_factura"})
+        Me.cbCampoDetalle_factura.Location = New System.Drawing.Point(807, 65)
+        Me.cbCampoDetalle_factura.Name = "cbCampoDetalle_factura"
+        Me.cbCampoDetalle_factura.Size = New System.Drawing.Size(253, 28)
+        Me.cbCampoDetalle_factura.TabIndex = 46
+        Me.cbCampoDetalle_factura.Text = "no_factura"
         '
         'Panel1
         '
@@ -262,26 +279,17 @@ Partial Class FormDetalle_Factura
         '
         'txtFecha_venta
         '
+        Me.txtFecha_venta.Enabled = False
         Me.txtFecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtFecha_venta.Location = New System.Drawing.Point(126, 162)
+        Me.txtFecha_venta.Location = New System.Drawing.Point(125, 133)
         Me.txtFecha_venta.Name = "txtFecha_venta"
         Me.txtFecha_venta.Size = New System.Drawing.Size(130, 27)
         Me.txtFecha_venta.TabIndex = 25
         '
-        'btnBuscar_cliente
-        '
-        Me.btnBuscar_cliente.Location = New System.Drawing.Point(463, 111)
-        Me.btnBuscar_cliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnBuscar_cliente.Name = "btnBuscar_cliente"
-        Me.btnBuscar_cliente.Size = New System.Drawing.Size(46, 27)
-        Me.btnBuscar_cliente.TabIndex = 24
-        Me.btnBuscar_cliente.Text = "..."
-        Me.btnBuscar_cliente.UseVisualStyleBackColor = True
-        '
         'labelApellido2Cliente
         '
         Me.labelApellido2Cliente.AutoSize = True
-        Me.labelApellido2Cliente.Location = New System.Drawing.Point(6, 226)
+        Me.labelApellido2Cliente.Location = New System.Drawing.Point(6, 177)
         Me.labelApellido2Cliente.Name = "labelApellido2Cliente"
         Me.labelApellido2Cliente.Size = New System.Drawing.Size(114, 20)
         Me.labelApellido2Cliente.TabIndex = 15
@@ -290,7 +298,8 @@ Partial Class FormDetalle_Factura
         'txtno_factura
         '
         Me.txtno_factura.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtno_factura.Location = New System.Drawing.Point(126, 56)
+        Me.txtno_factura.Enabled = False
+        Me.txtno_factura.Location = New System.Drawing.Point(125, 39)
         Me.txtno_factura.Name = "txtno_factura"
         Me.txtno_factura.Size = New System.Drawing.Size(131, 27)
         Me.txtno_factura.TabIndex = 1
@@ -298,7 +307,7 @@ Partial Class FormDetalle_Factura
         'lblno_factura
         '
         Me.lblno_factura.AutoSize = True
-        Me.lblno_factura.Location = New System.Drawing.Point(39, 57)
+        Me.lblno_factura.Location = New System.Drawing.Point(38, 40)
         Me.lblno_factura.Name = "lblno_factura"
         Me.lblno_factura.Size = New System.Drawing.Size(81, 20)
         Me.lblno_factura.TabIndex = 4
@@ -307,7 +316,8 @@ Partial Class FormDetalle_Factura
         'txtIdCliente
         '
         Me.txtIdCliente.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtIdCliente.Location = New System.Drawing.Point(126, 107)
+        Me.txtIdCliente.Enabled = False
+        Me.txtIdCliente.Location = New System.Drawing.Point(125, 87)
         Me.txtIdCliente.Name = "txtIdCliente"
         Me.txtIdCliente.Size = New System.Drawing.Size(61, 27)
         Me.txtIdCliente.TabIndex = 12
@@ -315,7 +325,7 @@ Partial Class FormDetalle_Factura
         'lblidcliente_venta
         '
         Me.lblidcliente_venta.AutoSize = True
-        Me.lblidcliente_venta.Location = New System.Drawing.Point(49, 111)
+        Me.lblidcliente_venta.Location = New System.Drawing.Point(48, 91)
         Me.lblidcliente_venta.Name = "lblidcliente_venta"
         Me.lblidcliente_venta.Size = New System.Drawing.Size(71, 20)
         Me.lblidcliente_venta.TabIndex = 11
@@ -324,7 +334,7 @@ Partial Class FormDetalle_Factura
         'lblFecha_venta
         '
         Me.lblFecha_venta.AutoSize = True
-        Me.lblFecha_venta.Location = New System.Drawing.Point(70, 168)
+        Me.lblFecha_venta.Location = New System.Drawing.Point(69, 139)
         Me.lblFecha_venta.Name = "lblFecha_venta"
         Me.lblFecha_venta.Size = New System.Drawing.Size(50, 20)
         Me.lblFecha_venta.TabIndex = 13
@@ -332,18 +342,28 @@ Partial Class FormDetalle_Factura
         '
         'GroupBxDatosVentas
         '
+        Me.GroupBxDatosVentas.Controls.Add(Me.txtStock)
+        Me.GroupBxDatosVentas.Controls.Add(Me.txtCantidad)
+        Me.GroupBxDatosVentas.Controls.Add(Me.txtPrecioUnitario)
+        Me.GroupBxDatosVentas.Controls.Add(Me.lblPrecio_Unitario)
+        Me.GroupBxDatosVentas.Controls.Add(Me.lblStock)
+        Me.GroupBxDatosVentas.Controls.Add(Me.lblCantidad)
+        Me.GroupBxDatosVentas.Controls.Add(Me.txtNombre_Medicamento)
+        Me.GroupBxDatosVentas.Controls.Add(Me.btnBuscar_Medicamento)
+        Me.GroupBxDatosVentas.Controls.Add(Me.txtIdMedicamento)
+        Me.GroupBxDatosVentas.Controls.Add(Me.lblMedicamento)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtApellido2_cliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtApellido1_cliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.cbFormaPago)
         Me.GroupBxDatosVentas.Controls.Add(Me.GroupBox1)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtFecha_venta)
-        Me.GroupBxDatosVentas.Controls.Add(Me.btnBuscar_cliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.labelApellido2Cliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtno_factura)
         Me.GroupBxDatosVentas.Controls.Add(Me.lblno_factura)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtIdCliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.lblidcliente_venta)
         Me.GroupBxDatosVentas.Controls.Add(Me.lblFecha_venta)
+        Me.GroupBxDatosVentas.Enabled = False
         Me.GroupBxDatosVentas.Location = New System.Drawing.Point(286, 183)
         Me.GroupBxDatosVentas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBxDatosVentas.Name = "GroupBxDatosVentas"
@@ -352,6 +372,114 @@ Partial Class FormDetalle_Factura
         Me.GroupBxDatosVentas.TabIndex = 43
         Me.GroupBxDatosVentas.TabStop = False
         Me.GroupBxDatosVentas.Text = "Datos de la venta"
+        '
+        'txtStock
+        '
+        Me.txtStock.Location = New System.Drawing.Point(126, 317)
+        Me.txtStock.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.txtStock.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txtStock.Name = "txtStock"
+        Me.txtStock.Size = New System.Drawing.Size(82, 27)
+        Me.txtStock.TabIndex = 46
+        Me.txtStock.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(125, 276)
+        Me.txtCantidad.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(82, 27)
+        Me.txtCantidad.TabIndex = 45
+        Me.txtCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'txtPrecioUnitario
+        '
+        Me.txtPrecioUnitario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPrecioUnitario.Location = New System.Drawing.Point(125, 358)
+        Me.txtPrecioUnitario.Name = "txtPrecioUnitario"
+        Me.txtPrecioUnitario.Size = New System.Drawing.Size(165, 27)
+        Me.txtPrecioUnitario.TabIndex = 44
+        '
+        'lblPrecio_Unitario
+        '
+        Me.lblPrecio_Unitario.AutoSize = True
+        Me.lblPrecio_Unitario.Location = New System.Drawing.Point(16, 358)
+        Me.lblPrecio_Unitario.Name = "lblPrecio_Unitario"
+        Me.lblPrecio_Unitario.Size = New System.Drawing.Size(108, 20)
+        Me.lblPrecio_Unitario.TabIndex = 43
+        Me.lblPrecio_Unitario.Text = "Precio unitario:"
+        '
+        'lblStock
+        '
+        Me.lblStock.AutoSize = True
+        Me.lblStock.Location = New System.Drawing.Point(71, 319)
+        Me.lblStock.Name = "lblStock"
+        Me.lblStock.Size = New System.Drawing.Size(48, 20)
+        Me.lblStock.TabIndex = 42
+        Me.lblStock.Text = "Stock:"
+        '
+        'lblCantidad
+        '
+        Me.lblCantidad.AutoSize = True
+        Me.lblCantidad.Location = New System.Drawing.Point(47, 278)
+        Me.lblCantidad.Name = "lblCantidad"
+        Me.lblCantidad.Size = New System.Drawing.Size(72, 20)
+        Me.lblCantidad.TabIndex = 41
+        Me.lblCantidad.Text = "Cantidad:"
+        '
+        'txtNombre_Medicamento
+        '
+        Me.txtNombre_Medicamento.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNombre_Medicamento.Location = New System.Drawing.Point(193, 234)
+        Me.txtNombre_Medicamento.Name = "txtNombre_Medicamento"
+        Me.txtNombre_Medicamento.Size = New System.Drawing.Size(165, 27)
+        Me.txtNombre_Medicamento.TabIndex = 40
+        '
+        'btnBuscar_Medicamento
+        '
+        Me.btnBuscar_Medicamento.Location = New System.Drawing.Point(379, 234)
+        Me.btnBuscar_Medicamento.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnBuscar_Medicamento.Name = "btnBuscar_Medicamento"
+        Me.btnBuscar_Medicamento.Size = New System.Drawing.Size(46, 27)
+        Me.btnBuscar_Medicamento.TabIndex = 39
+        Me.btnBuscar_Medicamento.Text = "..."
+        Me.btnBuscar_Medicamento.UseVisualStyleBackColor = True
+        '
+        'txtIdMedicamento
+        '
+        Me.txtIdMedicamento.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtIdMedicamento.Location = New System.Drawing.Point(126, 234)
+        Me.txtIdMedicamento.Name = "txtIdMedicamento"
+        Me.txtIdMedicamento.Size = New System.Drawing.Size(61, 27)
+        Me.txtIdMedicamento.TabIndex = 38
+        '
+        'lblMedicamento
+        '
+        Me.lblMedicamento.AutoSize = True
+        Me.lblMedicamento.Location = New System.Drawing.Point(16, 241)
+        Me.lblMedicamento.Name = "lblMedicamento"
+        Me.lblMedicamento.Size = New System.Drawing.Size(104, 20)
+        Me.lblMedicamento.TabIndex = 37
+        Me.lblMedicamento.Text = "Medicamento:"
+        '
+        'txtApellido2_cliente
+        '
+        Me.txtApellido2_cliente.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtApellido2_cliente.Enabled = False
+        Me.txtApellido2_cliente.Location = New System.Drawing.Point(323, 87)
+        Me.txtApellido2_cliente.Name = "txtApellido2_cliente"
+        Me.txtApellido2_cliente.Size = New System.Drawing.Size(125, 27)
+        Me.txtApellido2_cliente.TabIndex = 36
+        '
+        'txtApellido1_cliente
+        '
+        Me.txtApellido1_cliente.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtApellido1_cliente.Enabled = False
+        Me.txtApellido1_cliente.Location = New System.Drawing.Point(192, 87)
+        Me.txtApellido1_cliente.Name = "txtApellido1_cliente"
+        Me.txtApellido1_cliente.Size = New System.Drawing.Size(125, 27)
+        Me.txtApellido1_cliente.TabIndex = 35
         '
         'Label2
         '
@@ -363,21 +491,27 @@ Partial Class FormDetalle_Factura
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "DETALLES DE VENTA"
         '
-        'txtApellido1_cliente
+        'BttEliminarDetalle_factura
         '
-        Me.txtApellido1_cliente.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtApellido1_cliente.Location = New System.Drawing.Point(193, 107)
-        Me.txtApellido1_cliente.Name = "txtApellido1_cliente"
-        Me.txtApellido1_cliente.Size = New System.Drawing.Size(125, 27)
-        Me.txtApellido1_cliente.TabIndex = 35
+        Me.BttEliminarDetalle_factura.Location = New System.Drawing.Point(261, 91)
+        Me.BttEliminarDetalle_factura.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.BttEliminarDetalle_factura.Name = "BttEliminarDetalle_factura"
+        Me.BttEliminarDetalle_factura.Size = New System.Drawing.Size(127, 51)
+        Me.BttEliminarDetalle_factura.TabIndex = 51
+        Me.BttEliminarDetalle_factura.Text = "Eliminar"
+        Me.BttEliminarDetalle_factura.UseVisualStyleBackColor = True
         '
-        'txtApellido2_cliente
+        'PicBxEliminarCategoria
         '
-        Me.txtApellido2_cliente.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtApellido2_cliente.Location = New System.Drawing.Point(324, 107)
-        Me.txtApellido2_cliente.Name = "txtApellido2_cliente"
-        Me.txtApellido2_cliente.Size = New System.Drawing.Size(125, 27)
-        Me.txtApellido2_cliente.TabIndex = 36
+        Me.PicBxEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PicBxEliminarCategoria.Image = CType(resources.GetObject("PicBxEliminarCategoria.Image"), System.Drawing.Image)
+        Me.PicBxEliminarCategoria.Location = New System.Drawing.Point(211, 91)
+        Me.PicBxEliminarCategoria.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PicBxEliminarCategoria.Name = "PicBxEliminarCategoria"
+        Me.PicBxEliminarCategoria.Size = New System.Drawing.Size(43, 51)
+        Me.PicBxEliminarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicBxEliminarCategoria.TabIndex = 50
+        Me.PicBxEliminarCategoria.TabStop = False
         '
         'FormDetalle_Factura
         '
@@ -387,8 +521,8 @@ Partial Class FormDetalle_Factura
         Me.Controls.Add(Me.Panel1Clientes)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.linklblInexistente)
-        Me.Controls.Add(Me.txtBusquedaventas)
-        Me.Controls.Add(Me.cbCampoVenta)
+        Me.Controls.Add(Me.txtBusquedaDetalle_factura)
+        Me.Controls.Add(Me.cbCampoDetalle_factura)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.cbeliminar)
         Me.Controls.Add(Me.GroupBxDatosVentas)
@@ -405,6 +539,9 @@ Partial Class FormDetalle_Factura
         CType(Me.DataGridViewVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBxDatosVentas.ResumeLayout(False)
         Me.GroupBxDatosVentas.PerformLayout()
+        CType(Me.txtStock, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicBxEliminarCategoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -414,8 +551,8 @@ Partial Class FormDetalle_Factura
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents erroricono As ErrorProvider
     Friend WithEvents linklblInexistente As LinkLabel
-    Friend WithEvents txtBusquedaventas As TextBox
-    Friend WithEvents cbCampoVenta As ComboBox
+    Friend WithEvents txtBusquedaDetalle_factura As TextBox
+    Friend WithEvents cbCampoDetalle_factura As ComboBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cbeliminar As CheckBox
     Friend WithEvents GroupBxDatosVentas As GroupBox
@@ -429,7 +566,6 @@ Partial Class FormDetalle_Factura
     Friend WithEvents PicBxGuardarCliente As PictureBox
     Friend WithEvents PicBxAgregarCliente As PictureBox
     Friend WithEvents txtFecha_venta As DateTimePicker
-    Friend WithEvents btnBuscar_cliente As Button
     Friend WithEvents labelApellido2Cliente As Label
     Friend WithEvents txtno_factura As TextBox
     Friend WithEvents lblno_factura As Label
@@ -441,4 +577,16 @@ Partial Class FormDetalle_Factura
     Friend WithEvents Label2 As Label
     Friend WithEvents txtApellido1_cliente As TextBox
     Friend WithEvents txtApellido2_cliente As TextBox
+    Friend WithEvents btnBuscar_Medicamento As Button
+    Friend WithEvents txtIdMedicamento As TextBox
+    Friend WithEvents lblMedicamento As Label
+    Friend WithEvents lblCantidad As Label
+    Friend WithEvents lblPrecio_Unitario As Label
+    Friend WithEvents lblStock As Label
+    Friend WithEvents txtStock As NumericUpDown
+    Friend WithEvents txtCantidad As NumericUpDown
+    Friend WithEvents txtPrecioUnitario As TextBox
+    Friend WithEvents txtNombre_Medicamento As TextBox
+    Friend WithEvents BttEliminarDetalle_factura As Button
+    Friend WithEvents PicBxEliminarCategoria As PictureBox
 End Class

@@ -455,4 +455,12 @@ Public Class FormClientes
         Call limpiar()
         BttAgregarCliente.Enabled = True
     End Sub
+
+    Private Sub DataGridViewClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewClientes.CellDoubleClick
+        Dim frmven As FormVentas = CType(Owner, FormVentas)
+        frmven.txtIdCliente.Text = DataGridViewClientes.CurrentRow.Cells(1).Value
+        frmven.txtApellido1_cliente.Text = DataGridViewClientes.CurrentRow.Cells(4).Value
+        frmven.txtApellido2_cliente.Text = DataGridViewClientes.CurrentRow.Cells(5).Value
+        Me.Close()
+    End Sub
 End Class

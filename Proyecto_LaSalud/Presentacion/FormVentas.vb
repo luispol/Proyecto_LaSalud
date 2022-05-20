@@ -317,6 +317,7 @@
 
     Private Sub DataGridViewVentas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewVentas.CellDoubleClick
         cargar_detalle()
+        FormDetalle_Factura.ShowDialog()
     End Sub
 
     Private Sub btnBuscar_cliente_Click(sender As Object, e As EventArgs) Handles btnBuscar_cliente.Click

@@ -315,4 +315,6 @@
     Private Sub txtBusquedaCategoria_TextChanged(sender As Object, e As EventArgs) Handles txtBusquedaCategoria.TextChanged
         buscar()
     End Sub
+
+
 End Class

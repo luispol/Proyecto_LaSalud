@@ -507,4 +507,13 @@ Public Class FormMedicamentos
     Private Sub txtBusquedaMedicamentos_TextChanged(sender As Object, e As EventArgs) Handles txtBusquedaMedicamentos.TextChanged
         buscar()
     End Sub
+
+    Private Sub DataGridViewMedicamentos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMedicamentos.CellDoubleClick
+        Dim frm As FormDetalle_Factura = CType(Owner, FormDetalle_Factura)
+        frm.txtIdMedicamento.Text = DataGridViewMedicamentos.CurrentRow.Cells(1).Value
+        frm.txtNombre_Medicamento.Text = DataGridViewMedicamentos.CurrentRow.Cells(4).Value
+        frm.txtStock.Text = DataGridViewMedicamentos.CurrentRow.Cells(6).Value
+        frm.txtPrecioUnitario.Text = DataGridViewMedicamentos.CurrentRow.Cells(7).Value
+        Me.Close()
+    End Sub
 End Class

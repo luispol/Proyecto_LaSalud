@@ -49,7 +49,6 @@ Partial Class FormVentas
         Me.txtBusquedaventas = New System.Windows.Forms.TextBox()
         Me.cbCampoVenta = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.cbeliminar = New System.Windows.Forms.CheckBox()
         Me.ToolTipCliente = New System.Windows.Forms.ToolTip(Me.components)
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1Clientes = New System.Windows.Forms.Panel()
@@ -72,13 +71,14 @@ Partial Class FormVentas
         Me.DataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.DataGridViewVentas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DataGridViewVentas.Location = New System.Drawing.Point(716, 100)
+        Me.DataGridViewVentas.Location = New System.Drawing.Point(818, 133)
+        Me.DataGridViewVentas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridViewVentas.Name = "DataGridViewVentas"
         Me.DataGridViewVentas.ReadOnly = True
         Me.DataGridViewVentas.RowHeadersWidth = 51
         Me.DataGridViewVentas.RowTemplate.Height = 25
         Me.DataGridViewVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewVentas.Size = New System.Drawing.Size(596, 374)
+        Me.DataGridViewVentas.Size = New System.Drawing.Size(681, 499)
         Me.DataGridViewVentas.TabIndex = 34
         Me.ToolTipCliente.SetToolTip(Me.DataGridViewVentas, "Para editar o eliminar, primero seleccione un registro")
         '
@@ -103,9 +103,11 @@ Partial Class FormVentas
         Me.GroupBxDatosVentas.Controls.Add(Me.txtIdCliente)
         Me.GroupBxDatosVentas.Controls.Add(Me.lblidcliente_venta)
         Me.GroupBxDatosVentas.Controls.Add(Me.lblFecha_venta)
-        Me.GroupBxDatosVentas.Location = New System.Drawing.Point(250, 137)
+        Me.GroupBxDatosVentas.Location = New System.Drawing.Point(286, 183)
+        Me.GroupBxDatosVentas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBxDatosVentas.Name = "GroupBxDatosVentas"
-        Me.GroupBxDatosVentas.Size = New System.Drawing.Size(451, 204)
+        Me.GroupBxDatosVentas.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBxDatosVentas.Size = New System.Drawing.Size(515, 272)
         Me.GroupBxDatosVentas.TabIndex = 33
         Me.GroupBxDatosVentas.TabStop = False
         Me.GroupBxDatosVentas.Text = "Datos de la venta"
@@ -113,10 +115,9 @@ Partial Class FormVentas
         'txtApellido2_cliente
         '
         Me.txtApellido2_cliente.Cursor = System.Windows.Forms.Cursors.No
-        Me.txtApellido2_cliente.Location = New System.Drawing.Point(279, 80)
-        Me.txtApellido2_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtApellido2_cliente.Location = New System.Drawing.Point(319, 107)
         Me.txtApellido2_cliente.Name = "txtApellido2_cliente"
-        Me.txtApellido2_cliente.Size = New System.Drawing.Size(110, 23)
+        Me.txtApellido2_cliente.Size = New System.Drawing.Size(125, 27)
         Me.txtApellido2_cliente.TabIndex = 35
         '
         'cbFormaPago
@@ -124,10 +125,9 @@ Partial Class FormVentas
         Me.cbFormaPago.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cbFormaPago.FormattingEnabled = True
         Me.cbFormaPago.Items.AddRange(New Object() {"Efectivo", "BITCOIN", "Tarjeta de credito"})
-        Me.cbFormaPago.Location = New System.Drawing.Point(106, 161)
-        Me.cbFormaPago.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cbFormaPago.Location = New System.Drawing.Point(121, 215)
         Me.cbFormaPago.Name = "cbFormaPago"
-        Me.cbFormaPago.Size = New System.Drawing.Size(224, 23)
+        Me.cbFormaPago.Size = New System.Drawing.Size(255, 28)
         Me.cbFormaPago.TabIndex = 34
         Me.cbFormaPago.Text = "Efectivo"
         '
@@ -135,18 +135,18 @@ Partial Class FormVentas
         '
         Me.txtFecha_venta.Cursor = System.Windows.Forms.Cursors.Hand
         Me.txtFecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtFecha_venta.Location = New System.Drawing.Point(106, 122)
-        Me.txtFecha_venta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtFecha_venta.Location = New System.Drawing.Point(121, 163)
         Me.txtFecha_venta.Name = "txtFecha_venta"
-        Me.txtFecha_venta.Size = New System.Drawing.Size(114, 23)
+        Me.txtFecha_venta.Size = New System.Drawing.Size(130, 27)
         Me.txtFecha_venta.TabIndex = 25
         '
         'btnBuscar_cliente
         '
         Me.btnBuscar_cliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar_cliente.Location = New System.Drawing.Point(395, 80)
+        Me.btnBuscar_cliente.Location = New System.Drawing.Point(451, 107)
+        Me.btnBuscar_cliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnBuscar_cliente.Name = "btnBuscar_cliente"
-        Me.btnBuscar_cliente.Size = New System.Drawing.Size(36, 23)
+        Me.btnBuscar_cliente.Size = New System.Drawing.Size(41, 31)
         Me.btnBuscar_cliente.TabIndex = 24
         Me.btnBuscar_cliente.Text = "..."
         Me.btnBuscar_cliente.UseVisualStyleBackColor = True
@@ -154,63 +154,60 @@ Partial Class FormVentas
         'txtApellido1_cliente
         '
         Me.txtApellido1_cliente.Cursor = System.Windows.Forms.Cursors.No
-        Me.txtApellido1_cliente.Location = New System.Drawing.Point(163, 80)
-        Me.txtApellido1_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtApellido1_cliente.Location = New System.Drawing.Point(186, 107)
         Me.txtApellido1_cliente.Name = "txtApellido1_cliente"
-        Me.txtApellido1_cliente.Size = New System.Drawing.Size(110, 23)
+        Me.txtApellido1_cliente.Size = New System.Drawing.Size(125, 27)
         Me.txtApellido1_cliente.TabIndex = 22
         '
         'labelApellido2Cliente
         '
         Me.labelApellido2Cliente.AutoSize = True
-        Me.labelApellido2Cliente.Location = New System.Drawing.Point(10, 164)
+        Me.labelApellido2Cliente.Location = New System.Drawing.Point(11, 219)
         Me.labelApellido2Cliente.Name = "labelApellido2Cliente"
-        Me.labelApellido2Cliente.Size = New System.Drawing.Size(90, 15)
+        Me.labelApellido2Cliente.Size = New System.Drawing.Size(114, 20)
         Me.labelApellido2Cliente.TabIndex = 15
         Me.labelApellido2Cliente.Text = "Forma de pago:"
         '
         'txtno_factura
         '
         Me.txtno_factura.Cursor = System.Windows.Forms.Cursors.No
-        Me.txtno_factura.Location = New System.Drawing.Point(106, 39)
-        Me.txtno_factura.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtno_factura.Location = New System.Drawing.Point(121, 52)
         Me.txtno_factura.Name = "txtno_factura"
-        Me.txtno_factura.Size = New System.Drawing.Size(51, 23)
+        Me.txtno_factura.Size = New System.Drawing.Size(58, 27)
         Me.txtno_factura.TabIndex = 1
         '
         'lblno_factura
         '
         Me.lblno_factura.AutoSize = True
-        Me.lblno_factura.Location = New System.Drawing.Point(34, 42)
+        Me.lblno_factura.Location = New System.Drawing.Point(39, 56)
         Me.lblno_factura.Name = "lblno_factura"
-        Me.lblno_factura.Size = New System.Drawing.Size(66, 15)
+        Me.lblno_factura.Size = New System.Drawing.Size(81, 20)
         Me.lblno_factura.TabIndex = 4
         Me.lblno_factura.Text = "no_factura:"
         '
         'txtIdCliente
         '
         Me.txtIdCliente.Cursor = System.Windows.Forms.Cursors.No
-        Me.txtIdCliente.Location = New System.Drawing.Point(106, 80)
-        Me.txtIdCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtIdCliente.Location = New System.Drawing.Point(121, 107)
         Me.txtIdCliente.Name = "txtIdCliente"
-        Me.txtIdCliente.Size = New System.Drawing.Size(51, 23)
+        Me.txtIdCliente.Size = New System.Drawing.Size(58, 27)
         Me.txtIdCliente.TabIndex = 12
         '
         'lblidcliente_venta
         '
         Me.lblidcliente_venta.AutoSize = True
-        Me.lblidcliente_venta.Location = New System.Drawing.Point(43, 82)
+        Me.lblidcliente_venta.Location = New System.Drawing.Point(49, 109)
         Me.lblidcliente_venta.Name = "lblidcliente_venta"
-        Me.lblidcliente_venta.Size = New System.Drawing.Size(57, 15)
+        Me.lblidcliente_venta.Size = New System.Drawing.Size(71, 20)
         Me.lblidcliente_venta.TabIndex = 11
         Me.lblidcliente_venta.Text = "IdCliente:"
         '
         'lblFecha_venta
         '
         Me.lblFecha_venta.AutoSize = True
-        Me.lblFecha_venta.Location = New System.Drawing.Point(59, 128)
+        Me.lblFecha_venta.Location = New System.Drawing.Point(67, 171)
         Me.lblFecha_venta.Name = "lblFecha_venta"
-        Me.lblFecha_venta.Size = New System.Drawing.Size(41, 15)
+        Me.lblFecha_venta.Size = New System.Drawing.Size(50, 20)
         Me.lblFecha_venta.TabIndex = 13
         Me.lblFecha_venta.Text = "Fecha:"
         '
@@ -223,9 +220,11 @@ Partial Class FormVentas
         Me.GroupBox1.Controls.Add(Me.PicBxGuardarCliente)
         Me.GroupBox1.Controls.Add(Me.PicBxAgregarCliente)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(250, 357)
+        Me.GroupBox1.Location = New System.Drawing.Point(286, 476)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(451, 117)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(515, 156)
         Me.GroupBox1.TabIndex = 33
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Acciones de Registro"
@@ -233,9 +232,10 @@ Partial Class FormVentas
         'BttAgregarVenta
         '
         Me.BttAgregarVenta.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttAgregarVenta.Location = New System.Drawing.Point(57, 68)
+        Me.BttAgregarVenta.Location = New System.Drawing.Point(65, 91)
+        Me.BttAgregarVenta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BttAgregarVenta.Name = "BttAgregarVenta"
-        Me.BttAgregarVenta.Size = New System.Drawing.Size(111, 38)
+        Me.BttAgregarVenta.Size = New System.Drawing.Size(127, 51)
         Me.BttAgregarVenta.TabIndex = 25
         Me.BttAgregarVenta.Text = "Agregar"
         Me.BttAgregarVenta.UseVisualStyleBackColor = True
@@ -243,9 +243,10 @@ Partial Class FormVentas
         'BttGuardarVenta
         '
         Me.BttGuardarVenta.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttGuardarVenta.Location = New System.Drawing.Point(228, 24)
+        Me.BttGuardarVenta.Location = New System.Drawing.Point(261, 32)
+        Me.BttGuardarVenta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BttGuardarVenta.Name = "BttGuardarVenta"
-        Me.BttGuardarVenta.Size = New System.Drawing.Size(111, 38)
+        Me.BttGuardarVenta.Size = New System.Drawing.Size(127, 51)
         Me.BttGuardarVenta.TabIndex = 24
         Me.BttGuardarVenta.Text = "Guardar"
         Me.BttGuardarVenta.UseVisualStyleBackColor = True
@@ -253,9 +254,10 @@ Partial Class FormVentas
         'BttEditarVenta
         '
         Me.BttEditarVenta.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttEditarVenta.Location = New System.Drawing.Point(57, 24)
+        Me.BttEditarVenta.Location = New System.Drawing.Point(65, 32)
+        Me.BttEditarVenta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BttEditarVenta.Name = "BttEditarVenta"
-        Me.BttEditarVenta.Size = New System.Drawing.Size(111, 38)
+        Me.BttEditarVenta.Size = New System.Drawing.Size(127, 51)
         Me.BttEditarVenta.TabIndex = 23
         Me.BttEditarVenta.Text = "Editar"
         Me.BttEditarVenta.UseVisualStyleBackColor = True
@@ -264,9 +266,10 @@ Partial Class FormVentas
         '
         Me.PicBxEditarClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxEditarClientes.Image = CType(resources.GetObject("PicBxEditarClientes.Image"), System.Drawing.Image)
-        Me.PicBxEditarClientes.Location = New System.Drawing.Point(13, 24)
+        Me.PicBxEditarClientes.Location = New System.Drawing.Point(15, 32)
+        Me.PicBxEditarClientes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PicBxEditarClientes.Name = "PicBxEditarClientes"
-        Me.PicBxEditarClientes.Size = New System.Drawing.Size(38, 38)
+        Me.PicBxEditarClientes.Size = New System.Drawing.Size(43, 51)
         Me.PicBxEditarClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxEditarClientes.TabIndex = 0
         Me.PicBxEditarClientes.TabStop = False
@@ -276,9 +279,10 @@ Partial Class FormVentas
         '
         Me.PicBxGuardarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxGuardarCliente.Image = CType(resources.GetObject("PicBxGuardarCliente.Image"), System.Drawing.Image)
-        Me.PicBxGuardarCliente.Location = New System.Drawing.Point(184, 24)
+        Me.PicBxGuardarCliente.Location = New System.Drawing.Point(210, 32)
+        Me.PicBxGuardarCliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PicBxGuardarCliente.Name = "PicBxGuardarCliente"
-        Me.PicBxGuardarCliente.Size = New System.Drawing.Size(38, 38)
+        Me.PicBxGuardarCliente.Size = New System.Drawing.Size(43, 51)
         Me.PicBxGuardarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxGuardarCliente.TabIndex = 1
         Me.PicBxGuardarCliente.TabStop = False
@@ -288,9 +292,10 @@ Partial Class FormVentas
         '
         Me.PicBxAgregarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxAgregarCliente.Image = CType(resources.GetObject("PicBxAgregarCliente.Image"), System.Drawing.Image)
-        Me.PicBxAgregarCliente.Location = New System.Drawing.Point(13, 68)
+        Me.PicBxAgregarCliente.Location = New System.Drawing.Point(15, 91)
+        Me.PicBxAgregarCliente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PicBxAgregarCliente.Name = "PicBxAgregarCliente"
-        Me.PicBxAgregarCliente.Size = New System.Drawing.Size(38, 38)
+        Me.PicBxAgregarCliente.Size = New System.Drawing.Size(43, 51)
         Me.PicBxAgregarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicBxAgregarCliente.TabIndex = 2
         Me.PicBxAgregarCliente.TabStop = False
@@ -299,9 +304,9 @@ Partial Class FormVentas
         'linklblInexistente
         '
         Me.linklblInexistente.AutoSize = True
-        Me.linklblInexistente.Location = New System.Drawing.Point(961, 283)
+        Me.linklblInexistente.Location = New System.Drawing.Point(1098, 377)
         Me.linklblInexistente.Name = "linklblInexistente"
-        Me.linklblInexistente.Size = New System.Drawing.Size(102, 15)
+        Me.linklblInexistente.Size = New System.Drawing.Size(129, 20)
         Me.linklblInexistente.TabIndex = 38
         Me.linklblInexistente.TabStop = True
         Me.linklblInexistente.Text = "Datos inexistentes"
@@ -309,10 +314,9 @@ Partial Class FormVentas
         'txtBusquedaventas
         '
         Me.txtBusquedaventas.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBusquedaventas.Location = New System.Drawing.Point(944, 47)
-        Me.txtBusquedaventas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtBusquedaventas.Location = New System.Drawing.Point(1079, 63)
         Me.txtBusquedaventas.Name = "txtBusquedaventas"
-        Me.txtBusquedaventas.Size = New System.Drawing.Size(368, 23)
+        Me.txtBusquedaventas.Size = New System.Drawing.Size(420, 27)
         Me.txtBusquedaventas.TabIndex = 37
         '
         'cbCampoVenta
@@ -320,10 +324,9 @@ Partial Class FormVentas
         Me.cbCampoVenta.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cbCampoVenta.FormattingEnabled = True
         Me.cbCampoVenta.Items.AddRange(New Object() {"DUI", "primerapellido"})
-        Me.cbCampoVenta.Location = New System.Drawing.Point(716, 47)
-        Me.cbCampoVenta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cbCampoVenta.Location = New System.Drawing.Point(818, 63)
         Me.cbCampoVenta.Name = "cbCampoVenta"
-        Me.cbCampoVenta.Size = New System.Drawing.Size(222, 23)
+        Me.cbCampoVenta.Size = New System.Drawing.Size(253, 28)
         Me.cbCampoVenta.TabIndex = 36
         Me.cbCampoVenta.Text = "DUI"
         '
@@ -331,21 +334,11 @@ Partial Class FormVentas
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(232, 0)
+        Me.Panel1.Location = New System.Drawing.Point(265, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1092, 22)
+        Me.Panel1.Size = New System.Drawing.Size(1248, 29)
         Me.Panel1.TabIndex = 35
-        '
-        'cbeliminar
-        '
-        Me.cbeliminar.AutoSize = True
-        Me.cbeliminar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cbeliminar.Location = New System.Drawing.Point(716, 75)
-        Me.cbeliminar.Name = "cbeliminar"
-        Me.cbeliminar.Size = New System.Drawing.Size(69, 19)
-        Me.cbeliminar.TabIndex = 39
-        Me.cbeliminar.Text = "Eliminar"
-        Me.cbeliminar.UseVisualStyleBackColor = True
         '
         'erroricono
         '
@@ -356,35 +349,37 @@ Partial Class FormVentas
         Me.Panel1Clientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1Clientes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 621)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(265, 828)
         Me.Panel1Clientes.TabIndex = 29
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(284, 65)
+        Me.Label2.Location = New System.Drawing.Point(325, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(283, 29)
+        Me.Label2.Size = New System.Drawing.Size(352, 36)
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "REGISTRO DE VENTAS"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(588, 31)
+        Me.PictureBox1.Location = New System.Drawing.Point(672, 41)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox1.Size = New System.Drawing.Size(129, 133)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
         'FormVentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1324, 621)
+        Me.ClientSize = New System.Drawing.Size(1513, 828)
         Me.Controls.Add(Me.DataGridViewVentas)
         Me.Controls.Add(Me.GroupBxDatosVentas)
         Me.Controls.Add(Me.GroupBox1)
@@ -392,12 +387,10 @@ Partial Class FormVentas
         Me.Controls.Add(Me.txtBusquedaventas)
         Me.Controls.Add(Me.cbCampoVenta)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.cbeliminar)
         Me.Controls.Add(Me.Panel1Clientes)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormVentas"
         Me.Text = "Ventas"
         CType(Me.DataGridViewVentas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -428,7 +421,6 @@ Partial Class FormVentas
     Friend WithEvents txtBusquedaventas As TextBox
     Friend WithEvents cbCampoVenta As ComboBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents cbeliminar As CheckBox
     Friend WithEvents erroricono As ErrorProvider
     Friend WithEvents Panel1Clientes As Panel
     Friend WithEvents Label2 As Label

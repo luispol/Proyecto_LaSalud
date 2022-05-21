@@ -75,6 +75,7 @@
 
 
 
+
     'Proceso para limpiar los textbox cuando se registre un nuevo cliente
     Public Sub limpiar()
         txtIdMedicamento.Text = ""
@@ -120,7 +121,7 @@
         txtIdMedicamento.Enabled = False
         txtNombre_Medicamento.Enabled = False
         txtCantidad.Enabled = True
-        txtStock.Enabled = False
+        txtStock.Enabled = True
         txtPrecioUnitario.Enabled = True
         btnBuscar_Medicamento.Enabled = True
         BttQuitarArts.Enabled = True
@@ -129,7 +130,7 @@
 
     Private Sub BttGuardarVenta_Click_1(sender As Object, e As EventArgs) Handles BttGuardarDetalleVenta.Click
         'Condicion para validar que se hayan registrado datos en texboxs especificos
-        If Me.ValidateChildren = True And txtIdMedicamento.Text <> "" And txtCantidad.Text <> "" And txtPrecioUnitario.Text <> "" Then
+        If Me.ValidateChildren = True And txtIdMedicamento.Text <> "" And txtStock.Text <> "" And txtCantidad.Text <> "" And txtPrecioUnitario.Text <> "" Then
             Try
                 Dim dts As New vdetalle_factura
                 Dim func As New fdetalle_factura

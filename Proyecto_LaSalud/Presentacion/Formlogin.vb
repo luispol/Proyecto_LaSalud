@@ -8,7 +8,7 @@
         lblHora.Text = TimeOfDay
     End Sub
 
-    Private Sub bttSalir_Click(sender As Object, e As EventArgs) Handles bttSalir.Click
+    Private Sub bttSalir_Click(sender As Object, e As EventArgs)
         End
     End Sub
 

@@ -35,6 +35,7 @@ Partial Class FormPrincipal
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,6 +43,7 @@ Partial Class FormPrincipal
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelFormularios.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -181,6 +183,7 @@ Partial Class FormPrincipal
         'PanelFormularios
         '
         Me.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.PanelFormularios.Controls.Add(Me.PictureBox3)
         Me.PanelFormularios.Controls.Add(Me.Panel1)
         Me.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelFormularios.Location = New System.Drawing.Point(0, 0)
@@ -197,6 +200,16 @@ Partial Class FormPrincipal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1513, 29)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(271, 36)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(1239, 789)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
         '
         'FormPrincipal
         '
@@ -218,6 +231,7 @@ Partial Class FormPrincipal
         CType(Me.PicBxBottnMedicts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBxbttClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFormularios.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -234,4 +248,5 @@ Partial Class FormPrincipal
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnCategorias As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

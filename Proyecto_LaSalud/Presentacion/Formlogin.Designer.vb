@@ -42,10 +42,9 @@ Partial Class Formlogin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 13)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 10)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(551, 116)
+        Me.PictureBox1.Size = New System.Drawing.Size(482, 87)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -59,9 +58,11 @@ Partial Class Formlogin
         Me.gblogin.Controls.Add(Me.lblUsuario)
         Me.gblogin.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.gblogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.gblogin.Location = New System.Drawing.Point(12, 159)
+        Me.gblogin.Location = New System.Drawing.Point(10, 119)
+        Me.gblogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gblogin.Name = "gblogin"
-        Me.gblogin.Size = New System.Drawing.Size(687, 289)
+        Me.gblogin.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gblogin.Size = New System.Drawing.Size(601, 217)
         Me.gblogin.TabIndex = 5
         Me.gblogin.TabStop = False
         Me.gblogin.Text = "Iniciar Sesión"
@@ -72,43 +73,46 @@ Partial Class Formlogin
         Me.bttIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bttIngresar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.bttIngresar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.bttIngresar.Location = New System.Drawing.Point(323, 219)
+        Me.bttIngresar.Location = New System.Drawing.Point(283, 164)
+        Me.bttIngresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.bttIngresar.Name = "bttIngresar"
-        Me.bttIngresar.Size = New System.Drawing.Size(125, 40)
+        Me.bttIngresar.Size = New System.Drawing.Size(109, 35)
         Me.bttIngresar.TabIndex = 4
         Me.bttIngresar.Text = "Ingresar"
         Me.bttIngresar.UseVisualStyleBackColor = False
         '
         'txtContrasena
         '
-        Me.txtContrasena.Location = New System.Drawing.Point(212, 156)
+        Me.txtContrasena.Location = New System.Drawing.Point(186, 117)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasena.Size = New System.Drawing.Size(345, 34)
+        Me.txtContrasena.Size = New System.Drawing.Size(302, 29)
         Me.txtContrasena.TabIndex = 3
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(212, 77)
+        Me.txtUsuario.Location = New System.Drawing.Point(186, 58)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(345, 34)
+        Me.txtUsuario.Size = New System.Drawing.Size(302, 29)
         Me.txtUsuario.TabIndex = 2
         '
         'lblContrasena
         '
         Me.lblContrasena.AutoSize = True
-        Me.lblContrasena.Location = New System.Drawing.Point(62, 159)
+        Me.lblContrasena.Location = New System.Drawing.Point(54, 119)
         Me.lblContrasena.Name = "lblContrasena"
-        Me.lblContrasena.Size = New System.Drawing.Size(119, 28)
+        Me.lblContrasena.Size = New System.Drawing.Size(96, 21)
         Me.lblContrasena.TabIndex = 1
         Me.lblContrasena.Text = "Contraseña :"
         '
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(99, 80)
+        Me.lblUsuario.Location = New System.Drawing.Point(87, 60)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(88, 28)
+        Me.lblUsuario.Size = New System.Drawing.Size(71, 21)
         Me.lblUsuario.TabIndex = 0
         Me.lblUsuario.Text = "Usuario :"
         '
@@ -122,34 +126,36 @@ Partial Class Formlogin
         Me.lblHora.AutoSize = True
         Me.lblHora.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblHora.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblHora.Location = New System.Drawing.Point(12, 451)
+        Me.lblHora.Location = New System.Drawing.Point(10, 338)
         Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(85, 38)
+        Me.lblHora.Size = New System.Drawing.Size(66, 30)
         Me.lblHora.TabIndex = 6
         Me.lblHora.Text = "Login"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(529, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(463, 9)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(149, 141)
+        Me.PictureBox2.Size = New System.Drawing.Size(130, 106)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
         '
         'Formlogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(711, 501)
+        Me.ClientSize = New System.Drawing.Size(622, 376)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lblHora)
         Me.Controls.Add(Me.gblogin)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Formlogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

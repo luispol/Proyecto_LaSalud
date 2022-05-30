@@ -126,6 +126,7 @@ Partial Class FormClientes
         Me.txtCorreoClientes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtCorreoClientes.Location = New System.Drawing.Point(78, 256)
         Me.txtCorreoClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCorreoClientes.MaxLength = 50
         Me.txtCorreoClientes.Name = "txtCorreoClientes"
         Me.txtCorreoClientes.Size = New System.Drawing.Size(330, 23)
         Me.txtCorreoClientes.TabIndex = 8
@@ -144,6 +145,7 @@ Partial Class FormClientes
         Me.txtTelefonoClientes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTelefonoClientes.Location = New System.Drawing.Point(79, 389)
         Me.txtTelefonoClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTelefonoClientes.MaxLength = 10
         Me.txtTelefonoClientes.Name = "txtTelefonoClientes"
         Me.txtTelefonoClientes.Size = New System.Drawing.Size(329, 23)
         Me.txtTelefonoClientes.TabIndex = 10
@@ -162,6 +164,7 @@ Partial Class FormClientes
         Me.txtNombreClientes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtNombreClientes.Location = New System.Drawing.Point(79, 82)
         Me.txtNombreClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtNombreClientes.MaxLength = 50
         Me.txtNombreClientes.Name = "txtNombreClientes"
         Me.txtNombreClientes.Size = New System.Drawing.Size(329, 23)
         Me.txtNombreClientes.TabIndex = 12
@@ -180,6 +183,7 @@ Partial Class FormClientes
         Me.txtApellido1Cliente.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtApellido1Cliente.Location = New System.Drawing.Point(78, 123)
         Me.txtApellido1Cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtApellido1Cliente.MaxLength = 50
         Me.txtApellido1Cliente.Name = "txtApellido1Cliente"
         Me.txtApellido1Cliente.Size = New System.Drawing.Size(330, 23)
         Me.txtApellido1Cliente.TabIndex = 14
@@ -375,6 +379,7 @@ Partial Class FormClientes
         '
         Me.TxtApellido3.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtApellido3.Location = New System.Drawing.Point(78, 213)
+        Me.TxtApellido3.MaxLength = 50
         Me.TxtApellido3.Name = "TxtApellido3"
         Me.TxtApellido3.Size = New System.Drawing.Size(330, 23)
         Me.TxtApellido3.TabIndex = 21
@@ -392,6 +397,7 @@ Partial Class FormClientes
         '
         Me.txtdireccionCliente.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtdireccionCliente.Location = New System.Drawing.Point(78, 296)
+        Me.txtdireccionCliente.MaxLength = 50
         Me.txtdireccionCliente.Multiline = True
         Me.txtdireccionCliente.Name = "txtdireccionCliente"
         Me.txtdireccionCliente.Size = New System.Drawing.Size(330, 76)
@@ -409,6 +415,7 @@ Partial Class FormClientes
         'txtApellido2Cliente
         '
         Me.txtApellido2Cliente.Location = New System.Drawing.Point(78, 165)
+        Me.txtApellido2Cliente.MaxLength = 50
         Me.txtApellido2Cliente.Name = "txtApellido2Cliente"
         Me.txtApellido2Cliente.Size = New System.Drawing.Size(330, 23)
         Me.txtApellido2Cliente.TabIndex = 16
@@ -448,6 +455,7 @@ Partial Class FormClientes
         Me.txtBusquedaClientes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtBusquedaClientes.Location = New System.Drawing.Point(934, 50)
         Me.txtBusquedaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtBusquedaClientes.MaxLength = 50
         Me.txtBusquedaClientes.Name = "txtBusquedaClientes"
         Me.txtBusquedaClientes.Size = New System.Drawing.Size(374, 23)
         Me.txtBusquedaClientes.TabIndex = 26

@@ -282,17 +282,28 @@
         End If
     End Sub
 
+    Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("La Cantidad solo debe contener números enteros", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 
-
-    'Private Sub DataGridViewVentas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewDetalleVenta.CellDoubleClick
-    '    cargar_detalle()
+    'Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
+    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+    '        MessageBox.Show("El Stock solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End If
     'End Sub
 
-    'Private Sub btnBuscar_cliente_Click(sender As Object, e As EventArgs) Handles btnBuscar_cliente.Click
-    '    Dim frmcli As New FormClientes
-    '    AddOwnedForm(frmcli)
-    '    frmcli.ShowDialog()
+    'Private Sub txtPrecioUnitario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioUnitario.KeyPress
+    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsDigit(e.KeyChar) Then
+    '        MessageBox.Show("El Precio unitario solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End If
     'End Sub
+
+
 
 
 

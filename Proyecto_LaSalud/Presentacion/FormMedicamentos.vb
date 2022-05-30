@@ -516,4 +516,40 @@ Public Class FormMedicamentos
         frm.txtPrecioUnitario.Text = DataGridViewMedicamentos.CurrentRow.Cells(7).Value
         Me.Close()
     End Sub
+
+    'VALIDACION DE TEXT BOX
+    Private Sub txtNombreMedicamento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombreMedicamento.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El nombre solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    'Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
+    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+    '        MessageBox.Show("El stock solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End If
+    'End Sub
+
+    'Private Sub txtPrecioCompraMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioCompraMed.KeyPress
+    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+    '        MessageBox.Show("El precio de compra solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End If
+    'End Sub
+
+    'Private Sub txtPrecioVentaMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioVentaMed.KeyPress
+    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+    '        MessageBox.Show("El precio de venta solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End If
+    'End Sub
+
+    Private Sub txtDescripcionMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescripcionMed.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("La descripcion solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 End Class

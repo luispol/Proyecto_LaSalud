@@ -467,4 +467,56 @@ Public Class FormClientes
     Private Sub txtBusquedaClientes_TextChanged(sender As Object, e As EventArgs) Handles txtBusquedaClientes.TextChanged
         buscar()
     End Sub
+
+    'VALIDACION DE TEXBOXS
+    Private Sub txtDUIClientes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDUIClientes.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show(" El DUI solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+
+    Private Sub txtTelefonoClientes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefonoClientes.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El télefono solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub txtNombreClientes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombreClientes.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El nombre solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub txtApellido1Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApellido1Cliente.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub txtApellido2Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApellido2Cliente.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub TxtApellido3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtApellido3.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub txtdireccionCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtdireccionCliente.KeyPress
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
 End Class

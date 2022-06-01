@@ -49,11 +49,11 @@
             If dt.Rows.Count <> 0 Then
                 DataGridViewDetalleVenta.DataSource = dt
                 DataGridViewDetalleVenta.ColumnHeadersVisible = True
-                linklblInexistente.Enabled = False
+
             Else
                 DataGridViewDetalleVenta.DataSource = Nothing
                 DataGridViewDetalleVenta.ColumnHeadersVisible = False
-                linklblInexistente.Enabled = True
+
 
             End If
 
@@ -97,11 +97,9 @@
 
             dv.RowFilter = "no_factura='" & txtno_factura.Text & "'"
             If dv.Count <> 0 Then
-                linklblInexistente.Visible = False
                 DataGridViewDetalleVenta.DataSource = dv
                 ocultar_columnas()
             Else
-                linklblInexistente.Visible = True
                 DataGridViewDetalleVenta.DataSource = Nothing
             End If
 

@@ -83,6 +83,8 @@
         txtPrecioUnitario.Text = ""
         txtCantidad.Text = 0
         txtStock.Text = 1
+        Imagen.Image = Nothing
+        Imagen.SizeMode = PictureBoxSizeMode.StretchImage
 
     End Sub
 
@@ -125,7 +127,7 @@
         txtPrecioUnitario.Enabled = True
         btnBuscar_Medicamento.Enabled = True
         BttQuitarArts.Enabled = True
-
+        BttGuardarDetalleVenta.Enabled = True
     End Sub
 
     Private Sub BttGuardarVenta_Click_1(sender As Object, e As EventArgs) Handles BttGuardarDetalleVenta.Click
@@ -285,29 +287,19 @@
     Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
         e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
         If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-            MessageBox.Show("La Cantidad solo debe contener números enteros", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("La Cantidad solo debe contener números enteros", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
-    'Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-    '        MessageBox.Show("El Stock solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
+    Private Sub txtPrecioUnitario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioUnitario.KeyPress
+        Call FormMedicamentos.condicion(txtPrecioUnitario, e)
+    End Sub
 
-    'Private Sub txtPrecioUnitario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioUnitario.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsDigit(e.KeyChar) Then
-    '        MessageBox.Show("El Precio unitario solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
-
-
-
-
-
-
-
+    Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            'MessageBox.Show("La Cantidad solo debe contener números enteros", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 
 End Class

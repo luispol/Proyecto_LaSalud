@@ -68,6 +68,8 @@ Partial Class FormVentas
         '
         Me.DataGridViewVentas.AllowUserToAddRows = False
         Me.DataGridViewVentas.AllowUserToDeleteRows = False
+        Me.DataGridViewVentas.AllowUserToResizeColumns = False
+        Me.DataGridViewVentas.AllowUserToResizeRows = False
         Me.DataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.DataGridViewVentas.Cursor = System.Windows.Forms.Cursors.Hand
@@ -336,7 +338,7 @@ Partial Class FormVentas
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(232, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(967, 22)
+        Me.Panel1.Size = New System.Drawing.Size(1097, 22)
         Me.Panel1.TabIndex = 35
         '
         'erroricono
@@ -349,7 +351,7 @@ Partial Class FormVentas
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 562)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 628)
         Me.Panel1Clientes.TabIndex = 29
         '
         'Label2
@@ -376,7 +378,7 @@ Partial Class FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 562)
+        Me.ClientSize = New System.Drawing.Size(1329, 628)
         Me.Controls.Add(Me.DataGridViewVentas)
         Me.Controls.Add(Me.GroupBxDatosVentas)
         Me.Controls.Add(Me.GroupBox1)

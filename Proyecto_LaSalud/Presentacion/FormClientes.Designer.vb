@@ -194,7 +194,7 @@ Partial Class FormClientes
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 0)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 621)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 628)
         Me.Panel1Clientes.TabIndex = 15
         '
         'PictureBox1
@@ -269,6 +269,8 @@ Partial Class FormClientes
         '
         Me.DataGridViewClientes.AllowUserToAddRows = False
         Me.DataGridViewClientes.AllowUserToDeleteRows = False
+        Me.DataGridViewClientes.AllowUserToResizeColumns = False
+        Me.DataGridViewClientes.AllowUserToResizeRows = False
         Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.DataGridViewClientes.Cursor = System.Windows.Forms.Cursors.Hand
@@ -435,7 +437,7 @@ Partial Class FormClientes
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(232, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1092, 22)
+        Me.Panel1.Size = New System.Drawing.Size(1097, 22)
         Me.Panel1.TabIndex = 24
         '
         'cbCampoCliente
@@ -489,7 +491,7 @@ Partial Class FormClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1324, 621)
+        Me.ClientSize = New System.Drawing.Size(1329, 628)
         Me.Controls.Add(Me.cbeliminar)
         Me.Controls.Add(Me.linklblInexistente)
         Me.Controls.Add(Me.txtBusquedaClientes)

@@ -145,22 +145,6 @@ Public Class FormMedicamentos
             Me.erroricono.SetError(sender, "Ingrese el precio de venta al medicamento")
         End If
     End Sub
-    'Private Sub datefecha_vencimiento_Validating(ByVal sender As Object, e As CancelEventArgs) Handles datefecha_vencimiento.Validating
-    '    If DirectCast(sender, TextBox).Text.Length > 0 Then
-    '        Me.erroricono.SetError(sender, "")
-    '    Else
-    '        Me.erroricono.SetError(sender, "Ingrese la fecha de vencimiento del medicamento")
-    '    End If
-    'End Sub
-    'Private Sub Btn_CargarPic_Validating(ByVal sender As Object, e As CancelEventArgs) Handles Btn_CargarPic.Validating
-    '    If DirectCast(sender, TextBox).Text.Length > 0 Then
-    '        Me.erroricono.SetError(sender, "")
-    '    Else
-    '        Me.erroricono.SetError(sender, "Ingrese la categoría a la que pertecene el medicamento")
-    '    End If
-    'End Sub
-
-
 
     'Proceso para limpiar los textbox cuando se registre un nuevo cliente
     Public Sub limpiar()
@@ -514,6 +498,7 @@ Public Class FormMedicamentos
         frm.txtNombre_Medicamento.Text = DataGridViewMedicamentos.CurrentRow.Cells(4).Value
         frm.txtStock.Text = DataGridViewMedicamentos.CurrentRow.Cells(6).Value
         frm.txtPrecioUnitario.Text = DataGridViewMedicamentos.CurrentRow.Cells(7).Value
+        frm.Imagen.Image = Imagen.Image
         Me.Close()
     End Sub
 
@@ -521,35 +506,66 @@ Public Class FormMedicamentos
     Private Sub txtNombreMedicamento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombreMedicamento.KeyPress
         e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
         If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-            MessageBox.Show("El nombre solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("El nombre solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
-    'Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-    '        MessageBox.Show("El stock solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
+    Private Sub txtStock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtStock.KeyPress
+        Call condicion(txtStock, e)
+    End Sub
 
-    'Private Sub txtPrecioCompraMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioCompraMed.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-    '        MessageBox.Show("El precio de compra solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
+    Private Sub txtPrecioCompraMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioCompraMed.KeyPress
+        Call condicion(txtPrecioCompraMed, e)
+    End Sub
 
-    'Private Sub txtPrecioVentaMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioVentaMed.KeyPress
-    '    e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-    '    If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-    '        MessageBox.Show("El precio de venta solo debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
+    Private Sub txtPrecioVentaMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecioVentaMed.KeyPress
+        Call condicion(txtPrecioVentaMed, e)
+    End Sub
 
     Private Sub txtDescripcionMed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescripcionMed.KeyPress
         e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
         If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-            MessageBox.Show("La descripcion solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("La descripcion solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Public Sub condicion(sender As TextBox, e As KeyPressEventArgs)
+
+        Dim cadena As String = sender.Text
+        Dim filtro As String = "1234567890"
+
+        If Len(cadena) = 0 Then
+            filtro += "-"
+        End If
+        If Len(cadena) > 0 Then
+            filtro += "."
+        End If
+
+        For Each caracter In filtro
+            If e.KeyChar = caracter Then
+                e.Handled = False
+                Exit For
+            Else
+                e.Handled = True
+            End If
+        Next
+
+        If e.KeyChar = "0" And Mid(cadena, 1, 1) = "0" And Len(cadena) = 1 Then
+            sender.Text = ""
+        ElseIf e.KeyChar <> "0" And e.KeyChar <> "." And Mid(cadena, 1, 1) = "0" And Len(cadena) = 1 Then
+            sender.Text = ""
+
+
+        End If
+
+        If Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        End If
+
+
+        If e.KeyChar = "." And Not cadena.IndexOf(".") Then
+            e.Handled = True
+        End If
+
     End Sub
 End Class

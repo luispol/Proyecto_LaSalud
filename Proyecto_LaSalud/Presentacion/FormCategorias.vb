@@ -319,7 +319,7 @@
     Private Sub txtNombreCategoria_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombreCategoria.KeyPress
         e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
         If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
-            MessageBox.Show("El nombre de la categoría no debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show("El nombre de la categoría no debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormDetalle_Factura
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormDetalle_Factura
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDetalle_Factura))
@@ -48,7 +48,7 @@ Partial Class FormDetalle_Factura
         Me.lblidcliente_venta = New System.Windows.Forms.Label()
         Me.lblFecha_venta = New System.Windows.Forms.Label()
         Me.GroupBxDatosVentas = New System.Windows.Forms.GroupBox()
-        Me.bttImprimir = New System.Windows.Forms.Button()
+        Me.Imagen = New System.Windows.Forms.PictureBox()
         Me.txtStock = New System.Windows.Forms.NumericUpDown()
         Me.txtCantidad = New System.Windows.Forms.NumericUpDown()
         Me.txtPrecioUnitario = New System.Windows.Forms.TextBox()
@@ -69,6 +69,7 @@ Partial Class FormDetalle_Factura
         CType(Me.PicBxAgregarDet_Venta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewDetalleVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosVentas.SuspendLayout()
+        CType(Me.Imagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtStock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,7 +80,7 @@ Partial Class FormDetalle_Factura
         Me.Panel1Clientes.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1Clientes.Location = New System.Drawing.Point(0, 22)
         Me.Panel1Clientes.Name = "Panel1Clientes"
-        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 540)
+        Me.Panel1Clientes.Size = New System.Drawing.Size(232, 606)
         Me.Panel1Clientes.TabIndex = 40
         '
         'PictureBox1
@@ -180,6 +181,8 @@ Partial Class FormDetalle_Factura
         '
         Me.DataGridViewDetalleVenta.AllowUserToAddRows = False
         Me.DataGridViewDetalleVenta.AllowUserToDeleteRows = False
+        Me.DataGridViewDetalleVenta.AllowUserToResizeColumns = False
+        Me.DataGridViewDetalleVenta.AllowUserToResizeRows = False
         Me.DataGridViewDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewDetalleVenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.DataGridViewDetalleVenta.Cursor = System.Windows.Forms.Cursors.Hand
@@ -217,7 +220,7 @@ Partial Class FormDetalle_Factura
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1199, 22)
+        Me.Panel1.Size = New System.Drawing.Size(1329, 22)
         Me.Panel1.TabIndex = 45
         '
         'cbeliminardetalleVenta
@@ -300,7 +303,7 @@ Partial Class FormDetalle_Factura
         '
         'GroupBxDatosVentas
         '
-        Me.GroupBxDatosVentas.Controls.Add(Me.bttImprimir)
+        Me.GroupBxDatosVentas.Controls.Add(Me.Imagen)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtStock)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtCantidad)
         Me.GroupBxDatosVentas.Controls.Add(Me.txtPrecioUnitario)
@@ -328,15 +331,15 @@ Partial Class FormDetalle_Factura
         Me.GroupBxDatosVentas.TabStop = False
         Me.GroupBxDatosVentas.Text = "Datos de la venta"
         '
-        'bttImprimir
+        'Imagen
         '
-        Me.bttImprimir.Location = New System.Drawing.Point(338, 292)
-        Me.bttImprimir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bttImprimir.Name = "bttImprimir"
-        Me.bttImprimir.Size = New System.Drawing.Size(108, 50)
-        Me.bttImprimir.TabIndex = 47
-        Me.bttImprimir.Text = "PoneImagen"
-        Me.bttImprimir.UseVisualStyleBackColor = True
+        Me.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Imagen.Location = New System.Drawing.Point(289, 209)
+        Me.Imagen.Name = "Imagen"
+        Me.Imagen.Size = New System.Drawing.Size(145, 134)
+        Me.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Imagen.TabIndex = 47
+        Me.Imagen.TabStop = False
         '
         'txtStock
         '
@@ -469,7 +472,7 @@ Partial Class FormDetalle_Factura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 562)
+        Me.ClientSize = New System.Drawing.Size(1329, 628)
         Me.Controls.Add(Me.Panel1Clientes)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.linklblInexistente)
@@ -492,6 +495,7 @@ Partial Class FormDetalle_Factura
         CType(Me.DataGridViewDetalleVenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBxDatosVentas.ResumeLayout(False)
         Me.GroupBxDatosVentas.PerformLayout()
+        CType(Me.Imagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtStock, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -536,5 +540,5 @@ Partial Class FormDetalle_Factura
     Friend WithEvents txtPrecioUnitario As TextBox
     Friend WithEvents txtNombre_Medicamento As TextBox
     Friend WithEvents BttAgregarDetalleVenta As Button
-    Friend WithEvents bttImprimir As Button
+    Friend WithEvents Imagen As PictureBox
 End Class

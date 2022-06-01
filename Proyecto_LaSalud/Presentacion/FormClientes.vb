@@ -518,5 +518,10 @@ Public Class FormClientes
             MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
-
+    Private Sub txtCorreoClientes_Leave(sender As Object, e As EventArgs) Handles txtCorreoClientes.Leave
+        If (InStr(1, txtCorreoClientes.Text, "@") <= 0) Then
+            MessageBox.Show("Correo Inválido", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCorreoClientes.Text = ""
+        End If
+    End Sub
 End Class

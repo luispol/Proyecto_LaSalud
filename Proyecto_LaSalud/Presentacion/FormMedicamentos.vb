@@ -45,6 +45,10 @@ Public Class FormMedicamentos
         BttnSeleecionarCategoria.Enabled = False
         Btn_CargarPic.Enabled = False
         Btn_limpiarPic.Enabled = False
+        txtStockOpc.Enabled = False
+        rbAumentarStock.Enabled = False
+        rbDisminuirStock.Enabled = False
+        chkAumentar_Disminuir.Enabled = False
     End Sub
 
 
@@ -157,6 +161,11 @@ Public Class FormMedicamentos
         txtStock.Text = "0"
         txtPrecioCompraMed.Text = "0"
         txtPrecioVentaMed.Text = "0"
+        txtStockOpc.Text = 0
+        rbAumentarStock.Checked = False
+        rbDisminuirStock.Checked = False
+        BttnSeleecionarCategoria.Enabled = False
+        chkAumentar_Disminuir.Checked = False
 
         Imagen.Image = Nothing
         Imagen.BackgroundImage = My.Resources.sin_imagen
@@ -250,6 +259,7 @@ Public Class FormMedicamentos
     'los datos del medicamento seleccionado se transladan a los text box correspondientes
     Private Sub DataGridViewMedicamentos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewMedicamentos.CellClick
 
+
         'MessageBox.Show("Edite los datos y para confirmar, pulse el botón EDITAR", "Editar registro de cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'Cajas de texto
         txtIdMedicamento.Text = DataGridViewMedicamentos.SelectedCells.Item(1).Value
@@ -261,6 +271,8 @@ Public Class FormMedicamentos
         txtPrecioCompraMed.Text = DataGridViewMedicamentos.SelectedCells.Item(7).Value
         txtPrecioVentaMed.Text = DataGridViewMedicamentos.SelectedCells.Item(8).Value
         datefecha_vencimiento.Text = DataGridViewMedicamentos.SelectedCells.Item(9).Value
+
+
 
         Imagen.BackgroundImage = Nothing
         Dim b() As Byte = DataGridViewMedicamentos.SelectedCells.Item(10).Value
@@ -280,17 +292,24 @@ Public Class FormMedicamentos
 
         'Habilitar los Text Box
         txtIdMedicamento.Enabled = False
-        txtidCategoria_med.Enabled = True
+        txtidCategoria_med.Enabled = False
+        txtNom_Categoria.Enabled = False
+        BttnSeleecionarCategoria.Enabled = True
         txtNombreMedicamento.Enabled = True
         txtDescripcionMed.Enabled = True
-        txtStock.Enabled = True
+        txtStock.Enabled = False
         txtPrecioCompraMed.Enabled = True
         datefecha_vencimiento.Enabled = True
         txtPrecioVentaMed.Enabled = True
+        txtStockOpc.Enabled = False
+        rbAumentarStock.Enabled = False
+        rbDisminuirStock.Enabled = False
+        chkAumentar_Disminuir.Enabled = True
     End Sub
 
     'BOTON EDITAR
     Private Sub BttEditarMedicamentos_Click(sender As Object, e As EventArgs) Handles BttEditarMedicamentos.Click
+
         Dim result As DialogResult
         result = MessageBox.Show("¿Está seguro que quiere editar los datos del medicamento?", "Modicando registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
@@ -322,6 +341,35 @@ Public Class FormMedicamentos
 
                     dts.gimagen = ms.GetBuffer
 
+                    'If chkAumentar_Disminuir.Checked = True Then
+                    '    txtIdMedicamento.Enabled = False
+                    '    txtNombreMedicamento.Enabled = False
+                    '    txtidCategoria_med.Enabled = False
+                    '    txtDescripcionMed.Enabled = False
+                    '    txtStock.Enabled = False
+                    '    txtPrecioCompraMed.Enabled = False
+                    '    txtPrecioVentaMed.Enabled = False
+                    '    datefecha_vencimiento.Enabled = False
+                    '    BttnSeleecionarCategoria.Enabled = False
+                    '    txtStockOpc.Enabled = True
+                    '    rbAumentarStock.Enabled = True
+                    '    rbDisminuirStock.Enabled = True
+
+                    'End If
+
+
+                    If rbAumentarStock.Checked = True And txtStockOpc.Value > 0 Then
+                        Dim aumentar As Double
+                        aumentar = dts.gstock + txtStockOpc.Text
+                        dts.gstock = aumentar
+                    End If
+
+                    If rbDisminuirStock.Checked = True And txtStockOpc.Value > 0 And txtStockOpc.Value < dts.gstock Then
+                        Dim disminuir As Double
+                        disminuir = dts.gstock - txtStockOpc.Text
+                        dts.gstock = disminuir
+                    End If
+
                     If func.editar(dts) Then
                         MessageBox.Show("Datos de medicamento modificado correctamente", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         mostrar()
@@ -333,7 +381,10 @@ Public Class FormMedicamentos
                         txtPrecioCompraMed.Enabled = False
                         txtPrecioVentaMed.Enabled = False
                         datefecha_vencimiento.Enabled = False
-                        cbeliminarmedicamento.Checked = False
+                        txtStockOpc.Enabled = False
+                        rbAumentarStock.Enabled = False
+                        rbDisminuirStock.Enabled = False
+                        chkAumentar_Disminuir.Enabled = False
                         limpiar()
                     Else
                         MessageBox.Show("Datos no modificados", "Intente de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -354,8 +405,16 @@ Public Class FormMedicamentos
                 txtPrecioCompraMed.Enabled = False
                 txtPrecioVentaMed.Enabled = False
                 datefecha_vencimiento.Enabled = False
+                txtStockOpc.Enabled = False
+                rbAumentarStock.Enabled = False
+                rbDisminuirStock.Enabled = False
+                BttnSeleecionarCategoria.Enabled = False
+                chkAumentar_Disminuir.Enabled = False
                 limpiar()
             End If
+
+
+
         Else
             MessageBox.Show("Cancelando los cambios del registro", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtIdMedicamento.Enabled = False
@@ -366,7 +425,11 @@ Public Class FormMedicamentos
             txtPrecioCompraMed.Enabled = False
             txtPrecioVentaMed.Enabled = False
             datefecha_vencimiento.Enabled = False
-            cbeliminarmedicamento.Checked = False
+            txtStockOpc.Enabled = False
+            rbAumentarStock.Enabled = False
+            rbDisminuirStock.Enabled = False
+            BttnSeleecionarCategoria.Enabled = False
+            chkAumentar_Disminuir.Enabled = False
             Call mostrar()
         End If
         limpiar()
@@ -374,6 +437,9 @@ Public Class FormMedicamentos
         BttGuardarMedicamento.Enabled = False
         BttEditarMedicamentos.Enabled = False
         BttEliminarMedicamento.Enabled = False
+        txtStockOpc.Enabled = False
+        rbAumentarStock.Enabled = False
+        rbDisminuirStock.Enabled = False
     End Sub
 
     'Proceso para que muestre la columna que contiene los checkbox para seleccionar el registro a eliminar
@@ -568,4 +634,28 @@ Public Class FormMedicamentos
         End If
 
     End Sub
+
+    Private Sub btnAumentar_Click(sender As Object, e As EventArgs)
+        Dim aumentar As Double
+        aumentar = txtStock.Text + txtStockOpc.Text
+
+    End Sub
+
+    Private Sub chkAumentar_Disminuir_CheckedChanged(sender As Object, e As EventArgs) Handles chkAumentar_Disminuir.CheckedChanged
+        txtIdMedicamento.Enabled = False
+        txtNombreMedicamento.Enabled = False
+        txtidCategoria_med.Enabled = False
+        txtDescripcionMed.Enabled = False
+        txtStock.Enabled = False
+        txtPrecioCompraMed.Enabled = False
+        txtPrecioVentaMed.Enabled = False
+        datefecha_vencimiento.Enabled = False
+        BttnSeleecionarCategoria.Enabled = False
+        txtStockOpc.Enabled = True
+        rbAumentarStock.Enabled = True
+        rbDisminuirStock.Enabled = True
+
+    End Sub
+
+
 End Class

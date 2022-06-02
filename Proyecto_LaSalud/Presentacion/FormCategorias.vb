@@ -322,4 +322,10 @@
             'MessageBox.Show("El nombre de la categoría no debe contener números", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiar()
+        txtIdCategoria.Enabled = False
+        txtNombreCategoria.Enabled = False
+    End Sub
 End Class

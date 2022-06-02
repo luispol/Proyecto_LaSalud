@@ -300,5 +300,20 @@
         End If
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiar()
+        txtno_factura.Enabled = False
+        txtIdCliente.Enabled = False
+        txtApellido1_cliente.Enabled = False
+        txtApellido2_cliente.Enabled = False
+        txtFecha_venta.Enabled = False
+        cbFormaPago.Enabled = False
+        txtIdMedicamento.Enabled = False
+        txtNombre_Medicamento.Enabled = False
+        txtCantidad.Enabled = False
+        txtStock.Enabled = False
+        txtPrecioUnitario.Enabled = False
+        btnBuscar_Medicamento.Enabled = False
+        BttQuitarArts.Enabled = False
+    End Sub
 End Class

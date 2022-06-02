@@ -326,5 +326,14 @@
         frmcli.ShowDialog()
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiar()
+        txtno_factura.Enabled = False
+        txtIdCliente.Enabled = False
+        txtApellido1_cliente.Enabled = False
+        txtApellido2_cliente.Enabled = False
+        txtFecha_venta.Enabled = False
+        cbFormaPago.Enabled = False
+        btnBuscar_cliente.Enabled = False
+    End Sub
 End Class

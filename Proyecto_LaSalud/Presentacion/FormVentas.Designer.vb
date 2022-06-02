@@ -39,6 +39,7 @@ Partial Class FormVentas
         Me.lblidcliente_venta = New System.Windows.Forms.Label()
         Me.lblFecha_venta = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BttAgregarVenta = New System.Windows.Forms.Button()
         Me.BttGuardarVenta = New System.Windows.Forms.Button()
         Me.BttEditarVenta = New System.Windows.Forms.Button()
@@ -54,6 +55,7 @@ Partial Class FormVentas
         Me.Panel1Clientes = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBxDatosVentas.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -62,6 +64,7 @@ Partial Class FormVentas
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewVentas
@@ -221,6 +224,8 @@ Partial Class FormVentas
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PictureBox2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.BttAgregarVenta)
         Me.GroupBox1.Controls.Add(Me.BttGuardarVenta)
         Me.GroupBox1.Controls.Add(Me.BttEditarVenta)
@@ -234,6 +239,16 @@ Partial Class FormVentas
         Me.GroupBox1.TabIndex = 33
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Acciones de Registro"
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(228, 68)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 38)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Cancelar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'BttAgregarVenta
         '
@@ -374,6 +389,18 @@ Partial Class FormVentas
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(184, 68)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(38, 38)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 30
+        Me.PictureBox2.TabStop = False
+        Me.ToolTipCliente.SetToolTip(Me.PictureBox2, "Agregar un registro de venta")
+        '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -402,6 +429,7 @@ Partial Class FormVentas
         CType(Me.PicBxAgregarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -437,4 +465,6 @@ Partial Class FormVentas
     Friend WithEvents txtFecha_venta As DateTimePicker
     Friend WithEvents cbFormaPago As ComboBox
     Friend WithEvents txtApellido2_cliente As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

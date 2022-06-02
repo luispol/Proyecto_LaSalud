@@ -657,5 +657,23 @@ Public Class FormMedicamentos
 
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiar()
+        txtIdMedicamento.Enabled = False
+        txtNombreMedicamento.Enabled = False
+        txtidCategoria_med.Enabled = False
+        txtDescripcionMed.Enabled = False
+        txtStock.Enabled = False
+        txtPrecioCompraMed.Enabled = False
+        txtPrecioVentaMed.Enabled = False
+        datefecha_vencimiento.Enabled = False
+        txtNom_Categoria.Enabled = False
+        BttnSeleecionarCategoria.Enabled = False
+        Btn_CargarPic.Enabled = False
+        Btn_limpiarPic.Enabled = False
+        txtStockOpc.Enabled = False
+        rbAumentarStock.Enabled = False
+        rbDisminuirStock.Enabled = False
+        chkAumentar_Disminuir.Enabled = False
+    End Sub
 End Class

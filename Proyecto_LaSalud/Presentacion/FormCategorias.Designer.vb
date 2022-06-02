@@ -51,6 +51,7 @@ Partial Class FormCategorias
         Me.Panel1Clientes = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridViewCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxAccionesDeRegsitroCategoria.SuspendLayout()
         CType(Me.PicBxEditarCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +72,7 @@ Partial Class FormCategorias
         Me.DataGridViewCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.DataGridViewCategoria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DataGridViewCategoria.Location = New System.Drawing.Point(706, 100)
+        Me.DataGridViewCategoria.Location = New System.Drawing.Point(715, 100)
         Me.DataGridViewCategoria.Name = "DataGridViewCategoria"
         Me.DataGridViewCategoria.ReadOnly = True
         Me.DataGridViewCategoria.RowHeadersWidth = 51
@@ -91,6 +92,7 @@ Partial Class FormCategorias
         '
         'GroupBoxAccionesDeRegsitroCategoria
         '
+        Me.GroupBoxAccionesDeRegsitroCategoria.Controls.Add(Me.Button1)
         Me.GroupBoxAccionesDeRegsitroCategoria.Controls.Add(Me.BttEliminarCategoria)
         Me.GroupBoxAccionesDeRegsitroCategoria.Controls.Add(Me.BttAgregarCategoria)
         Me.GroupBoxAccionesDeRegsitroCategoria.Controls.Add(Me.BttGuardarCategoria)
@@ -102,7 +104,7 @@ Partial Class FormCategorias
         Me.GroupBoxAccionesDeRegsitroCategoria.ForeColor = System.Drawing.Color.Black
         Me.GroupBoxAccionesDeRegsitroCategoria.Location = New System.Drawing.Point(250, 317)
         Me.GroupBoxAccionesDeRegsitroCategoria.Name = "GroupBoxAccionesDeRegsitroCategoria"
-        Me.GroupBoxAccionesDeRegsitroCategoria.Size = New System.Drawing.Size(427, 126)
+        Me.GroupBoxAccionesDeRegsitroCategoria.Size = New System.Drawing.Size(450, 145)
         Me.GroupBoxAccionesDeRegsitroCategoria.TabIndex = 32
         Me.GroupBoxAccionesDeRegsitroCategoria.TabStop = False
         Me.GroupBoxAccionesDeRegsitroCategoria.Text = "Acciones de Registro"
@@ -110,7 +112,7 @@ Partial Class FormCategorias
         'BttEliminarCategoria
         '
         Me.BttEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttEliminarCategoria.Location = New System.Drawing.Point(232, 68)
+        Me.BttEliminarCategoria.Location = New System.Drawing.Point(230, 77)
         Me.BttEliminarCategoria.Name = "BttEliminarCategoria"
         Me.BttEliminarCategoria.Size = New System.Drawing.Size(111, 38)
         Me.BttEliminarCategoria.TabIndex = 26
@@ -120,7 +122,7 @@ Partial Class FormCategorias
         'BttAgregarCategoria
         '
         Me.BttAgregarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttAgregarCategoria.Location = New System.Drawing.Point(61, 68)
+        Me.BttAgregarCategoria.Location = New System.Drawing.Point(59, 77)
         Me.BttAgregarCategoria.Name = "BttAgregarCategoria"
         Me.BttAgregarCategoria.Size = New System.Drawing.Size(111, 38)
         Me.BttAgregarCategoria.TabIndex = 25
@@ -130,7 +132,7 @@ Partial Class FormCategorias
         'BttGuardarCategoria
         '
         Me.BttGuardarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttGuardarCategoria.Location = New System.Drawing.Point(232, 24)
+        Me.BttGuardarCategoria.Location = New System.Drawing.Point(230, 33)
         Me.BttGuardarCategoria.Name = "BttGuardarCategoria"
         Me.BttGuardarCategoria.Size = New System.Drawing.Size(111, 38)
         Me.BttGuardarCategoria.TabIndex = 24
@@ -140,7 +142,7 @@ Partial Class FormCategorias
         'BttEditarCategoria
         '
         Me.BttEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BttEditarCategoria.Location = New System.Drawing.Point(61, 24)
+        Me.BttEditarCategoria.Location = New System.Drawing.Point(59, 33)
         Me.BttEditarCategoria.Name = "BttEditarCategoria"
         Me.BttEditarCategoria.Size = New System.Drawing.Size(111, 38)
         Me.BttEditarCategoria.TabIndex = 23
@@ -151,7 +153,7 @@ Partial Class FormCategorias
         '
         Me.PicBxEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxEditarCategoria.Image = CType(resources.GetObject("PicBxEditarCategoria.Image"), System.Drawing.Image)
-        Me.PicBxEditarCategoria.Location = New System.Drawing.Point(17, 24)
+        Me.PicBxEditarCategoria.Location = New System.Drawing.Point(15, 33)
         Me.PicBxEditarCategoria.Name = "PicBxEditarCategoria"
         Me.PicBxEditarCategoria.Size = New System.Drawing.Size(38, 38)
         Me.PicBxEditarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -163,7 +165,7 @@ Partial Class FormCategorias
         '
         Me.PicBxEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxEliminarCategoria.Image = CType(resources.GetObject("PicBxEliminarCategoria.Image"), System.Drawing.Image)
-        Me.PicBxEliminarCategoria.Location = New System.Drawing.Point(188, 68)
+        Me.PicBxEliminarCategoria.Location = New System.Drawing.Point(186, 77)
         Me.PicBxEliminarCategoria.Name = "PicBxEliminarCategoria"
         Me.PicBxEliminarCategoria.Size = New System.Drawing.Size(38, 38)
         Me.PicBxEliminarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -175,7 +177,7 @@ Partial Class FormCategorias
         '
         Me.PicBxGuardarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxGuardarCategoria.Image = CType(resources.GetObject("PicBxGuardarCategoria.Image"), System.Drawing.Image)
-        Me.PicBxGuardarCategoria.Location = New System.Drawing.Point(188, 24)
+        Me.PicBxGuardarCategoria.Location = New System.Drawing.Point(186, 33)
         Me.PicBxGuardarCategoria.Name = "PicBxGuardarCategoria"
         Me.PicBxGuardarCategoria.Size = New System.Drawing.Size(38, 38)
         Me.PicBxGuardarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -187,7 +189,7 @@ Partial Class FormCategorias
         '
         Me.PicBxAgregarCategoria.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicBxAgregarCategoria.Image = CType(resources.GetObject("PicBxAgregarCategoria.Image"), System.Drawing.Image)
-        Me.PicBxAgregarCategoria.Location = New System.Drawing.Point(17, 68)
+        Me.PicBxAgregarCategoria.Location = New System.Drawing.Point(15, 77)
         Me.PicBxAgregarCategoria.Name = "PicBxAgregarCategoria"
         Me.PicBxAgregarCategoria.Size = New System.Drawing.Size(38, 38)
         Me.PicBxAgregarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -203,7 +205,7 @@ Partial Class FormCategorias
         Me.GroupBxDatosCategoria.Controls.Add(Me.lblNombreCategoria)
         Me.GroupBxDatosCategoria.Location = New System.Drawing.Point(250, 156)
         Me.GroupBxDatosCategoria.Name = "GroupBxDatosCategoria"
-        Me.GroupBxDatosCategoria.Size = New System.Drawing.Size(427, 142)
+        Me.GroupBxDatosCategoria.Size = New System.Drawing.Size(450, 142)
         Me.GroupBxDatosCategoria.TabIndex = 33
         Me.GroupBxDatosCategoria.TabStop = False
         Me.GroupBxDatosCategoria.Text = "Categorias"
@@ -214,7 +216,7 @@ Partial Class FormCategorias
         Me.txtIdCategoria.Location = New System.Drawing.Point(131, 41)
         Me.txtIdCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtIdCategoria.Name = "txtIdCategoria"
-        Me.txtIdCategoria.Size = New System.Drawing.Size(276, 23)
+        Me.txtIdCategoria.Size = New System.Drawing.Size(304, 23)
         Me.txtIdCategoria.TabIndex = 1
         '
         'lblIdCategoria
@@ -232,7 +234,7 @@ Partial Class FormCategorias
         Me.txtNombreCategoria.Location = New System.Drawing.Point(131, 82)
         Me.txtNombreCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombreCategoria.Name = "txtNombreCategoria"
-        Me.txtNombreCategoria.Size = New System.Drawing.Size(276, 23)
+        Me.txtNombreCategoria.Size = New System.Drawing.Size(304, 23)
         Me.txtNombreCategoria.TabIndex = 12
         '
         'lblNombreCategoria
@@ -267,7 +269,7 @@ Partial Class FormCategorias
         'txtBusquedaCategoria
         '
         Me.txtBusquedaCategoria.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBusquedaCategoria.Location = New System.Drawing.Point(934, 50)
+        Me.txtBusquedaCategoria.Location = New System.Drawing.Point(943, 50)
         Me.txtBusquedaCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBusquedaCategoria.Name = "txtBusquedaCategoria"
         Me.txtBusquedaCategoria.Size = New System.Drawing.Size(374, 23)
@@ -278,7 +280,7 @@ Partial Class FormCategorias
         Me.cbCampoCategoria.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cbCampoCategoria.FormattingEnabled = True
         Me.cbCampoCategoria.Items.AddRange(New Object() {"nombre_categoria"})
-        Me.cbCampoCategoria.Location = New System.Drawing.Point(706, 49)
+        Me.cbCampoCategoria.Location = New System.Drawing.Point(715, 49)
         Me.cbCampoCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbCampoCategoria.Name = "cbCampoCategoria"
         Me.cbCampoCategoria.Size = New System.Drawing.Size(222, 23)
@@ -299,7 +301,7 @@ Partial Class FormCategorias
         Me.cbeliminar.AutoSize = True
         Me.cbeliminar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cbeliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cbeliminar.Location = New System.Drawing.Point(706, 77)
+        Me.cbeliminar.Location = New System.Drawing.Point(715, 77)
         Me.cbeliminar.Name = "cbeliminar"
         Me.cbeliminar.Size = New System.Drawing.Size(67, 19)
         Me.cbeliminar.TabIndex = 39
@@ -338,6 +340,16 @@ Partial Class FormCategorias
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(347, 77)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(86, 38)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "Cancelar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormCategorias
         '
@@ -401,4 +413,5 @@ Partial Class FormCategorias
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txtflag As TextBox
+    Friend WithEvents Button1 As Button
 End Class

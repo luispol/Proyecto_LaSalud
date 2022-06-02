@@ -63,7 +63,7 @@ Partial Class FormPrincipal
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(232, 628)
+        Me.PanelMenu.Size = New System.Drawing.Size(232, 622)
         Me.PanelMenu.TabIndex = 0
         '
         'PictureBox2
@@ -189,7 +189,7 @@ Partial Class FormPrincipal
         Me.PanelFormularios.Location = New System.Drawing.Point(0, 0)
         Me.PanelFormularios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelFormularios.Name = "PanelFormularios"
-        Me.PanelFormularios.Size = New System.Drawing.Size(1329, 628)
+        Me.PanelFormularios.Size = New System.Drawing.Size(1329, 622)
         Me.PanelFormularios.TabIndex = 2
         '
         'PictureBox3
@@ -217,7 +217,7 @@ Partial Class FormPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1329, 628)
+        Me.ClientSize = New System.Drawing.Size(1329, 622)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.PanelFormularios)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

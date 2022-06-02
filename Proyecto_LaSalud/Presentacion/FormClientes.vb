@@ -524,4 +524,17 @@ Public Class FormClientes
             txtCorreoClientes.Text = ""
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiar()
+        txtIdClientes.Enabled = False
+        txtDUIClientes.Enabled = False
+        txtNombreClientes.Enabled = False
+        txtApellido1Cliente.Enabled = False
+        txtApellido2Cliente.Enabled = False
+        TxtApellido3.Enabled = False
+        txtCorreoClientes.Enabled = False
+        txtdireccionCliente.Enabled = False
+        txtTelefonoClientes.Enabled = False
+    End Sub
 End Class

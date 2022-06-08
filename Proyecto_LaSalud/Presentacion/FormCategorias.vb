@@ -327,5 +327,9 @@
         limpiar()
         txtIdCategoria.Enabled = False
         txtNombreCategoria.Enabled = False
+        BttAgregarCategoria.Enabled = True
+        BttEditarCategoria.Enabled = False
+        BttEliminarCategoria.Enabled = False
+        BttGuardarCategoria.Enabled = False
     End Sub
 End Class

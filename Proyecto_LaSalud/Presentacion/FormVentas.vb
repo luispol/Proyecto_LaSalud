@@ -335,5 +335,7 @@
         txtFecha_venta.Enabled = False
         cbFormaPago.Enabled = False
         btnBuscar_cliente.Enabled = False
+        BttAgregarVenta.Enabled = True
+        BttGuardarVenta.Enabled = False
     End Sub
 End Class

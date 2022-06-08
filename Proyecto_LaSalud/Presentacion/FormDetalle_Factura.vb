@@ -315,5 +315,7 @@
         txtPrecioUnitario.Enabled = False
         btnBuscar_Medicamento.Enabled = False
         BttQuitarArts.Enabled = False
+        BttAgregarDetalleVenta.Enabled = True
+        BttGuardarDetalleVenta.Enabled = False
     End Sub
 End Class

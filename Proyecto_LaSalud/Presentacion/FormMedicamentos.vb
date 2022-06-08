@@ -675,5 +675,7 @@ Public Class FormMedicamentos
         rbAumentarStock.Enabled = False
         rbDisminuirStock.Enabled = False
         chkAumentar_Disminuir.Enabled = False
+        BttAgregarMedicamentos.Enabled = True
+        BttGuardarMedicamento.Enabled = False
     End Sub
 End Class

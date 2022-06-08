@@ -89,7 +89,7 @@ Public Class fcategoria
                 Return False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
             Return False
         End Try
     End Function

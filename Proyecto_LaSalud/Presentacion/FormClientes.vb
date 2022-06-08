@@ -513,8 +513,8 @@ Public Class FormClientes
     End Sub
 
     Private Sub txtdireccionCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtdireccionCliente.KeyPress
-        e.Handled = Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
-        If Not Char.IsLetter(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+        e.Handled = Not Char.IsLetter(e.KeyChar) And Not IsNumeric(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+        If Not Char.IsLetter(e.KeyChar) And Not IsNumeric(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             'MessageBox.Show("El apellido solo debe contener letras", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
@@ -527,6 +527,12 @@ Public Class FormClientes
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         limpiar()
+        'botones
+        BttGuardarCliente.Enabled = False
+        BttEditarCliente.Enabled = False
+        BttAgregarCliente.Enabled = True
+
+        'activiacion de los textboxs
         txtIdClientes.Enabled = False
         txtDUIClientes.Enabled = False
         txtNombreClientes.Enabled = False
@@ -536,5 +542,6 @@ Public Class FormClientes
         txtCorreoClientes.Enabled = False
         txtdireccionCliente.Enabled = False
         txtTelefonoClientes.Enabled = False
+
     End Sub
 End Class

@@ -74,6 +74,7 @@ Public Class fcategoria
             desconectado()
         End Try
     End Function
+
     'FUNCION ELIMINAR
     Public Function eliminar(ByVal dts As vcategoria) As Boolean
         Try

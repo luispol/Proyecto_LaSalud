@@ -82,6 +82,7 @@ Public Class fcategoria
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
 
+
             cmd.Parameters.Add("@idcategoria", SqlDbType.NVarChar, 50).Value = dts.gidcategoria
             If cmd.ExecuteNonQuery Then
                 Return True
